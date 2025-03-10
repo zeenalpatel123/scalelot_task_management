@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@tailwind base;
+*{@apply font-nunito;}
+.anim{@apply transition-all duration-300;}
+body{@apply bg-g2;}
+h4{@apply text-18 lg:text-20 2xl:text-24 font-bold text-black;}
+.text16{@apply text-14 xl:text-16;}
+.text18{@apply text-14 lg:text-16 2xl:text-18;}
+.text24{@apply text-16 md:text-18 lg:text-20 2xl:text-24;}
+.input{@apply w-full bg-l1 py-2 lg:py-2.5 xl:py-3 px-2.5 xl:px-4 outline-none text-14 xl:text-16 font-normal text-b1 rounded-lg lg:rounded-xl placeholder:text-g6;}
+.label{@apply text16 text-b1 font-medium block mb-1.5;}
+.btn_primary{@apply bg-primary py-1.5 lg:py-2 2xl:py-2.5 px-3.5 lg:px-5 2xl:px-7 rounded-[10px] text-14 xl:text-16 font-extrabold text-white border border-primary cursor-pointer inline-block hover:text-primary hover:bg-transparent hover:border-primary;}
+.btn_secondary{@apply bg-l1 py-1.5 lg:py-2 2xl:py-2.5 px-3.5 lg:px-5 2xl:px-7 rounded-[10px] text-14 xl:text-16 font-extrabold text-primary border border-l1 cursor-pointer inline-block hover:text-primary hover:bg-transparent hover:border-primary;}
+
+/* table css start  */
+table tr th{@apply text-14 text-left text-g6 font-normal py-2 xl:py-3 px-4 xl:px-6 whitespace-nowrap;}
+table tr td{@apply text-14 text-b1 bg-l1 font-semibold py-2 xl:py-3 px-4 xl:px-6 whitespace-nowrap;}
+.table_radius tr td:first-child{@apply rounded-tl-lg rounded-bl-lg;}
+.table_radius tr td:last-child{@apply rounded-tr-lg rounded-br-lg;}
+
+.common_tabel tr th{@apply text-14 text-left text-g6 font-normal bg-[#FCFCFD] py-2 xl:py-3 px-4 xl:px-6 whitespace-nowrap;}
+.common_tabel tr td{@apply text-14 text-b1 font-semibold bg-white py-2 xl:py-3 px-4 xl:px-6 whitespace-nowrap;}
+.table_border tr td{@apply border-b;}
+.table_border_t tr td{@apply border-t;}
+.table_btn{@apply py-1.5 px-3 bg-primary border border-primary text-white text-14 xl:text-16 font-semibold rounded-md lg:rounded-lg xl:rounded-xl hover:bg-transparent hover:text-primary anim;}
+/* table css end  */
+@tailwind components;
+@tailwind utilities;

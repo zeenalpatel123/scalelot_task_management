@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/css/icomoon.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+    <div class="flex justify-end">
+        <div id="open" class="w-72 lg:w-[312px] fixed h-screen inset-y-0 left-0 bg-white overflow-x-hidden overflow-y-auto -translate-x-full lg:translate-x-0 anim z-50">
+            <div class="py-5 lg:py-6 2xl:py-8 px-4 2xl:px-6">
+                <a href="">
+                    <img src="assets/images/logo.png" class="mx-auto" alt="logo"/>
+                </a>
+            </div>
+            <ul class="px-4 xl:px-5 2xl:px-7 py-2.5 lg:py-4 2xl:py-6 space-y-2.5 lg:space-y-4 2xl:space-y-6">
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-[#E9EEEA] rounded-[10px] anim">
+                        <span class="icon-dashboard text-g1 group-hover:text-black text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-black anim">Dashboard</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-[#E9EEEA] rounded-[10px] anim">
+                        <span class="icon-notebook text-g1 group-hover:text-black text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-black anim">Projects</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-[#E9EEEA] rounded-[10px] anim">
+                        <span class="icon-task text-g1 group-hover:text-black text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-black anim">Tasks</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-[#E9EEEA] rounded-[10px] anim">
+                        <span class="icon-user text-g1 group-hover:text-black text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-black anim">HR Department</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-[#E9EEEA] rounded-[10px] anim">
+                        <span class="icon-role text-g1 group-hover:text-black text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-black anim">Roles & Permissions</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-[#E9EEEA] rounded-[10px] anim">
+                        <span class="icon-setting text-g1 group-hover:text-black text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-black anim">Settings</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="cover" class="fixed w-full h-screen backdrop-blur-sm bg-black/30 xl:w-0 z-20 origin-left xl:hidden -translate-x-full" onclick="toggleActive('#open','-translate-x-full'); toggleActive('#cover','-translate-x-full');"></div>
+        <div class="w-full lg:w-[calc(100%-312px)]">
+            <header class="py-3 lg:py-4 2xl:py-6 px-5 2xl:px-7">
+                <div class="flex items-center">
+                    <div class="space-y-1 block lg:hidden pr-5 cursor-pointer" onclick="toggleActive('#open','-translate-x-full'); toggleActive('#cover','-translate-x-full');">
+                        <span class="w-3 md:w-5 h-1 rounded-full bg-black block"></span>
+                        <span class="w-6 md:w-8 h-1 rounded-full bg-black block"></span>
+                        <span class="w-6 md:w-8 h-1 rounded-full bg-black block"></span>
+                    </div>
+                    <div class="w-full max-w-96 md:max-w-[500px] xl:max-w-[744px] hidden md:flex items-center bg-white rounded-lg px-2 md:px-3 xl:px-5 py-2 xl:py-3.5">
+                        <label for="search">
+                            <span class="icon-search text-d3 block text-[24px] cursor-pointer"></span>
+                        </label>
+                        <input type="search" id="search" class="w-full outline-none text-g3 bg-transparent text-dark pl-2.5" placeholder="Search"/>
+                    </div>
+                    <div class="flex items-center space-x-5 ml-auto">
+                        <span class="icon-noti text-[20px] 2xl:text-[24px] text-black cursor-pointer"></span>
+                        <div class="w-8 xl:w-10 h-8 xl:h-10 rounded-full cursor-pointer overflow-hidden">
+                            <img src="assets/images/profile.png" alt="profile"/>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="pt-3 lg:pt-0 pb-3 lg:pb-4 2xl:pb-6 px-5 2xl:px-7 space-y-3.5 lg:space-y-5 2xl:space-y-7">
+                <div class="flex items-center space-x-2.5 xl:space-x-4">
+                    <button class="btn_primary anim flex items-center justify-center space-x-1.5">
+                        <span class="icon-add text-[18px] lg:text-[20px] 2xl:text-[24px]"></span>
+                        <span class="inline-block">Add New Task</span>
+                    </button>
+                    <button class="btn_primary anim">View Reports</button>
+                </div>
+                <div class="flex flex-wrap items-start -mx-2 xl:-mx-3">
+                    <div class="w-full md:w-1/2 xl:w-4/12 p-2 xl:p-3">
+                        <div class="bg-white rounded-lg lg:rounded-2xl xl:rounded-[20px] p-5">
+                            <h4 class="text-18 lg:text-20 xl:text-24 font-bold text-black mb-3 lg:mb-5 2xl:mb-7">Employees Availability</h4>
+                            <div class="flex flex-wrap -mx-1.5 xl:-mx-2">
+                                <div class="w-1/2 p-1.5 xl:p-2">
+                                    <div class="border border-g4 rounded-[10px] py-2.5 lg:py-3.5 2xl:py-5 px-3 lg:px-4 2xl:px-6">
+                                        <span class="icon-attendance text-[20px] 2xl:text-[24px] text-primary text-center block mb-1.5 lg:mb-2.5"></span>
+                                        <span class="block text16 font-normal text-s1 text-center">Attendance</span>
+                                    </div>
+                                </div>
+                                <div class="w-1/2 p-1.5 xl:p-2">
+                                    <div class="border border-g4 rounded-[10px] py-2.5 lg:py-3.5 2xl:py-5 px-3 lg:px-4 2xl:px-6">
+                                        <span class="icon-time_clock text-[20px] 2xl:text-[24px] text-primary text-center block mb-1.5 lg:mb-2.5"></span>
+                                        <span class="block text16 font-normal text-s1 text-center">Late Coming</span>
+                                    </div>
+                                </div>
+                                <div class="w-1/2 p-1.5 xl:p-2">
+                                    <div class="border border-g4 rounded-[10px] py-2.5 lg:py-3.5 2xl:py-5 px-3 lg:px-4 2xl:px-6">
+                                        <span class="icon-absent text-[20px] 2xl:text-[24px] text-primary text-center block mb-1.5 lg:mb-2.5"></span>
+                                        <span class="block text16 font-normal text-s1 text-center">Absent</span>
+                                    </div>
+                                </div>
+                                <div class="w-1/2 p-1.5 xl:p-2">
+                                    <div class="border border-g4 rounded-[10px] py-2.5 lg:py-3.5 2xl:py-5 px-3 lg:px-4 2xl:px-6">
+                                        <span class="icon-leave text-[20px] 2xl:text-[24px] text-primary text-center block mb-1.5 lg:mb-2.5"></span>
+                                        <span class="block text16 font-normal text-s1 text-center">Leave Apply</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-3/12 p-2 xl:p-3">
+                        <div class="bg-white rounded-lg lg:rounded-2xl xl:rounded-[20px] p-5">
+                            <h4 class="text-18 lg:text-20 xl:text-24 font-bold text-black mb-3 lg:mb-5 2xl:mb-7">Employees Availability</h4>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-8/12 xl:w-5/12 p-2 xl:p-3">
+                        <div class="bg-white rounded-lg lg:rounded-2xl xl:rounded-[20px] p-5">
+                            <h4 class="text-18 lg:text-20 xl:text-24 font-bold text-black mb-3 lg:mb-5 2xl:mb-7">Updates</h4>
+                            <div class="space-y-2.5 lg:space-y-3.5 xl:space-y-5">
+                                <div class="flex items-center space-x-2.5 lg:space-x-4">
+                                    <div>
+                                        <div class="w-7 lg:w-9 xl:w-11 h-7 lg:h-9 xl:h-11 bg-l1 rounded-full flex items-center justify-center">
+                                            <span class="icon-archive text-[16px] lg:text-[18px] 2xl:text-[22px] text-primary"></span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="text18 font-semibold text-black">Project Spinspotter</h6>
+                                        <p class="text16 text-s1 font-normal">Successfully closed on Jan 6th, ahead of the deadline.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-2.5 lg:space-x-4">
+                                    <div>
+                                        <div class="w-7 lg:w-9 xl:w-11 h-7 lg:h-9 xl:h-11 bg-l1 rounded-full flex items-center justify-center">
+                                            <span class="icon-archive text-[16px] lg:text-[18px] 2xl:text-[22px] text-primary"></span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="text18 font-semibold text-black">Upcoming Deadlines</h6>
+                                        <p class="text16 text-s1 font-normal">5 tasks due within the next 3 days.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-2.5 lg:space-x-4">
+                                    <div>
+                                        <div class="w-7 lg:w-9 xl:w-11 h-7 lg:h-9 xl:h-11 bg-l1 rounded-full flex items-center justify-center">
+                                            <span class="icon-archive text-[16px] lg:text-[18px] 2xl:text-[22px] text-primary"></span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="text18 font-semibold text-black">Delayed Tasks</h6>
+                                        <p class="text16 text-s1 font-normal">3 tasks flagged for delay due to dependency issues.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-2.5 lg:space-x-4">
+                                    <div>
+                                        <div class="w-7 lg:w-9 xl:w-11 h-7 lg:h-9 xl:h-11 bg-l1 rounded-full flex items-center justify-center">
+                                            <span class="icon-archive text-[16px] lg:text-[18px] 2xl:text-[22px] text-primary"></span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="text18 font-semibold text-black">Resource Allocation</h6>
+                                        <p class="text16 text-s1 font-normal">2 new members added to Project Delta to accelerate delivery.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-2.5 lg:space-x-4">
+                                    <div>
+                                        <div class="w-7 lg:w-9 xl:w-11 h-7 lg:h-9 xl:h-11 bg-l1 rounded-full flex items-center justify-center">
+                                            <span class="icon-archive text-[16px] lg:text-[18px] 2xl:text-[22px] text-primary"></span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="text18 font-semibold text-black">Quarterly Report</h6>
+                                        <p class="text16 text-s1 font-normal">Draft finalized and under review for presentation.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-2.5 lg:space-x-4">
+                                    <div>
+                                        <div class="w-7 lg:w-9 xl:w-11 h-7 lg:h-9 xl:h-11 bg-l1 rounded-full flex items-center justify-center">
+                                            <span class="icon-archive text-[16px] lg:text-[18px] 2xl:text-[22px] text-primary"></span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="text18 font-semibold text-black">Onboarding</h6>
+                                        <p class="text16 text-s1 font-normal">Added 3 new team members; orientation completed successfully.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="assets/js/script.js"></script>
+</html>
