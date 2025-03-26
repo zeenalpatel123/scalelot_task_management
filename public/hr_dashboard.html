@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Department (Dashboard)</title>
+    <link rel="stylesheet" href="assets/css/icomoon.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+    <div class="flex justify-end">
+        <!-- <div class="block lg:hidden" onclick="toggleActive('#open','-translate-x-full'); toggleActive('#cover','-translate-x-full');">
+            <div class="absolute top-1/2 -translate-y-1/2 -right-5 w-10 h-10 left-[268px] z-[999] bg-primary rounded-full opacity-100 lg:opacity-0 flex items-center justify-center">
+                <span class="icon-close text-[20px] text-white"></span>
+            </div>
+        </div> -->
+        <div id="open" class="w-72 2xl:w-[312px] fixed h-screen inset-y-0 left-0 bg-white overflow-x-hidden overflow-y-auto -translate-x-full lg:translate-x-0 anim z-50">
+            <div class="py-5 lg:py-6 2xl:py-8 px-4 2xl:px-6">
+                <a href="">
+                    <img src="assets/images/logo.png" class="mx-auto" alt="logo"/>
+                </a>
+            </div>
+           
+            <ul class="px-4 xl:px-5 2xl:px-7 py-2.5 lg:py-4 2xl:py-6 space-y-2.5 lg:space-y-4 2xl:space-y-6">
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-dashboard text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Dashboard</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-notebook text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Projects</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-task text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Tasks</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-user text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">HR Department</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-role text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Roles &amp; Permissions</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-setting text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Settings</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="cover" class="fixed w-full h-screen backdrop-blur-sm bg-black/30 xl:w-0 z-20 origin-left xl:hidden -translate-x-full"></div>
+        <div class="w-full lg:w-[calc(100%-292px)] 2xl:w-[calc(100%-316px)] ml-auto">
+            <header class="py-2 2xl:py-2.5 px-3.5 2xl:px-5 bg-white rounded-bl-xl lg:rounded-b-2xl xl:rounded-bl-[20px] rounded-br-xl lg:rounded-br-2xl xl:rounded-br-[20px] z-50">
+                <div class="flex items-center">
+                    <span class="icon-menu text-[18px] md:text-[20px] lg:text-[24px] text-black lg:hidden pr-5 cursor-pointer" onclick="toggleActive('#open','-translate-x-full'); toggleActive('#cover','-translate-x-full');"></span>
+                    <div class="w-full max-w-[335px] hidden md:flex items-center bg-l1 rounded-lg px-2 md:px-3 xl:px-5 py-2 xl:py-3">
+                        <label for="search">
+                            <span class="icon-search text-g6 block text-[18px] xl:text-[20px] cursor-pointer"></span>
+                        </label>
+                        <input type="search" id="search" class="w-full outline-none text-g6 bg-transparent text-dark pl-2.5" placeholder="Search"/>
+                    </div>
+                    <div class="flex items-center space-x-3.5 md:space-x-5 xl:space-x-7 ml-auto">
+                        <button class="btn_primary anim flex items-center justify-center space-x-2 py-1.5 lg:py-2 xl:py-2.5">
+                            <span class="icon-time_clock font-bold text-[16px]"></span>
+                            <span class="inline-block text-14 font-bold">Time Tracker</span>
+                        </button>
+                        <div class="flex items-center space-x-3 xl:space-x-5">
+                            <span class="icon-noti text-[20px] 2xl:text-[24px] text-black cursor-pointer"></span>
+                            <div class="w-8 xl:w-10 h-8 xl:h-10 rounded-full cursor-pointer overflow-hidden">
+                                <img src="assets/images/profile.png" alt="profile"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="py-2 lg:py-3 2xl:py-4 px-4 2xl:px-6 space-y-1.5 xl:space-y-2 h-[calc(100vh-68px)] overflow-y-auto">
+                <div class="flex flex-wrap xs:flex-nowrap items-center -mx-1 md:-mx-2">
+                    <div class="p-1 md:p-2">
+                        <h4>Dashboard</h4>
+                    </div>
+                    <div class="p-1 md:p-2 w-full xs:max-w-64 xl:max-w-xs ml-auto">
+                        <div class="w-full max-w-96 md:max-w-[434px] flex items-center bg-white rounded-lg px-2 md:px-3 xl:px-5 py-2 xl:py-3">
+                            <label for="search">
+                                <span class="icon-search text-g6 block text-[18px] xl:text-[20px] cursor-pointer"></span>
+                            </label>
+                            <input type="search" id="search" class="w-full outline-none text-g6 bg-transparent text-dark pl-2.5" placeholder="Search"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center -mx-1.5 lg:-mx-2 2xl:-mx-3">
+                    <div class="w-full xs:w-1/2 md:w-1/3 xl:w-1/4 p-1.5 lg:p-2 2xl:p-3">
+                        <div class="bg-white py-2.5 xl:py-4 px-3 lg:px-4 xl:px-5 rounded-lg xl:rounded-xl">
+                            <div class="flex items-center space-x-2 mb-1">
+                                <span class="w-2.5 h-2.5 bg-primary rounded-full inline-block"></span>
+                                <span class="text16 text-black/50 font-medium inline-block">Attendance</span>
+                            </div>
+                            <h3>10</h3>
+                        </div>
+                    </div>
+                    <div class="w-full xs:w-1/2 md:w-1/3 xl:w-1/4 p-1.5 lg:p-2 2xl:p-3">
+                        <div class="bg-white py-2.5 xl:py-4 px-3 lg:px-4 xl:px-5 rounded-lg xl:rounded-xl">
+                            <div class="flex items-center space-x-2 mb-1">
+                                <span class="w-2.5 h-2.5 bg-yellow rounded-full inline-block"></span>
+                                <span class="text16 text-black/50 font-medium inline-block">Late Coming</span>
+                            </div>
+                            <h3>56</h3>
+                        </div>
+                    </div>
+                    <div class="w-full xs:w-1/2 md:w-1/3 xl:w-1/4 p-1.5 lg:p-2 2xl:p-3">
+                        <div class="bg-white py-2.5 xl:py-4 px-3 lg:px-4 xl:px-5 rounded-lg xl:rounded-xl">
+                            <div class="flex items-center space-x-2 mb-1">
+                                <span class="w-2.5 h-2.5 bg-[#F24545] rounded-full inline-block"></span>
+                                <span class="text16 text-black/50 font-medium inline-block">Absent</span>
+                            </div>
+                            <h3>12</h3>
+                        </div>
+                    </div>
+                    <div class="w-full xs:w-1/2 md:w-1/3 xl:w-1/4 p-1.5 lg:p-2 2xl:p-3">
+                        <div class="bg-white py-2.5 xl:py-4 px-3 lg:px-4 xl:px-5 rounded-lg xl:rounded-xl">
+                            <div class="flex items-center space-x-2 mb-1">
+                                <span class="w-2.5 h-2.5 bg-[#75C675] rounded-full inline-block"></span>
+                                <span class="text16 text-black/50 font-medium inline-block">Leave Apply</span>
+                            </div>
+                            <h3>12</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-stretch -mx-1.5 lg:-mx-2 2xl:-mx-3">
+                    <div class="w-full xl:w-1/2 p-1.5 lg:p-2 2xl:p-3 h-auto">
+                        <div class="bg-white rounded-lg md:rounded-xl lg:rounded-2xl 2xl:rounded-[20px] p-3 lg:p-4 xl:p-5 h-full">
+                            <h4>To Do List</h4>
+                            <div>
+                                <div class="w-full relative flex items-center py-1.5 xl:py-2.5 px-2.5 lg:px-3 xl:px-4 rounded-[10px]">
+                                    <input id="check" type="checkbox" class="absolute inset-0 w-full h-full opacity-0 z-10"/>
+                                    <div class="checkbox anim">
+                                        <span class="icon-check opacity-0 text-[18px] text-white"></span>
+                                    </div>
+                                    <label for="check" class="ml-2 block text-12 md:text-14 xl:text-16">Disburse salaries to employee accounts.</label>
+                                </div>
+                                <div class="w-full relative flex items-center py-1.5 xl:py-2.5 px-2.5 lg:px-3 xl:px-4 rounded-[10px]">
+                                    <input id="check" type="checkbox" class="absolute inset-0 w-full h-full opacity-0 z-10"/>
+                                    <div class="checkbox anim">
+                                        <span class="icon-check opacity-0 text-[18px] text-white"></span>
+                                    </div>
+                                    <label for="check" class="ml-2 block text-12 md:text-14 xl:text-16">Share pay slips with employees. </label>
+                                </div>
+                                <div class="w-full relative flex items-center py-1.5 xl:py-2.5 px-2.5 lg:px-3 xl:px-4 rounded-[10px]">
+                                    <input id="check" type="checkbox" class="absolute inset-0 w-full h-full opacity-0 z-10"/>
+                                    <div class="checkbox anim">
+                                        <span class="icon-check opacity-0 text-[18px] text-white"></span>
+                                    </div>
+                                    <label for="check" class="ml-2 block text-12 md:text-14 xl:text-16">Schedule training sessions and inform employees.</label>
+                                </div>
+                                <div class="w-full relative flex items-center py-1.5 xl:py-2.5 px-2.5 lg:px-3 xl:px-4 rounded-[10px]">
+                                    <input id="check" type="checkbox" class="absolute inset-0 w-full h-full opacity-0 z-10"/>
+                                    <div class="checkbox anim">
+                                        <span class="icon-check opacity-0 text-[18px] text-white"></span>
+                                    </div>
+                                    <label for="check" class="ml-2 block text-12 md:text-14 xl:text-16">Prepare the employee welcome kit</label>
+                                </div>
+                                <div class="w-full relative flex items-center py-1.5 xl:py-2.5 px-2.5 lg:px-3 xl:px-4 rounded-[10px]">
+                                    <input id="check" type="checkbox" class="absolute inset-0 w-full h-full opacity-0 z-10"/>
+                                    <div class="checkbox anim">
+                                        <span class="icon-check opacity-0 text-[18px] text-white"></span>
+                                    </div>
+                                    <label for="check" class="ml-2 block text-12 md:text-14 xl:text-16">Review incoming resumes for open positions.</label>
+                                </div>
+                                <div class="w-full relative flex items-center py-1.5 xl:py-2.5 px-2.5 lg:px-3 xl:px-4 rounded-[10px]">
+                                    <input id="check" type="checkbox" class="absolute inset-0 w-full h-full opacity-0 z-10"/>
+                                    <div class="checkbox anim">
+                                        <span class="icon-check opacity-0 text-[18px] text-white"></span>
+                                    </div>
+                                    <label for="check" class="ml-2 block text-12 md:text-14 xl:text-16">Schedule a team introduction meeting.</label>
+                                </div>
+                                <div class="w-full relative flex items-center py-1.5 xl:py-2.5 px-2.5 lg:px-3 xl:px-4 rounded-[10px]">
+                                    <input id="check" type="checkbox" class="absolute inset-0 w-full h-full opacity-0 z-10"/>
+                                    <div class="checkbox anim">
+                                        <span class="icon-check opacity-0 text-[18px] text-white"></span>
+                                    </div>
+                                    <label for="check" class="ml-2 block text-12 md:text-14 xl:text-16">Review employee leave requests for approval/rejection.</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full xl:w-1/2 p-1.5 lg:p-2 2xl:p-3 h-auto">
+                        <div class="bg-white rounded-lg md:rounded-xl lg:rounded-2xl 2xl:rounded-[20px] p-3 lg:p-4 xl:p-5 h-full">
+                            <h4>Upcoming Interviews</h4>
+                            <div class="mt-2 md:mt-3 space-y-3 lg:space-y-4 xl:space-y-5">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-2.5">
+                                        <div class="w-8 h-8 rounded-full flex items-center justify-center">
+                                            <span class="icon-user text-[18px] lg:text-[20px] 2xl:text-[24px] text-primary"></span>
+                                        </div>
+                                        <div>
+                                            <span class="block text16 text-black font-medium">Arnav Oliver</span>
+                                            <span class="block text16 text-g1 font-medium">Software development</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-2.5 xl:space-x-4">
+                                        <div class="flex items-center space-x-2">
+                                            <span class="icon-clock text-[16px] lg:text-[18px] 2xl:text-[20px] text-primary"></span>
+                                            <span class="inline-block text-black text-14 font-normal">08-01-2025</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="icon-clock text-[16px] lg:text-[18px] 2xl:text-[20px] text-primary"></span>
+                                            <span class="inline-block text-black text-14 font-normal">03:00 - 04:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-2.5">
+                                        <div class="w-8 h-8 rounded-full flex items-center justify-center">
+                                            <span class="icon-user text-[18px] lg:text-[20px] 2xl:text-[24px] text-primary"></span>
+                                        </div>
+                                        <div>
+                                            <span class="block text16 text-black font-medium">Arnav Oliver</span>
+                                            <span class="block text16 text-g1 font-medium">Software development</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-2.5 xl:space-x-4">
+                                        <div class="flex items-center space-x-2">
+                                            <span class="icon-clock text-[16px] lg:text-[18px] 2xl:text-[20px] text-primary"></span>
+                                            <span class="inline-block text-black text-14 font-normal">08-01-2025</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="icon-clock text-[16px] lg:text-[18px] 2xl:text-[20px] text-primary"></span>
+                                            <span class="inline-block text-black text-14 font-normal">03:00 - 04:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-2.5">
+                                        <div class="w-8 h-8 rounded-full flex items-center justify-center">
+                                            <span class="icon-user text-[18px] lg:text-[20px] 2xl:text-[24px] text-primary"></span>
+                                        </div>
+                                        <div>
+                                            <span class="block text16 text-black font-medium">Arnav Oliver</span>
+                                            <span class="block text16 text-g1 font-medium">Software development</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-2.5 xl:space-x-4">
+                                        <div class="flex items-center space-x-2">
+                                            <span class="icon-clock text-[16px] lg:text-[18px] 2xl:text-[20px] text-primary"></span>
+                                            <span class="inline-block text-black text-14 font-normal">08-01-2025</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="icon-clock text-[16px] lg:text-[18px] 2xl:text-[20px] text-primary"></span>
+                                            <span class="inline-block text-black text-14 font-normal">03:00 - 04:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-2.5">
+                                        <div class="w-8 h-8 rounded-full flex items-center justify-center">
+                                            <span class="icon-user text-[18px] lg:text-[20px] 2xl:text-[24px] text-primary"></span>
+                                        </div>
+                                        <div>
+                                            <span class="block text16 text-black font-medium">Arnav Oliver</span>
+                                            <span class="block text16 text-g1 font-medium">Software development</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-2.5 xl:space-x-4">
+                                        <div class="flex items-center space-x-2">
+                                            <span class="icon-clock text-[16px] lg:text-[18px] 2xl:text-[20px] text-primary"></span>
+                                            <span class="inline-block text-black text-14 font-normal">08-01-2025</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="icon-clock text-[16px] lg:text-[18px] 2xl:text-[20px] text-primary"></span>
+                                            <span class="inline-block text-black text-14 font-normal">03:00 - 04:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-2.5">
+                                        <div class="w-8 h-8 rounded-full flex items-center justify-center">
+                                            <span class="icon-user text-[18px] lg:text-[20px] 2xl:text-[24px] text-primary"></span>
+                                        </div>
+                                        <div>
+                                            <span class="block text16 text-black font-medium">Arnav Oliver</span>
+                                            <span class="block text16 text-g1 font-medium">Software development</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-2.5 xl:space-x-4">
+                                        <div class="flex items-center space-x-2">
+                                            <span class="icon-clock text-[16px] lg:text-[18px] 2xl:text-[20px] text-primary"></span>
+                                            <span class="inline-block text-black text-14 font-normal">08-01-2025</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="icon-clock text-[16px] lg:text-[18px] 2xl:text-[20px] text-primary"></span>
+                                            <span class="inline-block text-black text-14 font-normal">03:00 - 04:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full xl:w-5/12 p-1.5 lg:p-2 2xl:p-3 h-auto">
+                        <div class="bg-white rounded-lg md:rounded-xl lg:rounded-2xl 2xl:rounded-[20px] p-3 lg:p-4 xl:p-5 h-full">
+                            <h4>Updates</h4>
+                            <div class="space-y-2.5 lg:space-y-3.5 xl:space-y-5 mt-2.5 lg:mt-4 2xl:mt-6">
+                                <div class="flex items-center space-x-2.5 lg:space-x-4">
+                                    <div>
+                                        <div class="w-7 lg:w-9 xl:w-11 h-7 lg:h-9 xl:h-11 bg-l1 rounded-full flex items-center justify-center">
+                                            <span class="icon-archive text-[16px] lg:text-[18px] 2xl:text-[22px] text-primary"></span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="text18 font-semibold text-black">Mark Robinson updated his emergency contact information.(New contact: 9876543210)</h6>
+                                        <p class="text16 text-s1 font-normal">10:00 AM</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-2.5 lg:space-x-4">
+                                    <div>
+                                        <div class="w-7 lg:w-9 xl:w-11 h-7 lg:h-9 xl:h-11 bg-l1 rounded-full flex items-center justify-center">
+                                            <span class="icon-archive text-[16px] lg:text-[18px] 2xl:text-[22px] text-primary"></span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="text18 font-semibold text-black">Emily Davis was promoted to Senior Designer in the Design Department</h6>
+                                        <p class="text16 text-s1 font-normal">10:00 AM</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-2.5 lg:space-x-4">
+                                    <div>
+                                        <div class="w-7 lg:w-9 xl:w-11 h-7 lg:h-9 xl:h-11 bg-l1 rounded-full flex items-center justify-center">
+                                            <span class="icon-archive text-[16px] lg:text-[18px] 2xl:text-[22px] text-primary"></span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="text18 font-semibold text-black">Team Marketing submitted performance review forms for Q4.</h6>
+                                        <p class="text16 text-s1 font-normal">10:00 AM</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-2.5 lg:space-x-4">
+                                    <div>
+                                        <div class="w-7 lg:w-9 xl:w-11 h-7 lg:h-9 xl:h-11 bg-l1 rounded-full flex items-center justify-center">
+                                            <span class="icon-archive text-[16px] lg:text-[18px] 2xl:text-[22px] text-primary"></span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="text18 font-semibold text-black">John Carter uploaded documents for project completion.</h6>
+                                        <p class="text16 text-s1 font-normal">10:00 AM</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-2.5 lg:space-x-4">
+                                    <div>
+                                        <div class="w-7 lg:w-9 xl:w-11 h-7 lg:h-9 xl:h-11 bg-l1 rounded-full flex items-center justify-center">
+                                            <span class="icon-archive text-[16px] lg:text-[18px] 2xl:text-[22px] text-primary"></span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="text18 font-semibold text-black">David Lee submitted a request for role change.</h6>
+                                        <p class="text16 text-s1 font-normal">10:00 AM</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-2.5 lg:space-x-4">
+                                    <div>
+                                        <div class="w-7 lg:w-9 xl:w-11 h-7 lg:h-9 xl:h-11 bg-l1 rounded-full flex items-center justify-center">
+                                            <span class="icon-archive text-[16px] lg:text-[18px] 2xl:text-[22px] text-primary"></span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="text18 font-semibold text-black">Jane Smith applied for sick leave for 2 days</h6>
+                                        <p class="text16 text-s1 font-normal">10:00 AM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full xl:w-7/12 p-1.5 lg:p-2 2xl:p-3 h-auto">
+                        <div class="bg-white rounded-lg md:rounded-xl lg:rounded-2xl 2xl:rounded-[20px] p-3 lg:p-4 xl:p-5 h-full">
+                            <div class="pb-3 lg:pb-4 2xl:pb-5 border-b border-[#E5E5EF]">
+                                <h4>Employees By Department</h4>
+                            </div>
+                            <div class="space-y-3 lg:space-y-5 2xl:space-y-7 mt-2.5">
+                                <div class="space-y-1 md:space-y-1.5">
+                                    <div class="flex items-center justify-between">
+                                        <span class="inline-block text-s1 text-12 md:text-14 font-normal">Graphic & UI UX Design</span>
+                                        <span class="inline-block text-primary text-14 font-normal">8</span>
+                                    </div>
+                                    <div class="relative bg-l1 w-full h-2 lg:h-3 xl:h-4 rounded-full overflow-hidden">
+                                        <div class="absolute top-1/2 -translate-y-1/2 inset-y-0 bg-primary w-[30%] h-2 lg:h-3 xl:h-4 rounded-full"></div>
+                                    </div> 
+                                </div>
+                                <div class="space-y-1 md:space-y-1.5">
+                                    <div class="flex items-center justify-between">
+                                        <span class="inline-block text-s1 text-12 md:text-14 font-normal">Web Design & Development</span>
+                                        <span class="inline-block text-primary text-14 font-normal">10</span>
+                                    </div>
+                                    <div class="relative bg-l1 w-full h-2 lg:h-3 xl:h-4 rounded-full overflow-hidden">
+                                        <div class="absolute top-1/2 -translate-y-1/2 inset-y-0 bg-primary w-[40%] h-2 lg:h-3 xl:h-4 rounded-full"></div>
+                                    </div> 
+                                </div>
+                                <div class="space-y-1 md:space-y-1.5">
+                                    <div class="flex items-center justify-between">
+                                        <span class="inline-block text-s1 text-12 md:text-14 font-normal">Mobile App Development</span>
+                                        <span class="inline-block text-primary text-14 font-normal">5</span>
+                                    </div>
+                                    <div class="relative bg-l1 w-full h-2 lg:h-3 xl:h-4 rounded-full overflow-hidden">
+                                        <div class="absolute top-1/2 -translate-y-1/2 inset-y-0 bg-primary w-[20%] h-2 lg:h-3 xl:h-4 rounded-full"></div>
+                                    </div> 
+                                </div>
+                                <div class="space-y-1 md:space-y-1.5">
+                                    <div class="flex items-center justify-between">
+                                        <span class="inline-block text-s1 text-12 md:text-14 font-normal">HR</span>
+                                        <span class="inline-block text-primary text-14 font-normal">2</span>
+                                    </div>
+                                    <div class="relative bg-l1 w-full h-2 lg:h-3 xl:h-4 rounded-full overflow-hidden">
+                                        <div class="absolute top-1/2 -translate-y-1/2 inset-y-0 bg-primary w-[8%] h-2 lg:h-3 xl:h-4 rounded-full"></div>
+                                    </div> 
+                                </div>
+                                <div class="space-y-1 md:space-y-1.5">
+                                    <div class="flex items-center justify-between">
+                                        <span class="inline-block text-s1 text-12 md:text-14 font-normal">Account</span>
+                                        <span class="inline-block text-primary text-14 font-normal">2</span>
+                                    </div>
+                                    <div class="relative bg-l1 w-full h-2 lg:h-3 xl:h-4 rounded-full overflow-hidden">
+                                        <div class="absolute top-1/2 -translate-y-1/2 inset-y-0 bg-primary w-[10%] h-2 lg:h-3 xl:h-4 rounded-full"></div>
+                                    </div> 
+                                </div>
+                                <div class="space-y-1 md:space-y-1.5">
+                                    <div class="flex items-center justify-between">
+                                        <span class="inline-block text-s1 text-12 md:text-14 font-normal">Marketing</span>
+                                        <span class="inline-block text-primary text-14 font-normal">5</span>
+                                    </div>
+                                    <div class="relative bg-l1 w-full h-2 lg:h-3 xl:h-4 rounded-full overflow-hidden">
+                                        <div class="absolute top-1/2 -translate-y-1/2 inset-y-0 bg-primary w-[20%] h-2 lg:h-3 xl:h-4 rounded-full"></div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-4/12 p-2 xl:p-3">
+                        <div class="bg-white rounded-lg lg:rounded-2xl xl:rounded-[20px] p-5">
+                            <h4 class="text-18 lg:text-20 xl:text-24 font-bold text-black mb-3 lg:mb-5 2xl:mb-7">Employees Availability</h4>
+                            <div class="flex flex-wrap -mx-1.5 xl:-mx-2">
+                                <div class="w-full xs:w-1/2 p-1.5 xl:p-2">
+                                    <div class="border border-g4 rounded-[10px] py-2.5 lg:py-3.5 2xl:py-5 px-3 lg:px-4 2xl:px-6 text-center">
+                                        <span class="icon-attendance text-[20px] 2xl:text-[24px] text-primary text-center block mb-1.5 lg:mb-2.5"></span>
+                                        <span class="block text16 font-normal text-s1 text-center mb-1">Total Employees</span>
+                                        <h4>45</h4>
+                                    </div>
+                                </div>
+                                <div class="w-full xs:w-1/2 p-1.5 xl:p-2">
+                                    <div class="border border-g4 rounded-[10px] py-2.5 lg:py-3.5 2xl:py-5 px-3 lg:px-4 2xl:px-6 text-center">
+                                        <span class="icon-time_clock text-[20px] 2xl:text-[24px] text-primary text-center block mb-1.5 lg:mb-2.5"></span>
+                                        <span class="block text16 font-normal text-s1 text-center mb-1">Payroll Processedng</span>
+                                        <h4>10</h4>
+                                    </div>
+                                </div>
+                                <div class="w-full xs:w-1/2 p-1.5 xl:p-2">
+                                    <div class="border border-g4 rounded-[10px] py-2.5 lg:py-3.5 2xl:py-5 px-3 lg:px-4 2xl:px-6 text-center">
+                                        <span class="icon-absent text-[20px] 2xl:text-[24px] text-primary text-center block mb-1.5 lg:mb-2.5"></span>
+                                        <span class="block text16 font-normal text-s1 text-center mb-1">Pending Payments</span>
+                                        <h4>35</h4>
+                                    </div>
+                                </div>
+                                <div class="w-full xs:w-1/2 p-1.5 xl:p-2">
+                                    <div class="border border-g4 rounded-[10px] py-2.5 lg:py-3.5 2xl:py-5 px-3 lg:px-4 2xl:px-6 text-center">
+                                        <span class="icon-leave text-[20px] 2xl:text-[24px] text-primary text-center block mb-1.5 lg:mb-2.5"></span>
+                                        <span class="block text16 font-normal text-s1 text-center mb-1">Next Payroll Date</span>
+                                        <h4>Jan, 15 2025</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="assets/js/script.js"></script>
+</html>

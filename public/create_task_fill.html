@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Project Fill</title>
+    <title>Create Task Fill</title>
     <link rel="stylesheet" href="assets/css/icomoon.css"/>
     <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
@@ -71,11 +71,18 @@
                         </label>
                         <input type="search" id="search" class="w-full outline-none text-g6 bg-transparent text-dark pl-2.5" placeholder="Search"/>
                     </div>
-                    <div class="flex items-center space-x-5 ml-auto">
-                        <span class="icon-noti text-[20px] 2xl:text-[24px] text-black cursor-pointer"></span>
-                        <div class="w-8 xl:w-10 h-8 xl:h-10 rounded-full cursor-pointer overflow-hidden">
-                            <img src="assets/images/profile.png" alt="profile"/>
+                    <div class="flex items-center space-x-3.5 md:space-x-5 xl:space-x-7 ml-auto">
+                        <button class="btn_primary anim flex items-center justify-center space-x-2 py-1.5 lg:py-2 xl:py-2.5">
+                            <span class="icon-time_clock font-bold text-[16px]"></span>
+                            <span class="inline-block text-14 font-bold">Time Tracker</span>
+                        </button>
+                        <div class="flex items-center space-x-3 xl:space-x-5">
+                            <span class="icon-noti text-[20px] 2xl:text-[24px] text-black cursor-pointer"></span>
+                            <div class="w-8 xl:w-10 h-8 xl:h-10 rounded-full cursor-pointer overflow-hidden">
+                                <img src="assets/images/profile.png" alt="profile"/>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
             </header>
@@ -83,32 +90,32 @@
                 <div class="bg-white py-3 lg:py-4 2xl:py-6 px-5 lg:px-7 2xl:px-9 rounded-lg lg:rounded-xl 2xl:rounded-2xl space-y-2.5 lg:space-y-4">
                     <div class="flex items-center flex-wrap justify-between -mx-1 md:-mx-2">
                         <div class="order-1 p-1 md:p-2">
-                            <h4>Create Project</h4>
+                            <h4>Create Task</h4>
                         </div>
                         <div class="order-4 sm:order-5 p-1 md:p-2">
                             <button class="btn_primary anim">Save</button>
                         </div>
                     </div>
-                    <div class="flex flex-wrap items-start -mx-2.5 xl:-mx-3.5">
+                    <div class="flex flex-wrap items-center -mx-2.5 xl:-mx-3.5">
                         <div class="w-full xs:w-1/2 md:w-1/3 p-2.5 xl:p-3.5">
-                            <label class="label">Project Name <span class="text-red">*</span></label>
-                            <input type="text" class="input" placeholder="Enter Project Name"/>
+                            <label class="label">Task Name <span class="text-red">*</span></label>
+                            <input type="text" class="input" placeholder="Enter Task Name"/>
+                        </div>
+                        <div class="w-full xs:w-1/2 md:w-1/3 p-2.5 xl:p-3.5">
+                            <label class="label">Project Name  <span class="text-red">*</span></label>
+                            <input type="text" class="input" placeholder="Select Project"/>
+                        </div>
+                        <div class="w-full xs:w-1/2 md:w-1/3 p-2.5 xl:p-3.5">
+                            <label class="label">Status</label>
+                            <input type="text" class="input" placeholder="Select "/>
                         </div>
                         <div class="w-full xs:w-1/2 md:w-1/3 p-2.5 xl:p-3.5">
                             <label class="label">Start Date  <span class="text-red">*</span></label>
-                            <input type="text" class="input" placeholder="Select"/>
+                            <input type="text" class="input" placeholder="Select "/>
                         </div>
                         <div class="w-full xs:w-1/2 md:w-1/3 p-2.5 xl:p-3.5">
-                            <label class="label">Due Date <span class="text-red">*</span></label>
-                            <input type="text" class="input" placeholder="Select"/>
-                        </div>
-                        <div class="w-full xs:w-1/2 md:w-1/3 p-2.5 xl:p-3.5">
-                            <label class="label">Priority  <span class="text-red">*</span></label>
-                            <input type="text" class="input" placeholder="Select Priority"/>
-                        </div>
-                        <div class="w-full xs:w-1/2 md:w-1/3 p-2.5 xl:p-3.5">
-                            <label class="label">Status <span class="text-red">*</span></label>
-                            <input type="text" class="input" placeholder="Select Status"/>
+                            <label class="label">Due Date  <span class="text-red">*</span></label>
+                            <input type="text" class="input" placeholder="Select "/>
                         </div>
                         <div class="w-full xs:w-1/2 md:w-1/3 p-2.5 xl:p-3.5">
                             <label class="label">Assignee  <span class="text-red">*</span></label>
@@ -118,20 +125,9 @@
                             <label class="label">Upload Documents</label>
                             <div class="w-full h-20 xl:h-[102px] bg-white relative border border-dashed border-primary rounded-lg lg:rounded-xl 2xl:rounded-2xl flex items-center justify-center">
                                 <input type="file" class="absolute opacity-0 z-10 w-full h-full inset-0"/>
-                                <div class="py-2 px-4 text-center flex items-center justify-center flex-col">
-                                    <div class="w-6 h-6 bg-primary rounded">
-                                        <span class="text-[12px] md:text-[24px] font-medium text-white icon-upload"></span>
-                                    </div>
+                                <div class="py-2 px-4 text-center">
+                                    <span class="text-22 2xl:text-28 font-medium text-gray_1 icon-upload"></span>
                                     <span class="text-12 md:text-14 2xl:text-16 font-medium text-gray_1 block">Drag & Drop or <span class="text-primary">choose file</span> to upload</span>
-                                </div>
-                            </div>
-                            <div class="bg-l1 rounded-lg lg:rounded-xl py-3 px-6 mt-2 xl:mt-3">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center space-x-4">
-                                        <img src="assets/images/file.png" alt="file"/>
-                                        <span class="inline-block text16 text-[#0C0F35]">Daily Update 2024.pdf</span>
-                                    </div>
-                                    <span class="icon-trash1 text-[18px] lg:text-[20px] xl:text-[24px] text-[#DC2626] cursor-pointer"></span>
                                 </div>
                             </div>
                         </div>
@@ -142,7 +138,7 @@
                     </div>
                     <div class="pt-2.5 md:pt-3 lg:pt-4 2xl:pt-5 border-t border-[#D2D2D2]">
                         <div class="flex items-center justify-between">
-                            <h4>Add Task</h4>
+                            <h4>Add Subtask</h4>
                             <button class="btn_secondary anim flex items-center justify-center space-x-1.5">
                                 <span class="icon-add text-[18px] lg:text-[20px] 2xl:text-[24px]"></span>
                                 <span class="hidden sm:inline-block">Add</span>
@@ -290,5 +286,4 @@
         </div>
     </div>
 </body>
-<script src="assets/js/script.js"></script>
 </html>

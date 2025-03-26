@@ -3,8 +3,9 @@
 @tailwind base;
 *{@apply font-nunito;}
 .anim{@apply transition-all duration-300;}
-body{@apply bg-g2;}
-h4{@apply text-18 lg:text-20 2xl:text-24 font-bold text-black;}
+body{@apply bg-l1;}
+h3{@apply text-22 lg:text-28 2xl:text-34 font-extrabold text-b1;}
+h4{@apply text-18 lg:text-20 2xl:text-24 font-extrabold text-black;}
 .text16{@apply text-14 xl:text-16;}
 .text18{@apply text-14 lg:text-16 2xl:text-18;}
 .text24{@apply text-16 md:text-18 lg:text-20 2xl:text-24;}
@@ -12,6 +13,14 @@ h4{@apply text-18 lg:text-20 2xl:text-24 font-bold text-black;}
 .label{@apply text16 text-b1 font-medium block mb-1.5;}
 .btn_primary{@apply bg-primary py-1.5 lg:py-2 2xl:py-2.5 px-3.5 lg:px-5 2xl:px-7 rounded-[10px] text-14 xl:text-16 font-extrabold text-white border border-primary cursor-pointer inline-block hover:text-primary hover:bg-transparent hover:border-primary;}
 .btn_secondary{@apply bg-l1 py-1.5 lg:py-2 2xl:py-2.5 px-3.5 lg:px-5 2xl:px-7 rounded-[10px] text-14 xl:text-16 font-extrabold text-primary border border-l1 cursor-pointer inline-block hover:text-primary hover:bg-transparent hover:border-primary;}
+.checkbox{@apply w-5 h-5 rounded border border-g1 flex items-center justify-center;}
+input:checked + .checkbox{@apply border-primary bg-primary;}
+input:checked + .checkbox span{@apply opacity-100;}
+
+.radio{@apply w-5 h-5 rounded-full border-4 border-g1 flex items-center justify-center;}
+input:checked + .radio{@apply border-primary;}
+input:checked + .radio span{@apply opacity-100;}
+
 
 /* table css start  */
 table tr th{@apply text-14 text-left text-g6 font-normal py-2 xl:py-3 px-4 xl:px-6 whitespace-nowrap;}

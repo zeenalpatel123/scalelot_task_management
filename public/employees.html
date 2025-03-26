@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Projects List View</title>
+    <title>Employees</title>
     <link rel="stylesheet" href="assets/css/icomoon.css"/>
     <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
@@ -14,14 +14,14 @@
                 <span class="icon-close text-[20px] text-white"></span>
             </div>
         </div> -->
-        <aside id="open" class="w-72 2xl:w-[274px] fixed h-screen inset-y-0 left-0 bg-white overflow-x-hidden overflow-y-auto -translate-x-full lg:translate-x-0 anim z-50">
+        <div id="open" class="w-72 2xl:w-[312px] fixed h-screen inset-y-0 left-0 bg-white overflow-x-hidden overflow-y-auto -translate-x-full lg:translate-x-0 anim z-50">
             <div class="py-5 lg:py-6 2xl:py-8 px-4 2xl:px-6">
                 <a href="">
                     <img src="assets/images/logo.png" class="mx-auto" alt="logo"/>
                 </a>
             </div>
            
-            <ul class="px-3 lg:px-4 2xl:px-5 py-2.5 lg:py-4 2xl:py-6 space-y-2.5 lg:space-y-4 2xl:space-y-6">
+            <ul class="px-4 xl:px-5 2xl:px-7 py-2.5 lg:py-4 2xl:py-6 space-y-2.5 lg:space-y-4 2xl:space-y-6">
                 <li class="group">
                     <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
                         <span class="icon-dashboard text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
@@ -59,9 +59,9 @@
                     </div>
                 </li>
             </ul>
-        </aside>
+        </div>
         <div id="cover" class="fixed w-full h-screen backdrop-blur-sm bg-black/30 xl:w-0 z-20 origin-left xl:hidden -translate-x-full"></div>
-        <div class="w-full lg:w-[calc(100%-292px)] 2xl:w-[calc(100%-278px)] ml-auto">
+        <div class="w-full lg:w-[calc(100%-292px)] 2xl:w-[calc(100%-316px)] ml-auto">
             <header class="py-2 2xl:py-2.5 px-3.5 2xl:px-5 bg-white rounded-bl-xl lg:rounded-b-2xl xl:rounded-bl-[20px] rounded-br-xl lg:rounded-br-2xl xl:rounded-br-[20px] z-50">
                 <div class="flex items-center">
                     <span class="icon-menu text-[18px] md:text-[20px] lg:text-[24px] text-black lg:hidden pr-5 cursor-pointer" onclick="toggleActive('#open','-translate-x-full'); toggleActive('#cover','-translate-x-full');"></span>
@@ -72,7 +72,7 @@
                         <input type="search" id="search" class="w-full outline-none text-g6 bg-transparent text-dark pl-2.5" placeholder="Search"/>
                     </div>
                     <div class="flex items-center space-x-3.5 md:space-x-5 xl:space-x-7 ml-auto">
-                        <button class="btn_primary anim flex items-center justify-center space-x-2 py-1.5 xl:py-2">
+                        <button class="btn_primary anim flex items-center justify-center space-x-2 py-1.5 lg:py-2 xl:py-2.5">
                             <span class="icon-time_clock font-bold text-[16px]"></span>
                             <span class="inline-block text-14 font-bold">Time Tracker</span>
                         </button>
@@ -86,12 +86,12 @@
                     </div>
                 </div>
             </header>
-            <div class="py-2 lg:py-3 2xl:py-4 px-4 2xl:px-6 space-y-2.5 lg:space-y-3 2xl:space-y-4 h-[calc(100vh-68px)] overflow-y-auto">
+            <div class="py-2 lg:py-3 2xl:py-4 px-4 2xl:px-6 space-y-1.5 xl:space-y-2 h-[calc(100vh-68px)] overflow-y-auto">
                 <div class="flex items-center flex-wrap -mx-1 md:-mx-2">
                     <div class="order-1 p-1 md:p-2">
-                        <h4>All Projects</h4>
+                        <h4>Employees</h4>
                     </div>
-                    <div class="order-5 sm:order-2 p-1 md:p-2 w-full sm:max-w-64 xl:max-w-[434px] sm:ml-auto">
+                    <div class="order-4 sm:order-2 p-1 md:p-2 w-full sm:max-w-64 xl:max-w-xs sm:ml-auto">
                         <div class="w-full max-w-[434px] flex items-center bg-white rounded-lg px-2 md:px-3 xl:px-5 py-2 xl:py-3">
                             <label for="search">
                                 <span class="icon-search text-g6 block text-[18px] xl:text-[20px] cursor-pointer"></span>
@@ -105,186 +105,142 @@
                                 <span class="icon-filter text-[14px] 2xl:text-[16px] text-b1"></span>
                                 <span class="hidden sm:inline-block text-b1 text-14 font-normal">Filter</span>
                             </div>
-                            <div class="w-full min-w-72 xs:min-w-96 md:min-w-[400px] 2xl:min-w-[560px] absolute top-full -right-[103px] sm:right-0 z-20 mt-2.5 bg-white rounded-lg lg:rounded-xl xl:rounded-2xl p-3 md:p-4 2xl:p-6 invisible -translate-y-8 group-hover:-translate-y-0 group-hover:visible anim">
+                            <div class="w-full min-w-72 xs:min-w-96 md:min-w-[400px] 2xl:min-w-[560px] absolute top-full right-0 z-20 mt-2.5 bg-white rounded-lg lg:rounded-xl xl:rounded-2xl p-3 md:p-4 2xl:p-6 invisible -translate-y-8 group-hover:-translate-y-0 group-hover:visible anim">
                                 <h4>Filter</h4>
                                 <div class="flex flex-wrap -mx-1.5 2xl:-mx-2 mt-2.5 lg:mt-4 xl:mt-6">
                                     <div class="w-full sm:w-1/2 p-1.5 2xl:p-2">
-                                        <label class="label">Project Status</label>
+                                        <label class="label">Employee Status</label>
                                         <input type="text" class="input" placeholder="Select Status"/>
                                     </div>
                                     <div class="w-full sm:w-1/2 p-1.5 2xl:p-2">
-                                        <label class="label">Created By</label>
-                                        <input type="text" class="input" placeholder="Select Status"/>
+                                        <label class="label">Department</label>
+                                        <input type="text" class="input" placeholder="Select Department"/>
                                     </div>
                                     <div class="w-full sm:w-1/2 p-1.5 2xl:p-2">
-                                        <label class="label">Date</label>
+                                        <label class="label">Role/Designation</label>
+                                        <input type="text" class="input" placeholder="Select User"/>
+                                    </div>
+                                    <div class="w-full sm:w-1/2 p-1.5 2xl:p-2">
+                                        <label class="label">Employee ID or Name</label>
+                                        <input type="text" class="input" placeholder="Enter text here"/>
+                                    </div>
+                                    <div class="w-full sm:w-1/2 p-1.5 2xl:p-2">
+                                        <label class="label">Date of Joining</label>
                                         <input type="text" class="input" placeholder="Select Date"/>
                                     </div>
                                     <div class="w-full sm:w-1/2 p-1.5 2xl:p-2">
-                                        <label class="label">Priority</label>
-                                        <input type="text" class="input" placeholder="Select Status"/>
+                                        <label class="label">Mobile Number</label>
+                                        <input type="text" class="input" placeholder="Enter text here"/>
                                     </div>
                                 </div>
-                                <div class="flex items-center justify-end space-x-2.5 lg:space-x-4 xl:space-x-6  mt-2.5 lg:mt-3 xl:mt-4">
+                                <div class="flex items-center justify-start space-x-2.5 lg:space-x-4 xl:space-x-6 mt-2.5 lg:mt-3 xl:mt-4">
                                     <button class="btn_secondary">Reset</button>
                                     <button class="btn_primary">Apply Filter</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="order-3 sm:order-4 p-1 md:p-2 ">
-                        <div class="bg-white rounded-[10px] flex items-center py-[7px] px-1">
-                            <div class="flex items-center py-1.5 px-3 2xl:px-5 cursor-pointer pr-2.5 2xl:pr-4 border-r border-[#D2D2D2]">
-                                <span class="icon-grid text-[14px] lg:text-[16px] 2xl:text-[22px] text-black"></span>
-                            </div>
-                            <div class="flex items-center bg-white rounded-[10px] py-1.5 px-3 2xl:px-5 cursor-pointer">
-                                <span class="icon-grid text-[14px] lg:text-[16px] 2xl:text-[22px] text-black"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-4 sm:order-5 p-1 md:p-2">
+                    <div class="order-3 sm:order-4 p-1 md:p-2">
                         <button class="btn_primary anim flex items-center justify-center space-x-1.5">
                             <span class="icon-add text-[18px] lg:text-[20px] 2xl:text-[24px]"></span>
-                            <span class="hidden sm:inline-block">Create Project</span>
+                            <span class="hidden sm:inline-block">Add Employee</span>
                         </button>
                     </div>
                 </div>
-                <div class="w-full relative bg-white rounded-lg lg:rounded-xl 2xl:rounded-2xl overflow-hidden">
+                <div class="w-full relative bg-white rounded-lg lg:rounded-xl xl:rounded-2xl overflow-hidden">
                     <div class="w-full relative overflow-hidden">
                         <div class="overflow-x-auto relative">
                             <table class="w-full common_tabel">
                                 <thead>
                                     <tr class="border-b border-slate_2">
-                                        <th> Project Name</th>
-                                        <th>Total Task</th>
-                                        <th>Assignee</th>
-                                        <th>Start Date </th>
-                                        <th>Deadline Date</th>
-                                        <th>Priority </th>
-                                        <th> Status</th>
-                                        <th> Time Tracked</th>
-                                        <th> Action </th>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Role</th>
+                                        <th>Department</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="border-b border-slate_2">
-                                        <td>Kratos Club</td>
-                                        <td> 10</td>
-                                        <td class="flex items-center space-x-1.5">
-                                            <div class="-space-x-3 flex">
+                                        <td>KA1001</td>
+                                        <td>
+                                            <div class="flex items-center space-x-2">
                                                 <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
                                                     <img src="assets/images/profile2.png" alt="profile2"/>
                                                 </span>
-                                                <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
-                                                    <img src="assets/images/profile2.png" alt="profile2"/>
-                                                </span>
-                                                <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
-                                                    <img src="assets/images/profile2.png" alt="profile2"/>
-                                                </span>
-                                                <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
-                                                    <img src="assets/images/profile2.png" alt="profile2"/>
-                                                </span>
+                                                <span class="inline-block">Uday Kyada</span>
                                             </div>
-                                            <span class="inline-block text-b1 font-semibold text-14">+2</span>
                                         </td>
-                                        <td> 01 Oct 2024</td>
-                                        <td>20 Oct 2024</td>
+                                        <td>
+                                            Junior UI-UX Designer
+                                        </td>
+                                        <td>
+                                            UI UX Design
+                                        </td>
+                                        <td>
+                                            <span class="text-green font-medium inline-block rounded-full bg-[#E8FDF9] px-4 py-1">Active</span>     
+                                        </td>
                                         <td> 
-                                            <span class="block text-yellow">Medium</span>
-                                        </td>
-                                        <td>
-                                            <div class="py-1 px-2 rounded-full bg-l1 w-max flex items-center space-x-1.5">
-                                                <span class="w-1.5 h-1.5 bg-g5 rounded-full inline-block"></span>
-                                                <span class="text-g5 font-medium">TODO</span>     
+                                            <div class="flex items-center space-x-3">
+                                                <span class="icon-eye text-[18px] xl:text-[20px] text-black"></span>
+                                                <span class="icon-eye text-[18px] xl:text-[20px] text-black"></span>
+                                                <span class="icon-eye text-[18px] xl:text-[20px] text-black"></span>
                                             </div>
-                                        </td>
-                                        <td>
-                                            <span class="block text-primary">20 h 30 m</span>
-                                        </td>
-                                        <td class="flex items-center space-x-3"> 
-                                            <span class="icon-eye text-[20px] text-b1 cursor-pointer"></span>   
-                                            <span class="icon-edit2 text-[20px] text-b1 cursor-pointer"></span>    
-                                            <span class="icon-trash3 text-[20px] text-b1 cursor-pointer"></span>    
                                         </td>
                                     </tr>
                                     <tr class="border-b border-slate_2">
-                                        <td>Kratos Club</td>
-                                        <td> 10</td>
-                                        <td class="flex items-center space-x-1.5">
-                                            <div class="-space-x-3 flex">
+                                        <td>KA1001</td>
+                                        <td>
+                                            <div class="flex items-center space-x-2">
                                                 <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
                                                     <img src="assets/images/profile2.png" alt="profile2"/>
                                                 </span>
-                                                <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
-                                                    <img src="assets/images/profile2.png" alt="profile2"/>
-                                                </span>
-                                                <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
-                                                    <img src="assets/images/profile2.png" alt="profile2"/>
-                                                </span>
-                                                <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
-                                                    <img src="assets/images/profile2.png" alt="profile2"/>
-                                                </span>
+                                                <span class="inline-block">Uday Kyada</span>
                                             </div>
-                                            <span class="inline-block text-b1 font-semibold text-14">+2</span>
                                         </td>
-                                        <td> 01 Oct 2024</td>
-                                        <td>20 Oct 2024</td>
+                                        <td>
+                                            Junior UI-UX Designer
+                                        </td>
+                                        <td>
+                                            UI UX Design
+                                        </td>
+                                        <td>
+                                            <span class="text-red font-medium inline-block rounded-full bg-[#FFF5F4] px-4 py-1">On Leave</span>     
+                                        </td>
                                         <td> 
-                                            <span class="block text-red">High</span>
-                                        </td>
-                                        <td>
-                                            <div class="py-1 px-2 rounded-full bg-l1 w-max flex items-center space-x-1.5">
-                                                <span class="w-1.5 h-1.5 bg-g5 rounded-full inline-block"></span>
-                                                <span class="text-g5 font-medium">TODO</span>     
+                                            <div class="flex items-center space-x-3">
+                                                <span class="icon-eye text-[18px] xl:text-[20px] text-black"></span>
+                                                <span class="icon-eye text-[18px] xl:text-[20px] text-black"></span>
+                                                <span class="icon-eye text-[18px] xl:text-[20px] text-black"></span>
                                             </div>
-                                        </td>
-                                        <td>
-                                            <span class="block text-primary">20 h 30 m</span>
-                                        </td>
-                                        <td class="flex items-center space-x-3"> 
-                                            <span class="icon-eye text-[20px] text-b1 cursor-pointer"></span>   
-                                            <span class="icon-edit2 text-[20px] text-b1 cursor-pointer"></span>    
-                                            <span class="icon-trash3 text-[20px] text-b1 cursor-pointer"></span>    
                                         </td>
                                     </tr>
                                     <tr class="border-b border-slate_2">
-                                        <td>Kratos Club</td>
-                                        <td> 10</td>
-                                        <td class="flex items-center space-x-1.5">
-                                            <div class="-space-x-3 flex">
+                                        <td>KA1001</td>
+                                        <td>
+                                            <div class="flex items-center space-x-2">
                                                 <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
                                                     <img src="assets/images/profile2.png" alt="profile2"/>
                                                 </span>
-                                                <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
-                                                    <img src="assets/images/profile2.png" alt="profile2"/>
-                                                </span>
-                                                <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
-                                                    <img src="assets/images/profile2.png" alt="profile2"/>
-                                                </span>
-                                                <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
-                                                    <img src="assets/images/profile2.png" alt="profile2"/>
-                                                </span>
+                                                <span class="inline-block">Uday Kyada</span>
                                             </div>
-                                            <span class="inline-block text-b1 font-semibold text-14">+2</span>
                                         </td>
-                                        <td> 01 Oct 2024</td>
-                                        <td>20 Oct 2024</td>
+                                        <td>
+                                            Junior UI-UX Designer
+                                        </td>
+                                        <td>
+                                            UI UX Design
+                                        </td>
+                                        <td>
+                                            <span class="text-green font-medium inline-block rounded-full bg-[#E8FDF9] px-4 py-1">Active</span>     
+                                        </td>
                                         <td> 
-                                            <span class="block text-green">Low</span>
-                                        </td>
-                                        <td>
-                                            <div class="py-1 px-2 rounded-full bg-l1 w-max flex items-center space-x-1.5">
-                                                <span class="w-1.5 h-1.5 bg-g5 rounded-full inline-block"></span>
-                                                <span class="text-g5 font-medium">TODO</span>     
+                                            <div class="flex items-center space-x-3">
+                                                <span class="icon-eye text-[18px] xl:text-[20px] text-black"></span>
+                                                <span class="icon-eye text-[18px] xl:text-[20px] text-black"></span>
+                                                <span class="icon-eye text-[18px] xl:text-[20px] text-black"></span>
                                             </div>
-                                        </td>
-                                        <td>
-                                            <span class="block text-primary">20 h 30 m</span>
-                                        </td>
-                                        <td class="flex items-center space-x-3"> 
-                                            <span class="icon-eye text-[20px] text-b1 cursor-pointer"></span>   
-                                            <span class="icon-edit2 text-[20px] text-b1 cursor-pointer"></span>    
-                                            <span class="icon-trash3 text-[20px] text-b1 cursor-pointer"></span>    
                                         </td>
                                     </tr>
                                 </tbody>
@@ -296,5 +252,4 @@
         </div>
     </div>
 </body>
-<script src="assets/js/script.js"></script>
 </html>
