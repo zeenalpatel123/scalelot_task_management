@@ -17,6 +17,15 @@ h4{@apply text-18 lg:text-20 2xl:text-24 font-extrabold text-black;}
 input:checked + .checkbox{@apply border-primary bg-primary;}
 input:checked + .checkbox span{@apply opacity-100;}
 
+.radio_sele{@apply w-full h-full rounded-[10px] border border-g1 flex items-center justify-center;}
+input:checked + .radio_sele{@apply border-primary;}
+
+.radio_sele2{@apply w-full h-full rounded-[10px] border border-g1 flex items-center justify-center;}
+input:checked + .radio_sele2{@apply border border-primary;}
+
+
+
+
 .radio{@apply w-5 h-5 rounded-full border-4 border-g1 flex items-center justify-center;}
 input:checked + .radio{@apply border-primary;}
 input:checked + .radio span{@apply opacity-100;}
