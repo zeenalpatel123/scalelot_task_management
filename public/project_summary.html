@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail / Project Summary</title>
+    <link rel="stylesheet" href="assets/css/icomoon.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+    <div class="flex justify-end">
+        <!-- <div class="block lg:hidden" onclick="toggleActive('#open','-translate-x-full'); toggleActive('#cover','-translate-x-full');">
+            <div class="absolute top-1/2 -translate-y-1/2 -right-5 w-10 h-10 left-[268px] z-[999] bg-primary rounded-full opacity-100 lg:opacity-0 flex items-center justify-center">
+                <span class="icon-close text-[20px] text-white"></span>
+            </div>
+        </div> -->
+        <div id="open" class="w-72 2xl:w-[312px] fixed h-screen inset-y-0 left-0 bg-white overflow-x-hidden overflow-y-auto -translate-x-full lg:translate-x-0 anim z-50">
+            <div class="py-5 lg:py-6 2xl:py-8 px-4 2xl:px-6">
+                <a href="">
+                    <img src="assets/images/logo.png" class="mx-auto" alt="logo"/>
+                </a>
+            </div>
+           
+            <ul class="px-4 xl:px-5 2xl:px-7 py-2.5 lg:py-4 2xl:py-6 space-y-2.5 lg:space-y-4 2xl:space-y-6">
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-dashboard text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Dashboard</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-notebook text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Projects</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-task text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Tasks</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-user text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">HR Department</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-role text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Roles & Permissions</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-setting text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Settings</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="cover" class="fixed w-full h-screen backdrop-blur-sm bg-black/30 xl:w-0 z-20 origin-left xl:hidden -translate-x-full"></div>
+        <div class="w-full lg:w-[calc(100%-292px)] 2xl:w-[calc(100%-316px)] ml-auto">
+            <header class="py-2 2xl:py-2.5 px-3.5 2xl:px-5 bg-white  z-50">
+                <div class="flex items-center">
+                    <span class="icon-menu text-[18px] md:text-[20px] lg:text-[24px] text-black xl:hidden pr-5 cursor-pointer" onclick="toggleActive('#open','-translate-x-full'); toggleActive('#cover','-translate-x-full');"></span>
+                    <div class="w-full max-w-80 2xl:max-w-[440px] hidden md:flex items-center bg-l1 rounded-lg px-2 md:px-3 xl:px-5 py-2 xl:py-3">
+                        <label for="search">
+                            <span class="icon-search text-g6 block text-[18px] xl:text-[20px] cursor-pointer"></span>
+                        </label>
+                        <input type="search" id="search" class="w-full outline-none text-g6 bg-transparent text-dark pl-2.5" placeholder="Search"/>
+                    </div>
+                    <div class="flex items-center space-x-3.5 md:space-x-5 xl:space-x-7 ml-auto">
+                        <button class="btn_primary anim flex items-center justify-center space-x-2 py-1.5 lg:py-2 xl:py-2.5">
+                            <span class="icon-time_clock font-bold text-[16px]"></span>
+                            <span class="inline-block text-14 font-bold">Time Tracker</span>
+                        </button>
+                        <div class="flex items-center space-x-3 xl:space-x-5">
+                            <span class="icon-noti text-[20px] 2xl:text-[24px] text-black cursor-pointer"></span>
+                            <div class="w-8 xl:w-10 h-8 xl:h-10 rounded-full cursor-pointer overflow-hidden">
+                                <img src="assets/images/profile.png" alt="profile"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="p-4 2xl:p-6 space-y-2.5 xl:space-y-4 h-[calc(100vh-68px)] overflow-y-auto">
+                <div class="w-full relative bg-white rounded-2xl overflow-hidden p-3 lg:p-4 xl:p-6">
+                    <h3>Kratos Club</h3>
+                    <p class="mt-1.5 lg:mt-2.5 text-12 lg:text-14 xl:text-16 font-normal text-[#525252] pb-2.5 lg:pb-4 xl:pb-6 border-b border-[#D6D6D6]">Aiming to create a modern, user-friendly website and a robust admin panel to streamline club operations and enhance member engagement for Kratos Club.  Aiming to create a modern, user-friendly website and a robust admin panel to streamline club operations and enhance member engagement for Kratos Club <span class="text-primary">View All</span> </p>
+                    <div class="w-full max-w-[920px] mt-2.5 lg:mt-4 xl:mt-6">
+                        <div class="flex flex-wrap -mx-1.5 xl:-mx-2.5">
+                            <div class="w-1/2 sm:w-1/4 md:w-1/5 xl:w-1/6 p-1.5 xl:p-2.5">
+                                <span class="block text-14 font-extrabold text-b1 mb-1.5">Status</span>
+                                <span class="text-14 font-normal text-green py-1 px-2.5 xl:px-4 rounded-full inline-block bg-[#E8FDF9]">Completed</span>
+                            </div>
+                            <div class="w-1/2 sm:w-1/4 md:w-1/5 xl:w-1/6 p-1.5 xl:p-2.5">
+                                <span class="block text-14 font-extrabold text-b1 mb-1.5">Assignee</span>
+                                <div class="-space-x-3 flex">
+                                    <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
+                                        <img src="assets/images/profile2.png" alt="profile2">
+                                    </span>
+                                    <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
+                                        <img src="assets/images/profile2.png" alt="profile2">
+                                    </span>
+                                    <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
+                                        <img src="assets/images/profile2.png" alt="profile2">
+                                    </span>
+                                    <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
+                                        <img src="assets/images/profile2.png" alt="profile2">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="w-1/2 sm:w-1/4 md:w-1/5 xl:w-1/6 p-1.5 xl:p-2.5">
+                                <span class="block text-14 font-extrabold text-b1 mb-1.5">Start Date</span>
+                                <span class="text-14 lg:text-16 font-normal text-g6 inline-block">01 Oct 2024</span>
+                            </div>
+                            <div class="w-1/2 sm:w-1/4 md:w-1/5 xl:w-1/6 p-1.5 xl:p-2.5">
+                                <span class="block text-14 font-extrabold text-b1 mb-1.5">Deadline Date</span>
+                                <span class="text-14 lg:text-16 font-normal text-g6 inline-block">20 Oct 2024</span>
+                            </div>
+                            <div class="w-1/2 sm:w-1/4 md:w-1/5 xl:w-1/6 p-1.5 xl:p-2.5">
+                                <span class="block text-14 font-extrabold text-b1 mb-1.5">Priority</span>
+                                <span class="text-14 lg:text-16 font-normal text-[#DC2626] inline-block">High</span>
+                            </div>
+                            <div class="w-1/2 sm:w-5/12 md:w-1/5 xl:w-1/6 p-1.5 xl:p-2.5">
+                                <span class="block text-14 font-extrabold text-b1 mb-1.5">Created By</span>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 rounded-full overflow-hidden border border-white">
+                                        <img src="assets/images/profile2.png" alt="profile2">
+                                    </div>
+                                    <span class="text-14 lg:text-16 font-normal text-g6 inline-block whitespace-nowrap">Uday Kyada</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl 2xl:rounded-2xl py-2 xl:py-3 2xl:py-4 px-5 lg:px-7 2xl:px-9 overflow-x-auto">
+                    <ul class="flex items-center space-x-2.5 xl:space-x-4 2xl:space-x-5">
+                        <li>
+                            <a href="" class="text16 text-g1 font-semibold hover:text-primary px-2.5 hover:font-extrabold inline-block anim whitespace-nowrap">Project Summary</a>
+                        </li>
+                        <li>
+                            <a href="" class="text16 text-g1 font-semibold hover:text-primary px-2.5 hover:font-extrabold inline-block anim whitespace-nowrap">All Tasks</a>
+                        </li>
+                        <li>
+                            <a href="" class="text16 text-g1 font-semibold hover:text-primary px-2.5 hover:font-extrabold inline-block anim whitespace-nowrap">Timesheet</a>
+                        </li>
+                        <li>
+                            <a href="" class="text16 text-g1 font-semibold hover:text-primary px-2.5 hover:font-extrabold inline-block anim whitespace-nowrap">Teams</a>
+                        </li>
+                        <li>
+                            <a href="" class="text16 text-g1 font-semibold hover:text-primary px-2.5 hover:font-extrabold inline-block anim whitespace-nowrap">Activity</a>
+                        </li>
+                        <li>
+                            <a href="" class="text16 text-g1 font-semibold hover:text-primary px-2.5 hover:font-extrabold inline-block anim whitespace-nowrap">Payment Progress</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full relative bg-white rounded-xl 2xl:rounded-2xl overflow-hidden p-3 lg:p-4 xl:p-6">
+                    <h4 class="text24 text-b1 font-extrabold">Project Progress</h4>
+                    <div class="flex flex-wrap mt-3 xl:mt-4 2xl:mt-6">
+                        <div class="w-full xl:w-8/12">
+                            <div class="flex flex-wrap -mx-2.5">
+                                <div class="w-full sm:w-1/2 xl:w-1/3 p-2.5">
+                                    <div class="bg-l1 rounded-xl 2xl:rounded-2xl py-3 xl:py-4 2xl:py-5 px-3 xl:px-5 2xl:px-7">
+                                        <div class="flex items-center space-x-2 mb-1">
+                                            <span class="w-2.5 h-2.5 bg-primary rounded-full inline-block"></span>
+                                            <span class="text16 text-black/50 font-medium inline-block">Total Tasks</span>
+                                        </div>
+                                        <h3 class="pl-5">50</h3>
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2 xl:w-1/3 p-2.5">
+                                    <div class="bg-l1 rounded-xl 2xl:rounded-2xl py-3 xl:py-4 2xl:py-5 px-3 xl:px-5 2xl:px-7">
+                                        <div class="flex items-center space-x-2 mb-1">
+                                            <span class="w-2.5 h-2.5 bg-primary rounded-full inline-block"></span>
+                                            <span class="text16 text-black/50 font-medium inline-block">TO DO Tasks</span>
+                                        </div>
+                                        <h3 class="pl-5">40</h3>
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2 xl:w-1/3 p-2.5">
+                                    <div class="bg-l1 rounded-xl 2xl:rounded-2xl py-3 xl:py-4 2xl:py-5 px-3 xl:px-5 2xl:px-7">
+                                        <div class="flex items-center space-x-2 mb-1">
+                                            <span class="w-2.5 h-2.5 bg-primary rounded-full inline-block"></span>
+                                            <span class="text16 text-black/50 font-medium inline-block">Overdue</span>
+                                        </div>
+                                        <h3 class="pl-5">2</h3>
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2 xl:w-1/3 p-2.5">
+                                    <div class="bg-l1 rounded-xl 2xl:rounded-2xl py-3 xl:py-4 2xl:py-5 px-3 xl:px-5 2xl:px-7">
+                                        <div class="flex items-center space-x-2 mb-1">
+                                            <span class="w-2.5 h-2.5 bg-primary rounded-full inline-block"></span>
+                                            <span class="text16 text-black/50 font-medium inline-block">IN Progress Tasks</span>
+                                        </div>
+                                        <h3 class="pl-5">10</h3>
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2 xl:w-1/3 p-2.5">
+                                    <div class="bg-l1 rounded-xl 2xl:rounded-2xl py-3 xl:py-4 2xl:py-5 px-3 xl:px-5 2xl:px-7">
+                                        <div class="flex items-center space-x-2 mb-1">
+                                            <span class="w-2.5 h-2.5 bg-primary rounded-full inline-block"></span>
+                                            <span class="text16 text-black/50 font-medium inline-block">Completed Tasks</span>
+                                        </div>
+                                        <h3 class="pl-5">5</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-4/12">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full relative bg-white rounded-xl 2xl:rounded-2xl overflow-hidden p-3 lg:p-4 xl:p-6">
+                    <h4 class="text24 text-b1 font-extrabold">Workload By Status</h4>
+
+                </div>
+                <div class="px-2.5">
+                    <div class="flex flex-wrap -mx-2.5">
+                        <div class="w-full xl:w-1/2 2xl:w-4/12 relative bg-white rounded-xl 2xl:rounded-2xl overflow-hidden p-3 lg:p-4 xl:p-6">
+                            <h4 class="text24 text-b1 font-extrabold">Total Tasks by Assignee</h4>
+    
+                        </div>
+                    </div>
+                </div>
+                    <div class="flex flex-wrap -mx-2.5">
+                        <div class="w-full xl:w-1/2 2xl:w-1/3 p-2.5">
+                            <div class="bg-white rounded-xl 2xl:rounded-2xl overflow-hidden p-3 lg:p-4 xl:p-6">
+                                <div class="flex items-center mb-2 2xl:mb-3">
+                                    <div class="w-[calc(100%-120px)]">
+                                        <div class="flex items-center space-x-4">
+                                            <div class="w-16 h-16 rounded-full object-cover">
+                                                <img src="assets/images/profile.png" class="max-w-full w-full" alt="profile"/>
+                                            </div>
+                                            <h5 class="text18 text-b1 font-bold">Caylee Mclean</h5>
+                                        </div>
+                                    </div>
+                                    <div class="w-[120px]"></div>
+    
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-4">
+                                        <span class="inline-block text16 text-b1 font-bold">Total Tasks</span>   
+                                        <span class="text-primary text16 font-bold inline-block">100</span>
+                                    </div>
+                                    <span class="icon-left text-g6 text-[16px] lg:text-[18px] 2xl:text-[20px]"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full xl:w-1/2 2xl:w-1/3 p-2.5">
+                            <div class="bg-white rounded-xl 2xl:rounded-2xl overflow-hidden p-3 lg:p-4 xl:p-6">
+                                <div class="flex items-center mb-2 2xl:mb-3">
+                                    <div class="w-[calc(100%-120px)]">
+                                        <div class="flex items-center space-x-4">
+                                            <div class="w-16 h-16 rounded-full object-cover">
+                                                <img src="assets/images/profile.png" class="max-w-full w-full" alt="profile"/>
+                                            </div>
+                                            <h5 class="text18 text-b1 font-bold">Caylee Mclean</h5>
+                                        </div>
+                                    </div>
+                                    <div class="w-[120px]"></div>
+    
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-4">
+                                        <span class="inline-block text16 text-b1 font-bold">Total Tasks</span>   
+                                        <span class="text-primary text16 font-bold inline-block">100</span>
+                                    </div>
+                                    <span class="icon-left text-g6 text-[16px] lg:text-[18px] 2xl:text-[20px]"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full xl:w-1/2 2xl:w-1/3 p-2.5">
+                            <div class="bg-white rounded-xl 2xl:rounded-2xl overflow-hidden p-3 lg:p-4 xl:p-6">
+                                <div class="flex items-center mb-2 2xl:mb-3">
+                                    <div class="w-[calc(100%-120px)]">
+                                        <div class="flex items-center space-x-4">
+                                            <div class="w-16 h-16 rounded-full object-cover">
+                                                <img src="assets/images/profile.png" class="max-w-full w-full" alt="profile"/>
+                                            </div>
+                                            <h5 class="text18 text-b1 font-bold">Caylee Mclean</h5>
+                                        </div>
+                                    </div>
+                                    <div class="w-[120px]"></div>
+    
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-4">
+                                        <span class="inline-block text16 text-b1 font-bold">Total Tasks</span>   
+                                        <span class="text-primary text16 font-bold inline-block">100</span>
+                                    </div>
+                                    <span class="icon-left text-g6 text-[16px] lg:text-[18px] 2xl:text-[20px]"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
