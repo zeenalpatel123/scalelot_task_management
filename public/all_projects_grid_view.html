@@ -62,90 +62,91 @@
         </div>
         <div id="cover" class="fixed w-full h-screen backdrop-blur-sm bg-black/30 xl:w-0 z-20 origin-left xl:hidden -translate-x-full"></div>
         <div class="w-full lg:w-[calc(100%-292px)] 2xl:w-[calc(100%-316px)] ml-auto">
-            <header class="py-2 2xl:py-2.5 px-3.5 2xl:px-5 bg-white  z-50">
+            <header class="py-2 2xl:py-2.5 px-3.5 2xl:px-5 bg-white z-50">
                 <div class="flex items-center">
                     <span class="icon-menu text-[18px] md:text-[20px] lg:text-[24px] text-black xl:hidden pr-5 cursor-pointer" onclick="toggleActive('#open','-translate-x-full'); toggleActive('#cover','-translate-x-full');"></span>
                     <div class="w-full max-w-80 2xl:max-w-[440px] hidden md:flex items-center bg-l1 rounded-lg px-2 md:px-3 xl:px-5 py-2 xl:py-3">
                         <label for="search">
                             <span class="icon-search text-g6 block text-[18px] xl:text-[20px] cursor-pointer"></span>
                         </label>
-                        <input type="search" id="search" class="w-full outline-none text-g6 bg-transparent text-dark pl-2.5" placeholder="Search"/>
+                        <input type="search" id="search" class="w-full outline-none text-g6 bg-transparent text-dark pl-2.5" placeholder="Search">
                     </div>
-                    <div class="flex items-center space-x-3.5 md:space-x-5 xl:space-x-7 ml-auto">
-                        <button class="btn_primary anim flex items-center justify-center space-x-2 py-1.5 lg:py-2 xl:py-2.5">
-                            <span class="icon-time_clock font-bold text-[16px]"></span>
-                            <span class="inline-block text-14 font-bold">Time Tracker</span>
-                        </button>
+                    <div class="flex items-center space-x-3 xl:space-x-5 2xl:space-x-7 ml-auto pl-2 xl:pl-0">
+                        <div class="flex items-center space-x-2.5 lg:space-x-3 2xl:space-x-5">
+                            <div class="bg-l1 rounded-xl flex items-center justify-center space-x-2 py-1.5 lg:py-2.5 2xl:py-3 px-2.5 xl:px-3.5 2xl:px-4">
+                                <span class="inline-block text16 text-black font-normal">Clock In at 08:45 AM</span>
+                                <div class="flex items-center space-x-2">
+                                    <span class="icon-time_clock text-[16px] font-bold text-red inline-block"></span>
+                                    <span class="inline-block text24 text-red font-extrabold">03:26</span>
+                                </div>
+                            </div>
+                            <button class="btn_primary anim flex items-center justify-center space-x-2 py-1.5 lg:py-2 2xl:py-2.5 px-3 xl:px-4 2xl:px-5">
+                                <span class="icon-time_clock font-bold text-[16px]"></span>
+                                <span class="inline-block text-14 font-bold">Task Timer</span>
+                            </button>
+                        </div>
                         <div class="flex items-center space-x-3 xl:space-x-5">
                             <span class="icon-noti text-[20px] 2xl:text-[24px] text-black cursor-pointer"></span>
+                            <span class="icon-noti text-[20px] 2xl:text-[24px] text-black cursor-pointer"></span>
                             <div class="w-8 xl:w-10 h-8 xl:h-10 rounded-full cursor-pointer overflow-hidden">
-                                <img src="assets/images/profile.png" alt="profile"/>
+                                <img src="assets/images/profile.png" alt="profile">
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </header>
             <div class="py-2 lg:py-3 2xl:py-4 px-4 2xl:px-6 space-y-1.5 xl:space-y-2 h-[calc(100vh-68px)] overflow-y-auto">
-                <div class="flex items-center flex-wrap -mx-1 md:-mx-2">
-                    <div class="order-1 p-1 md:p-2">
-                        <h4>All Tasks</h4>
+                <div class="flex items-center justify-between flex-wrap -mx-1 2xl:-mx-2">
+                    <div class="p-1 md:p-2">
+                        <h4>All Projects</h4>
                     </div>
-                    <div class="order-5 sm:order-2 p-1 md:p-2 w-full sm:max-w-64 xl:max-w-xs sm:ml-auto">
-                        <div class="w-full max-w-[434px] flex items-center bg-white rounded-lg px-2 md:px-3 xl:px-5 py-2 xl:py-3">
-                            <label for="search">
-                                <span class="icon-search text-g6 block text-[18px] xl:text-[20px] cursor-pointer"></span>
-                            </label>
-                            <input type="search" id="search" class="w-full outline-none text-g6 bg-transparent text-dark pl-2.5" placeholder="Search"/>
-                        </div>
-                    </div>
-                    <div class="order-2 sm:order-3 p-1 md:p-2 ml-auto sm:ml-0">
-                        <div class="relative group">
-                            <div class="flex items-center space-x-2 bg-white border border-white rounded-[10px] py-2.5 xl:py-3.5 px-3 xl:px-5 cursor-pointer group-hover:border-primary">
-                                <span class="icon-filter text-[14px] 2xl:text-[16px] text-b1"></span>
-                                <span class="hidden sm:inline-block text-b1 text-14 font-normal">Filter</span>
-                            </div>
-                            <div class="w-full min-w-72 xs:min-w-96 md:min-w-[400px] 2xl:min-w-[560px] absolute top-full -right-[103px] sm:right-0 z-20 mt-2.5 bg-white rounded-lg lg:rounded-xl xl:rounded-2xl p-3 md:p-4 2xl:p-6 invisible -translate-y-8 group-hover:-translate-y-0 group-hover:visible anim">
-                                <h4>Filter</h4>
-                                <div class="flex flex-wrap -mx-1.5 2xl:-mx-2 mt-2.5 lg:mt-4 xl:mt-6">
-                                    <div class="w-full sm:w-1/2 p-1.5 2xl:p-2">
-                                        <label class="label">Project Name</label>
-                                        <input type="text" class="input" placeholder="Select Project"/>
-                                    </div>
-                                    <div class="w-full sm:w-1/2 p-1.5 2xl:p-2">
-                                        <label class="label">Task Name</label>
-                                        <input type="text" class="input" placeholder="Select"/>
-                                    </div>
-                                    <div class="w-full sm:w-1/2 p-1.5 2xl:p-2">
-                                        <label class="label">Task Status</label>
-                                        <input type="text" class="input" placeholder="Select Status"/>
-                                    </div>
-                                    <div class="w-full sm:w-1/2 p-1.5 2xl:p-2">
-                                        <label class="label">Priority</label>
-                                        <input type="text" class="input" placeholder="Select Priority"/>
-                                    </div>
-                                    <div class="w-full sm:w-1/2 p-1.5 2xl:p-2">
-                                        <label class="label">Date</label>
-                                        <input type="text" class="input" placeholder="Select Date"/>
-                                    </div>
-                                </div>
-                                <div class="flex items-center justify-end space-x-2.5 lg:space-x-4 xl:space-x-6  mt-2.5 lg:mt-3 xl:mt-4">
-                                    <button class="btn_secondary">Reset</button>
-                                    <button class="btn_primary">Apply Filter</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-3 sm:order-4 p-1 md:p-2">
-                        <div class="flex items-center bg-white rounded-[10px] py-2.5 xl:py-3.5 px-3 xl:px-5 cursor-pointer">
-                            <span class="icon-grid text-[16px] md:text-[22px] text-b1"></span>
-                        </div>
-                    </div>
-                    <div class="order-4 sm:order-5 p-1 md:p-2">
+                    <div class="p-1 md:p-2">
                         <button class="btn_primary anim flex items-center justify-center space-x-1.5">
                             <span class="icon-add text-[18px] lg:text-[20px] 2xl:text-[24px]"></span>
-                            <span class="hidden sm:inline-block">Create Tasks</span>
+                            <span class="hidden sm:inline-block">Create Project</span>
                         </button>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-end">
+                    <div class="flex flex-wrap items-end -mx-1 2xl:-mx-2">
+                        <div class="w-1/4 xl:w-1/5 2xl:w-auto p-1 2xl:p-2">
+                            <label class="label">Project Status</label>
+                            <input type="text" class="input bg-white" placeholder="Select"/>
+                        </div>
+                        <div class="w-1/4 xl:w-1/5 2xl:w-auto p-1 2xl:p-2">
+                            <label class="label">Created By</label>
+                            <input type="text" class="input bg-white" placeholder="Select"/>
+                        </div>
+                        <div class="w-1/4 xl:w-1/5 2xl:w-auto p-1 2xl:p-2">
+                            <label class="label">Priority</label>
+                            <input type="text" class="input bg-white" placeholder="Select"/>
+                        </div>
+                        <div class="w-1/4 xl:w-1/5 2xl:w-auto p-1 2xl:p-2">
+                            <label class="label">From</label>
+                            <input type="text" class="input bg-white" placeholder="Select"/>
+                        </div>
+                        <div class="w-1/4 xl:w-1/5 2xl:w-auto p-1 2xl:p-2">
+                            <label class="label">To</label>
+                            <input type="text" class="input bg-white" placeholder="Select"/>
+                        </div>
+                        <div class="w-auto p-1 2xl:p-2">
+                           <div class="w-10 xl:w-10 2xl:w-11 h-9 xl:h-10 2xl:h-11 bg-white rounded-xl flex items-center justify-center">
+                                <span class="icon-share text-[18px] xl:text-[20px] text-black"></span>
+                           </div>
+                        </div>
+                        <div class="w-auto p-1 2xl:p-2">
+                           <button class="btn_primary py-1.5 2xl:py-2.5 px-2 xl:px-3 2xl:px-4 text-12 2xl:text-14">Apply</button>
+                        </div>
+                    </div>
+                    <div class="ml-auto p-1 2xl:p-2">
+                        <div class="bg-white rounded-[10px] flex items-center py-[7px] px-1">
+                            <div class="flex items-center py-1.5 px-3 2xl:px-5 cursor-pointer pr-2.5 2xl:pr-4 border-r border-[#D2D2D2]">
+                                <span class="icon-grid text-[14px] lg:text-[16px] 2xl:text-[22px] text-black"></span>
+                            </div>
+                            <div class="flex items-center bg-white rounded-[10px] py-1.5 px-3 2xl:px-5 cursor-pointer">
+                                <span class="icon-grid text-[14px] lg:text-[16px] 2xl:text-[22px] text-black"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="space-y-2 lg:space-y-3">

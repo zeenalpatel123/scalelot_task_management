@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Detail > if multiple user assign into one task</title>
+    <link rel="stylesheet" href="assets/css/icomoon.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="flex justify-end">
+        <!-- <div class="block lg:hidden" onclick="toggleActive('#open','-translate-x-full'); toggleActive('#cover','-translate-x-full');">
+            <div class="absolute top-1/2 -translate-y-1/2 -right-5 w-8 xl:w-10 h-8 xl:h-10 left-[268px] z-[999] bg-primary rounded-full opacity-100 lg:opacity-0 flex items-center justify-center">
+                <span class="icon-close text-[20px] text-white"></span>
+            </div>
+        </div> -->
+       
+        <div id="cover" class="fixed w-full h-screen backdrop-blur-sm bg-black/30 xl:w-0 z-20 origin-left xl:hidden -translate-x-full"></div>
+        <div class="w-full lg:w-[calc(100%-292px)] 2xl:w-[calc(100%-316px)] ml-auto">
+            <header class="py-2 2xl:py-2.5 px-3.5 2xl:px-5 bg-white  z-50">
+                <div class="flex items-center">
+                    <span class="icon-menu text-[18px] md:text-[20px] lg:text-[24px] text-black xl:hidden pr-5 cursor-pointer" onclick="toggleActive('#open','-translate-x-full'); toggleActive('#cover','-translate-x-full');"></span>
+                    <div class="w-full max-w-80 2xl:max-w-[440px] hidden md:flex items-center bg-l1 rounded-lg px-2 md:px-3 xl:px-5 py-2 xl:py-3">
+                        <label for="search">
+                            <span class="icon-search text-g6 block text-[18px] xl:text-[20px] cursor-pointer"></span>
+                        </label>
+                        <input type="search" id="search" class="w-full outline-none text-g6 bg-transparent text-dark pl-2.5" placeholder="Search"/>
+                    </div>
+                    <div class="flex items-center space-x-3.5 md:space-x-5 xl:space-x-7 ml-auto">
+                        <button class="btn_primary anim flex items-center justify-center space-x-2 py-1.5 lg:py-2 xl:py-2.5">
+                            <span class="icon-time_clock font-bold text-[16px]"></span>
+                            <span class="inline-block text-14 font-bold">Time Tracker</span>
+                        </button>
+                        <div class="flex items-center space-x-3 xl:space-x-5">
+                            <span class="icon-noti text-[20px] 2xl:text-[24px] text-black cursor-pointer"></span>
+                            <div class="w-8 xl:w-10 h-8 xl:h-10 rounded-full cursor-pointer overflow-hidden">
+                                <img src="assets/images/profile.png" alt="profile"/>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </header>
+            <div class="py-2 lg:py-3 2xl:py-4 px-4 2xl:px-6 space-y-2.5 lg:space-y-4 xl:space-y-6 h-[calc(100vh-68px)] overflow-y-auto">
+                <div class="w-full relative bg-white rounded-2xl overflow-hidden p-3 lg:p-4 xl:p-6">
+                    <div class="flex items-center">
+                        <h3>Design Dashboard for Admin Panel</h3>
+                        <div class="flex items-center space-x-3 ml-auto">
+                            <span class="icon-edit text-[18px] xl:text-[20px] 2xl:text-[24px] text-b1"></span>
+                            <span class="icon-trash1 text-[18px] xl:text-[20px] 2xl:text-[24px] text-red"></span>
+                        </div>
+                    </div>
+                    <p class="mt-1.5 lg:mt-2.5 text-12 lg:text-14 xl:text-16 font-normal text-[#525252] pb-2.5 lg:pb-4 xl:pb-6 border-b border-[#D6D6D6]">The Dashboard should provide an at-a-glance overview of the club’s activities, events, and memberships, with key data visualizations and actionable elements.</p>
+                    <div class="w-full mt-2.5 xl:mt-3 2xl:mt-4">
+                        <div class="flex flex-wrap 2xl:justify-between -mx-1.5 xl:-mx-2.5">
+                            <div class="w-1/2 sm:w-1/4 md:w-1/5 2xl:w-auto p-1.5 xl:p-2.5">
+                                <span class="block text-14 font-extrabold text-b1 mb-1.5">Project Name</span>
+                                <span class="text-14 lg:text-16 font-normal text-g6 inline-block">Kratos Club</span>
+                            </div>
+                            <div class="w-1/2 sm:w-1/4 md:w-1/5 2xl:w-auto p-1.5 xl:p-2.5">
+                                <span class="block text-14 font-extrabold text-b1 mb-1.5">Status</span>
+                                <span class="text-14 font-normal text-yellow py-1 px-2.5 xl:px-4 rounded-full inline-block bg-[#FFF8DA]">Inpogress</span>
+                            </div>
+                            <div class="w-1/2 sm:w-1/4 md:w-1/5 2xl:w-auto p-1.5 xl:p-2.5">
+                                <span class="block text-14 font-extrabold text-b1 mb-1.5">Start Date</span>
+                                <span class="text-14 lg:text-16 font-normal text-g6 inline-block">01 Oct 2024</span>
+                            </div>
+                            <div class="w-1/2 sm:w-1/4 md:w-1/5 2xl:w-auto p-1.5 xl:p-2.5">
+                                <span class="block text-14 font-extrabold text-b1 mb-1.5">Deadline Date</span>
+                                <span class="text-14 lg:text-16 font-normal text-g6 inline-block">20 Oct 2024</span>
+                            </div>
+                            <div class="w-1/2 sm:w-1/4 md:w-1/5 2xl:w-auto p-1.5 xl:p-2.5">
+                                <span class="block text-14 font-extrabold text-b1 mb-1.5">Assignee</span>
+                                <div class="-space-x-3 flex">
+                                    <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
+                                        <img src="assets/images/profile2.png" alt="profile2"/>
+                                    </span>
+                                    <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
+                                        <img src="assets/images/profile2.png" alt="profile2"/>
+                                    </span>
+                                    <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
+                                        <img src="assets/images/profile2.png" alt="profile2"/>
+                                    </span>
+                                    <span class="w-6 h-6 rounded-full overflow-hidden border border-white inline-block">
+                                        <img src="assets/images/profile2.png" alt="profile2"/>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="w-1/2 sm:w-1/4 md:w-1/5 2xl:w-auto p-1.5 xl:p-2.5">
+                                <span class="block text-14 font-extrabold text-b1 mb-1.5">Priority</span>
+                                <span class="text-14 lg:text-16 font-normal text-[#DC2626] inline-block">High</span>
+                            </div>
+                            <div class="w-1/2 sm:w-1/4 md:w-1/5 2xl:w-auto p-1.5 xl:p-2.5">
+                                <span class="block text-14 font-extrabold text-b1 mb-1.5">Expected Time</span>
+                                <span class="text-14 lg:text-16 font-normal text-primary inline-block">1 h</span>
+                            </div>
+                            <div class="w-1/2 sm:w-1/4 md:w-1/5 2xl:w-auto p-1.5 xl:p-2.5">
+                                <span class="block text-14 font-extrabold text-b1 mb-1.5">Worked Time</span>
+                                <span class="text-14 lg:text-16 font-normal text-primary inline-block">1 h</span>
+                            </div>
+                            <div class="w-1/2 sm:w-5/12 md:w-1/5 xl:w-1/6 p-1.5 xl:p-2.5">
+                                <span class="block text-14 font-extrabold text-b1 mb-1.5">Created By</span>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 rounded-full overflow-hidden border border-white">
+                                        <img src="assets/images/profile2.png" alt="profile2">
+                                    </div>
+                                    <span class="text-14 lg:text-16 font-normal text-g6 inline-block whitespace-nowrap">Uday Kyada</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Checklists tab  -->
+                <div class="flex items-center flex-wrap -mx-1.5 xl:-mx-2.5 2xl:-mx-3.5">
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-1.5 xl:p-2.5 2xl:p-3.5">
+                        <div class="bg-white rounded-xl xl:rounded-2xl 2xl:rounded-[20px] p-4 xl:p-5 2xl:p-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 xl:w-14 xl:h-14 2xl:w-16 2xl:h-16 rounded-full">
+                                        <img src="assets/images/profile.png" class="w-full h-full object-cover" alt="profile"/>
+                                    </div>
+                                    <h6 class="text18 font-bold text-b1">Robot</h6>
+                                </div>
+                                <span class="text-14 font-normal text-yellow py-1 px-2.5 xl:px-4 rounded-full inline-block bg-[#FFF8DA]">Inpogress</span>
+                            </div>
+                            <div class="space-y-1 md:space-y-1.5 mt-2.5 xl:mt-3 2xl:mt-4">
+                                <div class="relative bg-l1 w-full h-2 rounded-full overflow-hidden">
+                                    <div class="absolute top-1/2 -translate-y-1/2 inset-y-0 bg-yellow w-[40%] h-2 rounded-full"></div>
+                                </div> 
+                                <div class="flex items-center justify-between">
+                                    <h6 class="text-b1 text16 font-bold">8 <span class="text-g6 inline-block">/</span> <span class="text-primary font-bold inline-block">15</span> <span class="text-g6 font-normal inline-block">Total Items</span></h6>
+                                    <span class="inline-block text-b1 text16 font-bold">53%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-1.5 xl:p-2.5 2xl:p-3.5">
+                        <div class="bg-white rounded-xl xl:rounded-2xl 2xl:rounded-[20px] p-4 xl:p-5 2xl:p-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 xl:w-14 xl:h-14 2xl:w-16 2xl:h-16 rounded-full">
+                                        <img src="assets/images/profile.png" class="w-full h-full object-cover" alt="profile"/>
+                                    </div>
+                                    <h6 class="text18 font-bold text-b1">Robot</h6>
+                                </div>
+                                <span class="text-14 font-normal text-green py-1 px-2.5 xl:px-4 rounded-full inline-block bg-[#EDFBF7]">Completed</span>
+                            </div>
+                            <div class="space-y-1 md:space-y-1.5 mt-2.5 xl:mt-3 2xl:mt-4">
+                                <div class="relative bg-l1 w-full h-2 rounded-full overflow-hidden">
+                                    <div class="absolute top-1/2 -translate-y-1/2 inset-y-0 bg-primary w-full h-2 rounded-full"></div>
+                                </div> 
+                                <div class="flex items-center justify-between">
+                                    <h6 class="text-primary text16 font-bold">48 <span class="text-g6 inline-block">/</span> <span class="text-primary font-bold inline-block">48</span> <span class="text-g6 font-normal inline-block">Total Items</span></h6>
+                                    <span class="inline-block text-b1 text16 font-bold">100%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-1.5 xl:p-2.5 2xl:p-3.5">
+                        <div class="bg-white rounded-xl xl:rounded-2xl 2xl:rounded-[20px] p-4 xl:p-5 2xl:p-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 xl:w-14 xl:h-14 2xl:w-16 2xl:h-16 rounded-full">
+                                        <img src="assets/images/profile.png" class="w-full h-full object-cover" alt="profile"/>
+                                    </div>
+                                    <h6 class="text18 font-bold text-b1">Robot</h6>
+                                </div>
+                                <span class="text-14 font-normal text-green py-1 px-2.5 xl:px-4 rounded-full inline-block bg-[#EDFBF7]">Completed</span>
+                            </div>
+                            <div class="space-y-1 md:space-y-1.5 mt-2.5 xl:mt-3 2xl:mt-4">
+                                <div class="relative bg-l1 w-full h-2 rounded-full overflow-hidden">
+                                    <div class="absolute top-1/2 -translate-y-1/2 inset-y-0 bg-primary w-full h-2 rounded-full"></div>
+                                </div> 
+                                <div class="flex items-center justify-between">
+                                    <h6 class="text-primary text16 font-bold">48 <span class="text-g6 inline-block">/</span> <span class="text-primary font-bold inline-block">48</span> <span class="text-g6 font-normal inline-block">Total Items</span></h6>
+                                    <span class="inline-block text-b1 text16 font-bold">100%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Checklists tab  -->
+
+                <!-- Files & Attachments tab  -->
+                <div class="bg-white rounded-lg xl:rounded-xl 2xl:rounded-2xl p-5 xl:p-6 2xl:p-7">
+                    <h4 class="mb-1.5 xl:mb-2.5">Files & Attachments</h4>
+                    <div class="flex flex-wrap items-stretch -mx-1.5 xl:-mx-2.5 2xl:-mx-3.5">
+                        <div class="w-full sm:w-1/2 lg:w-1/3 2xl:w-1/4 p-1.5 xl:p-2.5 2xl:p-3.5 h-auto">
+                            <div class="bg-white border-2 border-l1 rounded-lg xl:rounded-xl 2xl:rounded-2xl p-3 xl:p-4 2xl:p-5 h-full">
+                                <div class="bg-[#E5ECF6] py-4 xl:py-5 2xl:py-6 px-3 xl:px-4 2xl:px-5 rounded-md">
+                                    <img src="assets/images/doc2.svg" class="mx-auto w-full max-w-10 2xl:max-w-16" alt="doc"/>
+                                </div>
+                                <div class="flex items-center mt-2.5 xl:mt-3 2xl:mt-4">
+                                    <p class="text16 font-medium text-[#0C0F35]">Daily Update 2024.doc</p>
+                                    <div class="flex items-center space-x-5 ml-auto">
+                                        <span class="icon-trash1 text-red text-[18px] xl:text-[20px] 2xl:text-[24px]"></span>
+                                        <span class="icon-trash1 text-red text-[18px] xl:text-[20px] 2xl:text-[24px]"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-1/2 lg:w-1/3 2xl:w-1/4 p-1.5 xl:p-2.5 2xl:p-3.5 h-auto">
+                            <div class="bg-white border-2 border-l1 rounded-lg xl:rounded-xl 2xl:rounded-2xl p-3 xl:p-4 2xl:p-5 h-full">
+                                <div class="bg-[#E5ECF6] py-4 xl:py-5 2xl:py-6 px-3 xl:px-4 2xl:px-5 rounded-md">
+                                    <img src="assets/images/zip2.svg" class="mx-auto w-full max-w-10 2xl:max-w-16" alt="doc"/>
+                                </div>
+                                <div class="flex items-center mt-2.5 xl:mt-3 2xl:mt-4">
+                                    <p class="text16 font-medium text-[#0C0F35]">Daily Update 2024.doc</p>
+                                    <div class="flex items-center space-x-5 ml-auto">
+                                        <span class="icon-trash1 text-red text-[18px] xl:text-[20px] 2xl:text-[24px]"></span>
+                                        <span class="icon-trash1 text-red text-[18px] xl:text-[20px] 2xl:text-[24px]"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-1/2 lg:w-1/3 2xl:w-1/4 p-1.5 xl:p-2.5 2xl:p-3.5 h-auto">
+                            <div class="bg-white border-2 border-l1 rounded-lg xl:rounded-xl 2xl:rounded-2xl p-3 xl:p-4 2xl:p-5 h-full">
+                                <img src="assets/images/jpg2.png" class="mx-auto" alt="doc"/>
+                                <div class="flex items-center mt-2.5 xl:mt-3 2xl:mt-4">
+                                    <p class="text16 font-medium text-[#0C0F35]">Daily Update 2024.doc</p>
+                                    <div class="flex items-center space-x-5 ml-auto">
+                                        <span class="icon-trash1 text-red text-[18px] xl:text-[20px] 2xl:text-[24px]"></span>
+                                        <span class="icon-trash1 text-red text-[18px] xl:text-[20px] 2xl:text-[24px]"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-1/2 lg:w-1/3 2xl:w-1/4 p-1.5 xl:p-2.5 2xl:p-3.5 h-auto">
+                            <div class="bg-white border-2 border-l1 rounded-lg xl:rounded-xl 2xl:rounded-2xl p-3 xl:p-4 2xl:p-5 h-full">
+                                <div class="bg-[#E5ECF6] py-4 xl:py-5 2xl:py-6 px-3 xl:px-4 2xl:px-5 rounded-md">
+                                    <img src="assets/images/pdf2.svg" class="mx-auto w-full max-w-10 2xl:max-w-16" alt="doc"/>
+                                </div>
+                                <div class="flex items-center mt-2.5 xl:mt-3 2xl:mt-4">
+                                    <p class="text16 font-medium text-[#0C0F35]">Daily Update 2024.doc</p>
+                                    <div class="flex items-center space-x-5 ml-auto">
+                                        <span class="icon-trash1 text-red text-[18px] xl:text-[20px] 2xl:text-[24px]"></span>
+                                        <span class="icon-trash1 text-red text-[18px] xl:text-[20px] 2xl:text-[24px]"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-1/2 lg:w-1/3 2xl:w-1/4 p-1.5 xl:p-2.5 2xl:p-3.5 h-auto">
+                            <div class="bg-white border-2 border-l1 rounded-lg xl:rounded-xl 2xl:rounded-2xl p-3 xl:p-4 2xl:p-5 h-full">
+                                <div class="bg-[#E5ECF6] py-4 xl:py-5 2xl:py-6 px-3 xl:px-4 2xl:px-5 rounded-md">
+                                    <img src="assets/images/doc2.svg" class="mx-auto w-full max-w-10 2xl:max-w-16" alt="doc"/>
+                                </div>
+                                <div class="flex items-center mt-2.5 xl:mt-3 2xl:mt-4">
+                                    <p class="text16 font-medium text-[#0C0F35]">Daily Update 2024.doc</p>
+                                    <div class="flex items-center space-x-5 ml-auto">
+                                        <span class="icon-trash1 text-red text-[18px] xl:text-[20px] 2xl:text-[24px]"></span>
+                                        <span class="icon-trash1 text-red text-[18px] xl:text-[20px] 2xl:text-[24px]"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-1/2 lg:w-1/3 2xl:w-1/4 p-1.5 xl:p-2.5 2xl:p-3.5 h-auto">
+                            <div class="bg-white border-2 border-l1 rounded-lg xl:rounded-xl 2xl:rounded-2xl p-3 xl:p-4 2xl:p-5 h-full">
+                                <div class="bg-[#E5ECF6] py-4 xl:py-5 2xl:py-6 px-3 xl:px-4 2xl:px-5 rounded-md">
+                                    <img src="assets/images/doc2.svg" class="mx-auto w-full max-w-10 2xl:max-w-16" alt="doc"/>
+                                </div>
+                                <div class="flex items-center mt-2.5 xl:mt-3 2xl:mt-4">
+                                    <p class="text16 font-medium text-[#0C0F35]">Daily Update 2024.doc</p>
+                                    <div class="flex items-center space-x-5 ml-auto">
+                                        <span class="icon-trash1 text-red text-[18px] xl:text-[20px] 2xl:text-[24px]"></span>
+                                        <span class="icon-trash1 text-red text-[18px] xl:text-[20px] 2xl:text-[24px]"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-1/2 lg:w-1/3 2xl:w-1/4 p-1.5 xl:p-2.5 2xl:p-3.5 h-auto">
+                            <div class="bg-white border-2 border-l1 rounded-lg xl:rounded-xl 2xl:rounded-2xl p-3 xl:p-4 2xl:p-5 h-full">
+                                <div class="bg-[#E5ECF6] py-4 xl:py-5 2xl:py-6 px-3 xl:px-4 2xl:px-5 rounded-md">
+                                    <img src="assets/images/doc2.svg" class="mx-auto w-full max-w-10 2xl:max-w-16" alt="doc"/>
+                                </div>
+                                <div class="flex items-center mt-2.5 xl:mt-3 2xl:mt-4">
+                                    <p class="text16 font-medium text-[#0C0F35]">Daily Update 2024.doc</p>
+                                    <div class="flex items-center space-x-5 ml-auto">
+                                        <span class="icon-trash1 text-red text-[18px] xl:text-[20px] 2xl:text-[24px]"></span>
+                                        <span class="icon-trash1 text-red text-[18px] xl:text-[20px] 2xl:text-[24px]"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-1/2 lg:w-1/3 2xl:w-1/4 p-1.5 xl:p-2.5 2xl:p-3.5 h-auto">
+                            <div class="bg-white border-2 border-l1 rounded-lg xl:rounded-xl 2xl:rounded-2xl p-3 xl:p-4 2xl:p-5 h-full">
+                                <div class="bg-[#E5ECF6] py-4 xl:py-5 2xl:py-6 px-3 xl:px-4 2xl:px-5 rounded-md">
+                                    <img src="assets/images/doc2.svg" class="mx-auto w-full max-w-10 2xl:max-w-16" alt="doc"/>
+                                </div>
+                                <div class="flex items-center mt-2.5 xl:mt-3 2xl:mt-4">
+                                    <p class="text16 font-medium text-[#0C0F35]">Daily Update 2024.doc</p>
+                                    <div class="flex items-center space-x-5 ml-auto">
+                                        <span class="icon-trash1 text-red text-[18px] xl:text-[20px] 2xl:text-[24px]"></span>
+                                        <span class="icon-trash1 text-red text-[18px] xl:text-[20px] 2xl:text-[24px]"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Files & Attachments tab  -->
+
+                <!-- Activity tab  -->
+                <div class="bg-white rounded-lg xl:rounded-xl 2xl:rounded-2xl p-5 xl:p-6 2xl:p-7">
+                    <h4 class="mb-3 xl:mb-5 2xl:mb-7">Activity</h4>
+                    <div class="space-y-1.5 xl:space-y-2.5">
+                        <div class="flex flex-wrap items-center justify-between">
+                            <div class="flex items-center space-x-2.5">
+                                <div>
+                                    <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+                                </div>
+                                <span class="inline-block text-s1 text16 font-normal max-w-80 lg:max-w-sm xl:max-w-lg 2xl:w-full">Task marked as completed by Krupa amreliya</span>
+                            </div>
+                            <span class="inline-block text16 text-g1 font-normal">03:34 PM</span>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between">
+                            <div class="flex items-center space-x-2.5">
+                                <div>
+                                    <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+                                </div>
+                                <span class="inline-block text-s1 text16 font-normal max-w-80 lg:max-w-sm xl:max-w-lg 2xl:w-full">Priority changed to ‘High’ by Nadeem Vora.</span>
+                            </div>
+                            <span class="inline-block text16 text-g1 font-normal">03:34 PM</span>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between">
+                            <div class="flex items-center space-x-2.5">
+                                <div>
+                                    <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+                                </div>
+                                <span class="inline-block text-s1 text16 font-normal max-w-80 lg:max-w-sm xl:max-w-lg 2xl:w-full">New comment added by Uday Kyada: 'Please review the design draft</span>
+                            </div>
+                            <span class="inline-block text16 text-g1 font-normal">03:34 PM</span>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between">
+                            <div class="flex items-center space-x-2.5">
+                                <div>
+                                    <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+                                </div>
+                                <span class="inline-block text-s1 text16 font-normal max-w-80 lg:max-w-sm xl:max-w-lg 2xl:w-full">Task marked as completed by Krupa amreliya</span>
+                            </div>
+                            <span class="inline-block text16 text-g1 font-normal">03:34 PM</span>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between">
+                            <div class="flex items-center space-x-2.5">
+                                <div>
+                                    <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+                                </div>
+                                <span class="inline-block text-s1 text16 font-normal max-w-80 lg:max-w-sm xl:max-w-lg 2xl:w-full">Deadline extended to January 15, 2025, by Uday Kyada.</span>
+                            </div>
+                            <span class="inline-block text16 text-g1 font-normal">03:34 PM</span>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between">
+                            <div class="flex items-center space-x-2.5">
+                                <div>
+                                    <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+                                </div>
+                                <span class="inline-block text-s1 text16 font-normal max-w-80 lg:max-w-sm xl:max-w-lg 2xl:w-full">Task description updated by Uday Kyada.</span>
+                            </div>
+                            <span class="inline-block text16 text-g1 font-normal">03:34 PM</span>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between">
+                            <div class="flex items-center space-x-2.5">
+                                <div>
+                                    <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+                                </div>
+                                <span class="inline-block text-s1 text16 font-normal max-w-80 lg:max-w-sm xl:max-w-lg 2xl:w-full">New comment added by Uday Kyada: 'Please review the design draft</span>
+                            </div>
+                            <span class="inline-block text16 text-g1 font-normal">03:34 PM</span>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between">
+                            <div class="flex items-center space-x-2.5">
+                                <div>
+                                    <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+                                </div>
+                                <span class="inline-block text-s1 text16 font-normal max-w-80 lg:max-w-sm xl:max-w-lg 2xl:w-full">Task marked as completed by Krupa amreliya</span>
+                            </div>
+                            <span class="inline-block text16 text-g1 font-normal">03:34 PM</span>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between">
+                            <div class="flex items-center space-x-2.5">
+                                <div>
+                                    <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+                                </div>
+                                <span class="inline-block text-s1 text16 font-normal max-w-80 lg:max-w-sm xl:max-w-lg 2xl:w-full">Deadline extended to January 15, 2025, by Uday Kyada.</span>
+                            </div>
+                            <span class="inline-block text16 text-g1 font-normal">03:34 PM</span>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between">
+                            <div class="flex items-center space-x-2.5">
+                                <div>
+                                    <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+                                </div>
+                                <span class="inline-block text-s1 text16 font-normal max-w-80 lg:max-w-sm xl:max-w-lg 2xl:w-full">Task marked as completed by Krupa amreliya</span>
+                            </div>
+                            <span class="inline-block text16 text-g1 font-normal">03:34 PM</span>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between">
+                            <div class="flex items-center space-x-2.5">
+                                <div>
+                                    <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+                                </div>
+                                <span class="inline-block text-s1 text16 font-normal max-w-80 lg:max-w-sm xl:max-w-lg 2xl:w-full">Priority changed to ‘High’ by Nadeem Vora.</span>
+                            </div>
+                            <span class="inline-block text16 text-g1 font-normal">03:34 PM</span>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between">
+                            <div class="flex items-center space-x-2.5">
+                                <div>
+                                    <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+                                </div>
+                                <span class="inline-block text-s1 text16 font-normal max-w-80 lg:max-w-sm xl:max-w-lg 2xl:w-full">Task marked as completed by Krupa amreliya</span>
+                            </div>
+                            <span class="inline-block text16 text-g1 font-normal">03:34 PM</span>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between">
+                            <div class="flex items-center space-x-2.5">
+                                <div>
+                                    <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+                                </div>
+                                <span class="inline-block text-s1 text16 font-normal max-w-80 lg:max-w-sm xl:max-w-lg 2xl:w-full">Deadline extended to January 15, 2025, by Uday Kyada.
+                            </div>
+                            <span class="inline-block text16 text-g1 font-normal">03:34 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Activity tab  -->
+
+                <!-- Comments tab  -->
+                <div class="bg-white rounded-lg xl:rounded-xl 2xl:rounded-2xl p-5 xl:p-6 2xl:p-7">
+                    <div class="flex items-center mb-2.5 lg:mb-3.5 xl:mb-5">
+                        <h4>Comments</h4>
+                        <div class="bg-l1 w-10 xl:w-12 h-10 xl:h-12 rounded-[10px] flex items-center justify-center ml-auto">
+                            <span class="icon-search text-[16px] lg:text-[18px] xl:text-[20px] text-g6 font-bold"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="space-y-2.5 xl:space-y-3 2xl:space-y-4 mb-3 lg:mb-5 xl:mb-7">
+                            <div class="flex items-center space-x-4 max-w-72 sm:max-w-96 md:max-w-md xl:max-w-[659px]">
+                                <div class="w-6 h-6 rounded-full">
+                                    <img src="assets/images/profile2.png" alt="w-full h-full object-cover"/>
+                                </div>
+                                <div class="relative">
+                                    <span class="absolute -left-1 top-1/2 -translate-y-1/2 rotate-45 w-3 h-3 bg-[#00C7BE]"></span>
+                                    <div class="border-l-4 border-[#00C7BE] bg-white relative z-10">
+                                        <div class="ml-2">
+                                            <span class="block text-12 text-g1 font-normal">03:34 PM</span>
+                                            <span class="inline-block text-s1 text16 font-normal max-w-80 lg:max-w-sm xl:max-w-lg 2xl:w-full">Task marked as completed by Krupa amreliya</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4 max-w-72 sm:max-w-96 md:max-w-md xl:max-w-[659px]">
+                                <div class="w-6 h-6 rounded-full">
+                                    <img src="assets/images/profile.png" alt="w-full h-full object-cover"/>
+                                </div>
+                                <div class="relative">
+                                    <span class="absolute -left-1 top-1/2 -translate-y-1/2 rotate-45 w-3 h-3 bg-[#FFCC00]"></span>
+                                    <div class="border-l-4 border-[#FFCC00] bg-white relative z-10">
+                                        <div class="ml-2">
+                                            <span class="block text-12 text-g1 font-normal">03:34 PM</span>
+                                            <span class="inline-block text-s1 text16 font-normal max-w-80 lg:max-w-sm xl:max-w-lg 2xl:w-full">Priority changed to ‘High’ by Nadeem Vora.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4 max-w-72 sm:max-w-96 md:max-w-md xl:max-w-[659px]">
+                                <div class="w-6 h-6 rounded-full">
+                                    <img src="assets/images/profile.png" alt="w-full h-full object-cover"/>
+                                </div>
+                                <div class="relative">
+                                    <span class="absolute -left-1 top-1/2 -translate-y-1/2 rotate-45 w-3 h-3 bg-[#FF2D55]"></span>
+                                    <div class="border-l-4 border-[#FF2D55] bg-white relative z-10">
+                                        <div class="ml-2">
+                                            <span class="block text-12 text-g1 font-normal">03:34 PM</span>
+                                            <span class="inline-block text-s1 text16 font-normal max-w-80 lg:max-w-sm xl:max-w-lg 2xl:w-full">Priority changed to ‘High’ by Nadeem Vora.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4 max-w-72 sm:max-w-96 md:max-w-md xl:max-w-[659px]">
+                                <div class="w-6 h-6 rounded-full">
+                                    <img src="assets/images/profile2.png" alt="w-full h-full object-cover"/>
+                                </div>
+                                <div class="relative">
+                                    <span class="absolute -left-1 top-1/2 -translate-y-1/2 rotate-45 w-3 h-3 bg-[#00C7BE]"></span>
+                                    <div class="border-l-4 border-[#00C7BE] bg-white relative z-10">
+                                        <div class="ml-2">
+                                            <span class="block text-12 text-g1 font-normal">03:34 PM</span>
+                                            <span class="inline-block text-s1 text16 font-normal max-w-80 lg:max-w-sm xl:max-w-lg 2xl:w-full">Task marked as completed by Krupa amreliya</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="bg-[#E6E9F0] rounded-md lg:rounded-lg xl:rounded-xl p-1.5 lg:p-2.5 max-w-72 sm:max-w-96 md:max-w-md xl:max-w-[659px] flex items-end space-x-1.5 ml-auto">
+                                <p class="text16 text-s1 font-normal"><span class="text-primary">@Zeenal Patel</span>  Subtask 'Create wireframes' marked as done by Krupa Amreliya. </p>
+                                <span class="inline-block text16 text-g1 font-normal whitespace-nowrap">03:34 PM</span>
+                            </div>
+                            <div class="bg-[#E6E9F0] rounded-md lg:rounded-lg xl:rounded-xl p-1.5 lg:p-2.5 max-w-72 sm:max-w-96 md:max-w-md xl:max-w-[720px] flex items-end space-x-1.5 ml-auto">
+                                <p class="text16 text-s1 font-normal"><span class="text-primary">@Nadeem Vora</span>   Subtask 'Create wireframes' marked as done by Krupa Amreliya. Task marked as completed by Krupa amreliya  Lorem Ipsum&nbsp;is simply dummy text of the printing and types of too</p>
+                                <span class="inline-block text16 text-g1 font-normal whitespace-nowrap">03:34 PM</span>
+                            </div>
+                        </div>
+                        <div class="bg-l1 rounded-md lg:rounded-lg xl:rounded-xl mt-1.5 lg:mt-3 relative">
+                            <input type="text" class="input" placeholder="Write a comment...">
+                            <div class="absolute right-2 top-1/2 -translate-y-1/2">
+                                <button class="btn_primary py-0.5 xl:py-1.5 text-12 xl:text-14">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Comments tab  -->
+                
+                <div class="p-5 xl:p-6 2xl:p-7">
+                    <img src="assets/images/active_log.png" class="mx-auto" alt="active_log"/>
+                    <p class="text16 font-normal text-g1 text-center mt-2.5 xl:mt-3 2xl:mt-4">It looks like there are no items created yet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

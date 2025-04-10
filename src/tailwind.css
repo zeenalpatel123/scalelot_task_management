@@ -14,8 +14,11 @@ h4{@apply text-18 lg:text-20 2xl:text-24 font-extrabold text-black;}
 .btn_primary{@apply bg-primary py-1.5 lg:py-2 2xl:py-2.5 px-3.5 lg:px-5 2xl:px-7 rounded-[10px] text-14 xl:text-16 font-extrabold text-white border border-primary cursor-pointer inline-block hover:text-primary hover:bg-transparent hover:border-primary;}
 .btn_secondary{@apply bg-l1 py-1.5 lg:py-2 2xl:py-2.5 px-3.5 lg:px-5 2xl:px-7 rounded-[10px] text-14 xl:text-16 font-extrabold text-primary border border-l1 cursor-pointer inline-block hover:text-primary hover:bg-transparent hover:border-primary;}
 .checkbox{@apply w-5 h-5 rounded border border-g1 flex items-center justify-center;}
-input:checked + .checkbox{@apply border-primary bg-primary;}
-input:checked + .checkbox span{@apply opacity-100;}
+input:checked + .fill .checkbox{@apply border-primary bg-primary;}
+input:checked + .fill .checkbox span{@apply opacity-100;}
+input:checked + .fill .checkbox ~ label{@apply line-through;}
+input:checked + .fill{@apply bg-l1 rounded-[10px] ;}
+
 
 .radio_sele{@apply w-full h-full rounded-[10px] border border-g1 flex items-center justify-center;}
 input:checked + .radio_sele{@apply border-primary;}

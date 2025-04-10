@@ -136,7 +136,7 @@
             </div>
         </div>
     </div>
-    <div class="fixed inset-0 w-full backdrop-blur bg-[#656B74]/60 overflow-hidden overflow-y-auto py-8 2xl:py-12 px-6 z-50 flex">
+    <div class="fixed inset-0 w-full backdrop-blur bg-[#656B74]/60 overflow-hidden overflow-y-auto py-8 2xl:py-12 px-6 z-50 flex hidden">
         <div class="w-full max-w-[498px] py-4 xl:py-5 2xl:py-6 px-3.5 xl:px-4 2xl:px-5 bg-white rounded-xl xl:rounded-2xl 2xl:rounded-[20px] m-auto">
             <div class="relative">
                 <h3 class="text24 text-b1 font-extrabold">Welcome John Doe!</h3>
@@ -184,6 +184,62 @@
            </div>
         </div>
     </div>
+    <!-- add Milestone popup  -->
+    <div class="fixed inset-0 w-full backdrop-blur bg-[#656B74]/60 overflow-hidden overflow-y-auto py-8 2xl:py-12 px-6 z-50 flex hidden">
+        <div class="w-full max-w-[776px] py-4 xl:py-5 2xl:py-6 px-3.5 xl:px-4 2xl:px-5 bg-white rounded-xl xl:rounded-2xl 2xl:rounded-[20px] m-auto">
+            <div class="relative">
+                <h3 class="text24 text-b1 font-extrabold text-left">Add Milestone</h3>
+                <span class="icon-close text-[#848A94] text-[24px] absolute right-0 top-0 cursor-pointer"></span>
+            </div>
+            <div class="flex flex-wrap items-center -mx-2.5 mt-4 xl:mt-5 2xl:mt-7">
+                <div class="w-full sm:w-1/2 p-2.5">
+                    <label class="label">Milestone Name <span class="text-red">*</span></label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+                <div class="w-full sm:w-1/2 p-2.5">
+                    <label class="label">Amount <span class="text-red">*</span></label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+                <div class="w-full p-2.5">
+                    <label class="label">Milestone Discription <span class="text-red">*</span></label>
+                    <textarea rows="3" type="text" class="input" placeholder="Enter your text here"></textarea>
+                </div>
+            </div>
+            <div class="text-center mt-4 xl:mt-5 2xl:mt-6 flex items-center justify-center space-x-3 lg:space-x-4 xl:space-x-5">
+                <button class="btn_secondary">Cancel</button>
+                <button class="btn_primary">Send</button>
+            </div>
+        </div>
+    </div>
+    <!-- add Milestone popup  -->
+    <!-- Task Timer popup  -->
+    <div class="fixed inset-0 w-full backdrop-blur bg-[#656B74]/60 overflow-hidden overflow-y-auto py-8 2xl:py-12 px-6 z-50 flex hidden">
+        <div class="w-full max-w-[980px] py-4 xl:py-5 2xl:py-6 px-3.5 xl:px-4 2xl:px-5 bg-white rounded-xl xl:rounded-2xl 2xl:rounded-[20px] m-auto">
+            <div class="relative">
+                <h3 class="text24 text-b1 font-extrabold text-left">Task Timer</h3>
+                <span class="icon-close text-[#848A94] text-[24px] absolute right-0 top-0 cursor-pointer"></span>
+            </div>
+            <div class="flex flex-wrap items-center -mx-2.5 mt-4 xl:mt-5 2xl:mt-7">
+                <div class="w-full p-2.5">
+                    <label class="label">Select Project <span class="text-red">*</span></label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+                <div class="w-full p-2.5">
+                    <label class="label">Select Task <span class="text-red">*</span></label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+            </div>
+            <div class="text-center mt-4 xl:mt-5 2xl:mt-6">
+                <button class="btn_primary w-full xs:max-w-[280px] anim flex items-center justify-center mx-auto space-x-2 py-1.5 lg:py-2 xl:py-2.5">
+                    <span class="icon-time_clock font-bold text-[16px]"></span>
+                    <span class="inline-block text-14 font-bold">Start Timer</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Task Timer popup  -->
+
+
     <!-- table  -->
     <div class="w-full relative bg-white overflow-hidden p-2 xl:p-3">
         <div class="overflow-x-auto relative">

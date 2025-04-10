@@ -25,7 +25,7 @@
                 <li class="group">
                     <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
                         <span class="icon-dashboard text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
-                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Dashboard</a>
+                        <a  href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Dashboard</a>
                     </div>
                 </li>
                 <li class="group">
@@ -86,8 +86,8 @@
                     </div>
                 </div>
             </header>
-            <div class="py-2 lg:py-3 2xl:py-4 px-4 2xl:px-6 space-y-1.5 xl:space-y-2 h-[calc(100vh-68px)] overflow-y-auto">
-                <div class="bg-white h- py-3 lg:py-4 2xl:py-6 px-5 lg:px-7 2xl:px-9 rounded-lg lg:rounded-xl 2xl:rounded-2xl space-y-2.5 lg:space-y-4">
+            <div class="p-4 xl:p-5 2xl:p-6 space-y-1.5 xl:space-y-2 h-[calc(100vh-68px)] overflow-y-auto">
+                <div class="bg-white py-3 lg:py-4 2xl:py-6 px-5 lg:px-7 2xl:px-9 rounded-lg lg:rounded-xl 2xl:rounded-2xl space-y-2.5 lg:space-y-4">
                     <div class="flex items-center flex-wrap justify-between -mx-1 md:-mx-2">
                         <div class="order-1 p-1 md:p-2">
                             <h4>Create Task</h4>
@@ -98,36 +98,54 @@
                     </div>
                     <div class="flex flex-wrap items-center -mx-2.5 xl:-mx-3.5">
                         <div class="w-full xs:w-1/2 md:w-1/3 p-2.5 xl:p-3.5">
-                            <label class="label">Task Name <span class="text-red">*</span></label>
-                            <input type="text" class="input" placeholder="Enter Task Name"/>
-                        </div>
-                        <div class="w-full xs:w-1/2 md:w-1/3 p-2.5 xl:p-3.5">
-                            <label class="label">Project Name  <span class="text-red">*</span></label>
+                            <label class="label">Select Project <span class="text-red">*</span></label>
                             <input type="text" class="input" placeholder="Select Project"/>
                         </div>
                         <div class="w-full xs:w-1/2 md:w-1/3 p-2.5 xl:p-3.5">
-                            <label class="label">Status</label>
-                            <input type="text" class="input" placeholder="Select"/>
+                            <label class="label">Task Name <span class="text-red">*</span></label>
+                            <input type="text" class="input" placeholder="Enter the task"/>
+                        </div>
+                        <div class="w-full xs:w-1/2 md:w-1/3">
+                            <div class="flex items-center">
+                                <div class="w-full xs:w-1/2 p-2.5 xl:p-3.5">
+                                    <label class="label">Start Date  <span class="text-red">*</span></label>
+                                    <input type="text" class="input" placeholder="Select"/>
+                                </div>
+                                <div class="w-full xs:w-1/2 p-2.5 xl:p-3.5">
+                                    <label class="label">Due Date <span class="text-red">*</span></label>
+                                    <input type="text" class="input" placeholder="Select"/>
+                                </div>
+                            </div>
                         </div>
                         <div class="w-full xs:w-1/2 md:w-1/3 p-2.5 xl:p-3.5">
-                            <label class="label">Start Date  <span class="text-red">*</span></label>
-                            <input type="text" class="input" placeholder="Select "/>
+                            <label class="label">Priority</label>
+                            <input type="text" class="input" placeholder="Select Priority"/>
                         </div>
                         <div class="w-full xs:w-1/2 md:w-1/3 p-2.5 xl:p-3.5">
-                            <label class="label">Due Date  <span class="text-red">*</span></label>
-                            <input type="text" class="input" placeholder="Select "/>
+                            <label class="label">Status<span class="text-red">*</span></label>
+                            <input type="text" class="input" placeholder="Select Status"/>
                         </div>
                         <div class="w-full xs:w-1/2 md:w-1/3 p-2.5 xl:p-3.5">
                             <label class="label">Assignee  <span class="text-red">*</span></label>
                             <input type="text" class="input" placeholder="Select Assignee"/>
                         </div>
+                        <div class="w-full xs:w-1/2 md:w-1/3 p-2.5 xl:p-3.5">
+                            <label class="label">Expected Time<span class="text-red">*</span></label>
+                            <input type="text" class="input" placeholder="Enter Time"/>
+                        </div>
+                        <div class="w-full xs:w-1/2 md:w-1/3 p-2.5 xl:p-3.5">
+                            <label class="label">Task Phase<span class="text-red">*</span></label>
+                            <input type="text" class="input" placeholder="Select"/>
+                        </div>
                         <div class="w-full md:w-1/2 p-2.5 xl:p-3.5">
                             <label class="label">Upload Documents</label>
                             <div class="w-full h-20 xl:h-[102px] bg-white relative border border-dashed border-primary rounded-lg lg:rounded-xl 2xl:rounded-2xl flex items-center justify-center">
-                                <input type="file" class="absolute opacity-0 z-10 w-full h-full inset-0"/>
-                                <div class="py-2 px-4 text-center">
-                                    <span class="text-22 2xl:text-28 font-medium text-gray_1 icon-upload"></span>
-                                    <span class="text-12 md:text-14 2xl:text-16 font-medium text-gray_1 block">Drag & Drop or <span class="text-primary">choose file</span> to upload</span>
+                                <input type="file" class="absolute opacity-0 z-10 w-full h-full inset-0">
+                                <div class="py-2 px-4 text-center flex items-center justify-center flex-col">
+                                    <div class="w-6 h-6 bg-primary rounded mb-1">
+                                        <span class="text-[12px] md:text-[24px] font-medium text-white icon-upload"></span>
+                                    </div>
+                                    <span class="text-12 md:text-14 2xl:text-16 font-medium text-gray_1 block">Drag &amp; Drop or <span class="text-primary">choose file</span> to upload</span>
                                 </div>
                             </div>
                         </div>
@@ -137,15 +155,67 @@
                         </div>
                     </div>
                     <div class="flex items-start justify-between pt-4 border-t border-[#D2D2D2]">
-                        <div class="order-1 p-1 md:p-2">
-                            <h4>Add Subtask</h4>
-                        </div>
-                        <div class="order-4 sm:order-5 p-1 md:p-2">
-                            <button class="btn_secondary anim flex items-center justify-center space-x-1.5">
-                                <span class="icon-add text-[18px] lg:text-[20px] 2xl:text-[24px]"></span>
-                                <span class="hidden sm:inline-block">Add</span>
-                            </button>
-                        </div>
+                        <h4>Checklist</h4>
+                        <button class="btn_secondary anim flex items-center justify-center space-x-1.5">
+                            <span class="icon-add text-[18px] lg:text-[20px] 2xl:text-[24px]"></span>
+                            <span class="hidden sm:inline-block">Add</span>
+                        </button>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="relative z-10">
+                            <input type="checkbox" class="absolute w-full h-full object-cover inset-0 opacity-0 z-10"/>
+                            <div class="w-full relative flex items-center fill py-2.5 px-4">
+                                <div class="checkbox anim">
+                                    <span class="icon-check text-white opacity-0 text-[24px]"></span>
+                                </div>
+                                <label for="check" class="ml-2 text16 text-black font-normal">Disburse salaries to employee accounts.</label>
+                            </div>
+                        </div> 
+                        <div class="relative z-10">
+                            <input type="checkbox" class="absolute w-full h-full object-cover inset-0 opacity-0 z-10"/>
+                            <div class="w-full relative flex items-center fill py-2.5 px-4">
+                                <div class="checkbox anim">
+                                    <span class="icon-check text-white opacity-0 text-[24px]"></span>
+                                </div>
+                                <label for="check" class="ml-2 text16 text-black font-normal">Share pay slips with employees. </label>
+                            </div>
+                        </div>                  
+                        <div class="relative z-10">
+                            <input type="checkbox" class="absolute w-full h-full object-cover inset-0 opacity-0 z-10"/>
+                            <div class="w-full relative flex items-center fill py-2.5 px-4">
+                                <div class="checkbox anim">
+                                    <span class="icon-check text-white opacity-0 text-[24px]"></span>
+                                </div>
+                                <label for="check" class="ml-2 text16 text-black font-normal">Schedule training sessions and inform employees.</label>
+                            </div>
+                        </div> 
+                        <div class="relative z-10">
+                            <input type="checkbox" class="absolute w-full h-full object-cover inset-0 opacity-0 z-10"/>
+                            <div class="w-full relative flex items-center fill py-2.5 px-4">
+                                <div class="checkbox anim">
+                                    <span class="icon-check text-white opacity-0 text-[24px]"></span>
+                                </div>
+                                <label for="check" class="ml-2 text16 text-black font-normal">Prepare the employee welcome kit</label>
+                            </div>
+                        </div> 
+                        <div class="relative z-10">
+                            <input type="checkbox" class="absolute w-full h-full object-cover inset-0 opacity-0 z-10"/>
+                            <div class="w-full relative flex items-center fill py-2.5 px-4">
+                                <div class="checkbox anim">
+                                    <span class="icon-check text-white opacity-0 text-[24px]"></span>
+                                </div>
+                                <label for="check" class="ml-2 text16 text-black font-normal">Review incoming resumes for open positions.</label>
+                            </div>
+                        </div> 
+                        <div class="relative z-10">
+                            <input type="checkbox" class="absolute w-full h-full object-cover inset-0 opacity-0 z-10"/>
+                            <div class="w-full relative flex items-center fill py-2.5 px-4">
+                                <div class="checkbox anim">
+                                    <span class="icon-check text-white opacity-0 text-[24px]"></span>
+                                </div>
+                                <label for="check" class="ml-2 text16 text-black font-normal">Schedule a team introduction meeting.</label>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
