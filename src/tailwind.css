@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @tailwind base;
-*{@apply font-nunito;}
 .anim{@apply transition-all duration-300;}
-body{@apply bg-l1;}
-h3{@apply text-22 lg:text-28 2xl:text-34 font-extrabold text-b1;}
-h4{@apply text-18 lg:text-20 2xl:text-24 font-extrabold text-black;}
+body{@apply bg-l1 font-nunito;}
+h3{@apply text-22 lg:text-28 3xl:text-34 font-extrabold text-b1;}
+h4{@apply text-18 lg:text-20 3xl:text-24 font-extrabold text-black;}
 .text16{@apply text-14 xl:text-16;}
 .text18{@apply text-16 2xl:text-18;}
 .text24{@apply text-18 md:text-20 lg:text-22 2xl:text-24;}
@@ -13,25 +13,28 @@ h4{@apply text-18 lg:text-20 2xl:text-24 font-extrabold text-black;}
 .label{@apply text16 text-b1 font-medium block mb-1.5;}
 .btn_primary{@apply bg-primary py-1.5 lg:py-2 2xl:py-2.5 px-3.5 lg:px-5 2xl:px-7 rounded-[10px] text-14 xl:text-16 font-extrabold text-white border border-primary cursor-pointer inline-block hover:text-primary hover:bg-transparent hover:border-primary;}
 .btn_secondary{@apply bg-l1 py-1.5 lg:py-2 2xl:py-2.5 px-3.5 lg:px-5 2xl:px-7 rounded-[10px] text-14 xl:text-16 font-extrabold text-primary border border-l1 cursor-pointer inline-block hover:text-primary hover:bg-transparent hover:border-primary;}
+/* checkbox css  */
 .checkbox{@apply w-5 h-5 rounded border border-g1 flex items-center justify-center;}
 input:checked + .fill .checkbox{@apply border-primary bg-primary;}
 input:checked + .fill .checkbox span{@apply opacity-100;}
 input:checked + .fill .checkbox ~ label{@apply line-through;}
 input:checked + .fill{@apply bg-l1 rounded-[10px] ;}
+/* checkbox css  */
 
-
+/* radio button css  */
 .radio_sele{@apply w-full h-full rounded-[10px] border border-g1 flex items-center justify-center;}
 input:checked + .radio_sele{@apply border-primary;}
 
 .radio_sele2{@apply w-full h-full rounded-[10px] border border-g1 flex items-center justify-center;}
 input:checked + .radio_sele2{@apply border border-primary;}
 
-
-
-
 .radio{@apply w-5 h-5 rounded-full border-4 border-g1 flex items-center justify-center;}
 input:checked + .radio{@apply border-primary;}
 input:checked + .radio span{@apply opacity-100;}
+.radio2{@apply w-5 h-5 rounded-full border-2 border-g1 flex items-center justify-center;}
+input:checked + .radio2{@apply border-primary;}
+input:checked + .radio2 span{@apply opacity-100;}
+/* radio button css  */
 
 
 /* table css start  */
@@ -46,6 +49,36 @@ table tr td{@apply text-14 text-b1 bg-l1 font-semibold py-2 xl:py-3 px-4 xl:px-6
 .table_border tr td{@apply border-b;}
 .table_border_t tr td{@apply border-t;}
 .table_btn{@apply py-1.5 px-3 bg-primary border border-primary text-white text-14 xl:text-16 font-semibold rounded-md lg:rounded-lg xl:rounded-xl hover:bg-transparent hover:text-primary anim;}
+
+table.help_table tr th{background-color: #FCFCFD !important; color: #8F8F8F !important;}
+table.help_table tr td{@apply text-s1 font-normal text16;}
 /* table css end  */
+
+/* Help popup show  */
+
+
+.emoji_select {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: transparent;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    text-align: center;
+}
+input:checked + .emoji_select {
+    --tw-bg-opacity: 1;
+    background-color: #ddd9d9;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
 @tailwind components;
 @tailwind utilities;

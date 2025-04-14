@@ -25,6 +25,21 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
+  .icon-msg:before {
+    content: "\e932";
+  }
+  .icon-chat:before {
+    content: "\e933";
+  }
+  .icon-clock1:before {
+    content: "\e934";
+  }
+  .icon-play:before {
+    content: "\e935";
+  }
+  .icon-question:before {
+    content: "\e936";
+  }
   .icon-trash3:before {
     content: "\e927";
   }

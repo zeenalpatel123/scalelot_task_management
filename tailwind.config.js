@@ -47,11 +47,13 @@ module.exports = {
         '32' : ['32px','42px'],
         '34' : ['34px','44px'],
         '36' : ['36px','46px'],
+        '44' : ['44px','54px'],
         '48' : ['48px','56px'],
       },
       fontFamily: {
         'nunito': ['Nunito Sans', 'sans-serif'],
         'pop': ['Poppins', 'sans-serif'],
+        'inter' : ['Inter','sans-serif']
 
       },
     },
