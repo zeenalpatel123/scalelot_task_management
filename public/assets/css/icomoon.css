@@ -25,6 +25,15 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
+  .icon-download1:before {
+    content: "\e937";
+  }
+  .icon-tag:before {
+    content: "\e938";
+  }
+  .icon-copy:before {
+    content: "\e939";
+  }
   .icon-msg:before {
     content: "\e932";
   }

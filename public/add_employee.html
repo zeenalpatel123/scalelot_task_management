@@ -9,11 +9,6 @@
 </head>
 <body>
     <div class="flex justify-end">
-        <!-- <div class="block lg:hidden" onclick="toggleActive('#open','-translate-x-full'); toggleActive('#cover','-translate-x-full');">
-            <div class="absolute top-1/2 -translate-y-1/2 -right-5 w-10 h-10 left-[268px] z-[999] bg-primary rounded-full opacity-100 lg:opacity-0 flex items-center justify-center">
-                <span class="icon-close text-[20px] text-white"></span>
-            </div>
-        </div> -->
         <div id="open" class="w-72 2xl:w-[312px] fixed h-screen inset-y-0 left-0 bg-white overflow-x-hidden overflow-y-auto -translate-x-full lg:translate-x-0 anim z-50">
             <div class="py-5 lg:py-6 2xl:py-8 px-4 2xl:px-6">
                 <a href="">
@@ -82,7 +77,6 @@
                                 <img src="assets/images/profile.png" alt="profile"/>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </header>
@@ -105,60 +99,88 @@
                 <div class="w-full space-y-3 lg:space-y-5 2xl:space-y-6">
                     <div class="bg-white rounded-xl lg:rounded-2xl 2xl:rounded-[20px] p-3 lg:p-4 2xl:p-5 space-y-2.5 lg:space-y-3.5">
                         <h4>Personal Info</h4>
-                        <div class="flex flex-wrap items-start -mx-1.5 xl:-mx-2">
-                            <div class="w-full p-1.5 xl:p-2">
-                                <label class="label">Profile Picture</label>
-                                <div class="w-24 h-24 rounded lg:rounded-md 2xl:rounded-[10px] relative bg-g2 flex overflow-hidden">
-                                    <input type="file" class="absolute inset-0 w-full h-full opacity-0"/>
-                                    <span class="icon-add text-[18px] lg:text-[20px] 2xl:text-[24px] text-g1 m-auto"></span>
-                                </div>
-                            </div>
-                            <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-1.5 xl:p-2">
-                                <label class="label">First Name</label>
-                                <input type="text" class="input" placeholder="Enter your text here"/>
-                            </div>
-                            <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-1.5 xl:p-2">
-                                <label class="label">Last Name</label>
-                                <input type="text" class="input" placeholder="Enter your text here"/>
-                            </div>
-                            <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-1.5 xl:p-2">
-                                <label class="label">Middle Name</label>
-                                <input type="text" class="input" placeholder="Enter your text here"/>
-                            </div>
-                            <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-1.5 xl:p-2">
-                                <label class="label">Gender</label>
-                                <div class="flex items-center space-x-5 mt-3 lg:mt-4 xl:mt-5">
-                                    <div class="relative w-max flex items-center">
-                                        <input type="radio" id="radio" name="gender" class="absolute inset-0 w-full h-full opacity-0 z-10"/>
-                                        <div class="radio">
-                                            <span class="opacity-0"></span>
+                        <div>
+                            <div class="flex flex-wrap items-center -mx-1.5 2xl:-mx-2.5 3xl:-mx-3.5">
+                                <div class="w-full 2xl:w-[140px] p-1.5 2xl:p-2.5 3xl:p-3.5">
+                                    <label class="label">Profile Picture</label>
+                                    <div class="w-28 h-28 rounded lg:rounded-md 2xl:rounded-[10px] relative bg-l1 flex overflow-hidden">
+                                        <input type="file" class="absolute inset-0 w-full h-full opacity-0"/>
+                                        <span class="icon-add text-[18px] lg:text-[20px] 2xl:text-[24px] text-g1 m-auto"></span>
+                                        <div class="w-6 h-6 rounded-full bg-white absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 hidden flex items-center justify-center cursor-pointer">
+                                            <span class="icon-trash1 text-[12px] text-black"></span>
                                         </div>
-                                        <label for="radio" class="ml-2 block">Female</label>
                                     </div>
-                                    <div class="relative w-max flex items-center">
-                                        <input type="radio" id="radio" name="gender" class="absolute inset-0 w-full h-full opacity-0 z-10"/>
-                                        <div class="radio">
-                                            <span class="opacity-0"></span>
+                                </div>
+                                <div class="w-full 2xl:w-[calc(100%-140px)]">
+                                    <div class="flex flex-wrap items-center">
+                                        <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 2xl:p-2.5 3xl:p-3.5">
+                                            <label class="label">First Name <span class="text-red">*</span></label>
+                                            <input type="text" class="input" placeholder="Enter your text here"/>
                                         </div>
-                                        <label for="radio" class="ml-2 block">Male</label>
+                                        <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 2xl:p-2.5 3xl:p-3.5">
+                                            <label class="label">Middle Name <span class="text-red">*</span></label>
+                                            <input type="text" class="input" placeholder="Enter your text here"/>
+                                        </div>
+                                        <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 2xl:p-2.5 3xl:p-3.5">
+                                            <label class="label">Last Name <span class="text-red">*</span></label>
+                                            <input type="text" class="input" placeholder="Enter your text here"/>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-1.5 xl:p-2">
-                                <label class="label">Date of birth</label>
-                                <input type="text" class="input" placeholder="Select Date"/>
+                            <div class="flex flex-wrap items-center -mx-1.5 2xl:-mx-2.5 3xl:-mx-3.5">
+                                <div class="w-full 2xl:w-48 p-1.5 2xl:p-2.5 3xl:p-3.5">
+                                    <div class="w-auto p-1.5 xl:p-2">
+                                        <label class="label">Gender</label>
+                                        <div class="flex items-center space-x-5 mt-3 lg:mt-4 xl:mt-5">
+                                            <div class="relative w-max flex items-center">
+                                                <input type="radio" id="radio" name="gender" class="absolute inset-0 w-full h-full opacity-0 z-10"/>
+                                                <div class="radio">
+                                                    <span class="opacity-0"></span>
+                                                </div>
+                                                <label for="radio" class="ml-2 block">Female</label>
+                                            </div>
+                                            <div class="relative w-max flex items-center">
+                                                <input type="radio" id="radio" name="gender" class="absolute inset-0 w-full h-full opacity-0 z-10"/>
+                                                <div class="radio">
+                                                    <span class="opacity-0"></span>
+                                                </div>
+                                                <label for="radio" class="ml-2 block">Male</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full 2xl:w-[calc(100%-192px)]">
+                                    <div class="flex flex-wrap items-center">
+                                        <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 2xl:p-2.5 3xl:p-3.5">
+                                            <label class="label">Date of Birth <span class="text-red">*</span></label>
+                                            <input type="text" class="input" placeholder="Select Date"/>
+                                        </div>
+                                        <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 2xl:p-2.5 3xl:p-3.5">
+                                            <label class="label">Mobile Number <span class="text-red">*</span></label>
+                                            <input type="text" class="input" placeholder="00000 00000"/>
+                                        </div>
+                                        <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 2xl:p-2.5 3xl:p-3.5">
+                                            <label class="label">Email Address <span class="text-red">*</span></label>
+                                            <input type="text" class="input" placeholder="example@gmail.com"/>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-1.5 xl:p-2">
-                                <label class="label">Contact Number</label>
-                                <input type="text" class="input" placeholder="00000 00000"/>
-                            </div>
-                            <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-1.5 xl:p-2">
-                                <label class="label">Email Address</label>
-                                <input type="text" class="input" placeholder="example@gmail.com"/>
-                            </div>
-                            <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-1.5 xl:p-2">
-                                <label class="label">Employee ID</label>
-                                <input type="text" class="input" placeholder="KA1001"/>
+                            <div class="-mx-1.5 2xl:-mx-2.5 3xl:-mx-3.5">
+                                <div class="w-full sm:w-1/2 2xl:w-1/3 p-2.5 xl:p-3.5">
+                                    <label class="label">Upload Documents (Pan card, Aadhar card)</label>
+                                    <div class="w-full h-32 2xl:h-[139px] bg-white relative border border-dashed border-primary rounded-lg lg:rounded-xl 2xl:rounded-2xl flex items-center justify-center">
+                                        <input type="file" class="absolute opacity-0 z-10 w-full h-full inset-0 cursor-pointer">
+                                        <div class="py-2 px-4 text-center">
+                                            <div class="w-8 h-8 xl:w-9 xl:h-9 2xl:w-10 2xl:h-10 mx-auto flex items-center justify-center rounded-[10px] bg-primary mb-1.5 2xl:mb-2.5">
+                                                <span class="text-22 2xl:text-28 text-white font-medium text-gray_1 icon-upload"></span>
+                                            </div>
+                                            <span class="text-12 md:text-14 2xl:text-16 font-medium text-gray_1 block">Drag &amp; Drop or <span class="text-primary">choose file</span> to upload</span>
+                                            <span class="block text-center text-g1 font-normal mt-0.5 2xl:mt-1 text-12 xl:text-14">Supported formats : Jpeg, pdf</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -166,101 +188,166 @@
                         <h4>Job Details</h4>
                         <div class="flex flex-wrap items-start -mx-1.5 xl:-mx-2">
                             <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                <label class="label">Department</label>
+                                <label class="label">Department <span class="text-red">*</span></label>
                                 <input type="text" class="input" placeholder="Select Department"/>
                             </div>
                             <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                <label class="label">Designation & Role</label>
+                                <label class="label">Designation <span class="text-red">*</span></label>
                                 <input type="text" class="input" placeholder="Select Role"/>
                             </div>
                             <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                <label class="label">Employee Type</label>
+                                <label class="label">Employee Type <span class="text-red">*</span></label>
                                 <input type="text" class="input" placeholder="Select Employee Type ( ex. Full time, Part Time )"/>
                             </div>
                             <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                <label class="label">Joining Date</label>
+                                <label class="label">Joining Date <span class="text-red">*</span></label>
                                 <input type="text" class="input" placeholder="Select Date"/>
                             </div>
                             <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                <label class="label">Manager/Supervisor</label>
+                                <label class="label">Team Leader/ Manager <span class="text-red">*</span></label>
                                 <input type="text" class="input" placeholder="Manager/Supervisor"/>
                             </div>
                             <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                <label class="label">Work Location</label>
+                                <label class="label">Work Location <span class="text-red">*</span></label>
                                 <input type="text" class="input" placeholder="Work Location"/>
                             </div>
                             <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                <label class="label">Work Email</label>
+                                <label class="label">Work Email <span class="text-red">*</span></label>
                                 <input type="text" class="input" placeholder="Enter Email"/>
                             </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl lg:rounded-2xl 2xl:rounded-[20px] p-3 lg:p-4 2xl:p-5 space-y-2.5 lg:space-y-3.5">
+                        <div class="flex items-center">
+                            <h4>Address</h4>
+                            <button class="btn_primary px-3 2xl:px-4 anim flex items-center justify-center space-x-2 ml-auto">
+                                <span class="icon-add font-bold"></span>
+                                <span class="inline-block font-bold">Add</span>
+                            </button>
+                        </div>
+                        <div>
+                            <div class="pb-4 xl:pb-5 2xl:pb-6">
+                                <p class="text18 text-black font-bold">Home Address</p>
+                                <div class="flex flex-wrap items-start -mx-1.5 xl:-mx-2">
+                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
+                                        <label class="label">Address Line 1 <span class="text-red">*</span></label>
+                                        <input type="text" class="input" placeholder="Enter your text here"/>
+                                    </div>
+                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
+                                        <label class="label">Address Line 2 <span class="text-red">*</span></label>
+                                        <input type="text" class="input" placeholder="Enter your text here"/>
+                                    </div>
+                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
+                                        <label class="label">City <span class="text-red">*</span></label>
+                                        <input type="text" class="input" placeholder="Select"/>
+                                    </div>
+                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
+                                        <label class="label">State <span class="text-red">*</span></label>
+                                        <input type="text" class="input" placeholder="Enter your text here"/>
+                                    </div>
+                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
+                                        <label class="label">Country <span class="text-red">*</span></label>
+                                        <input type="text" class="input" placeholder="Select Country"/>
+                                    </div>
+                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
+                                        <label class="label">Zip code <span class="text-red">*</span></label>
+                                        <input type="text" class="input" placeholder="Enter your text here"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-4 xl:pt-5 2xl:pt-6 border-t border-l2">
+                                <p class="text18 text-black font-bold">Permanent Address</p>
+                                <div class="flex flex-wrap items-start -mx-1.5 xl:-mx-2">
+                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
+                                        <label class="label">Address Line 1 <span class="text-red">*</span></label>
+                                        <input type="text" class="input" placeholder="Enter your text here"/>
+                                    </div>
+                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
+                                        <label class="label">Address Line 2 <span class="text-red">*</span></label>
+                                        <input type="text" class="input" placeholder="Enter your text here"/>
+                                    </div>
+                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
+                                        <label class="label">City <span class="text-red">*</span></label>
+                                        <input type="text" class="input" placeholder="Select"/>
+                                    </div>
+                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
+                                        <label class="label">State <span class="text-red">*</span></label>
+                                        <input type="text" class="input" placeholder="Enter your text here"/>
+                                    </div>
+                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
+                                        <label class="label">Country <span class="text-red">*</span></label>
+                                        <input type="text" class="input" placeholder="Select Country"/>
+                                    </div>
+                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
+                                        <label class="label">Zip code <span class="text-red">*</span></label>
+                                        <input type="text" class="input" placeholder="Enter your text here"/>
+                                    </div>
+                                </div>
+                            </div>  
                         </div>
                     </div>
                     <div class="bg-white rounded-xl lg:rounded-2xl 2xl:rounded-[20px] p-3 lg:p-4 2xl:p-5 space-y-2.5 lg:space-y-3.5">
                         <h4>Salary & Benefits</h4>
                         <div class="flex flex-wrap items-start -mx-1.5 xl:-mx-2">
                             <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                <label class="label">Monthly Salary</label>
+                                <label class="label">Monthly Salary <span class="text-red">*</span></label>
                                 <input type="text" class="input" placeholder="₹"/>
                             </div>
                             <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                <label class="label">Salary Payment Method</label>
-                                <input type="text" class="input" placeholder="Select Payment Method"/>
+                                <label class="label">Increment Period <span class="text-red">*</span></label>
+                                <input type="text" class="input" placeholder="Select Increment Period"/>
                             </div>
                             <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                <label class="label">Bank Account Number</label>
-                                <input type="text" class="input" placeholder="1256 - 7890 - 1XXX"/>
+                                <label class="label">Bank Name <span class="text-red">*</span></label>
+                                <input type="text" class="input" placeholder="Enter Bank Name"/>
                             </div>
                             <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                <label class="label">Account Type</label>
-                                <input type="text" class="input" placeholder="Salary Account"/>
+                                <label class="label">Bank Account Number <span class="text-red">*</span></label>
+                                <input type="text" class="input" placeholder="Enter Bank Account Number"/>
                             </div>
                             <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                <label class="label">Bank Branch Name</label>
-                                <input type="text" class="input" placeholder="MG Road Branch, Delhi"/>
+                                <label class="label">Account Type <span class="text-red">*</span></label>
+                                <input type="text" class="input" placeholder="Select"/>
                             </div>
                             <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                <label class="label">IFSC Code</label>
-                                <input type="text" class="input" placeholder="HDFC0001234"/>
+                                <label class="label">Bank Branch Name <span class="text-red">*</span></label>
+                                <input type="text" class="input" placeholder="Enter Branch Name"/>
                             </div>
                             <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                <label class="label">UPI ID</label>
-                                <input type="text" class="input" placeholder="Employee@upi"/>
+                                <label class="label">IFSC Code <span class="text-red">*</span></label>
+                                <input type="text" class="input" placeholder="Enter IFSC Code"/>
                             </div>
                             <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                <label class="label">PAN Number</label>
-                                <input type="text" class="input" placeholder="AAAPA1234A"/>
-                            </div>
-                            <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                <label class="label">Aadhar Number</label>
-                                <input type="text" class="input" placeholder="2653  8564  4663"/>
+                                <label class="label">UPI ID <span class="text-red">*</span></label>
+                                <input type="text" class="input" placeholder="Enter UPI ID"/>
                             </div>
                         </div>
                     </div>
                     <div class="bg-white rounded-xl lg:rounded-2xl 2xl:rounded-[20px] p-3 lg:p-4 2xl:p-5 space-y-2.5 lg:space-y-3.5">
                         <div class="flex items-center">
                             <h4>Family Details</h4>
-                            <button class="btn_secondary anim flex items-center justify-center space-x-2 ml-auto">
-                                <span class="icon-add font-bold text-primary"></span>
-                                <span class="inline-block font-bold text-primary">Add</span>
+                            <button class="btn_primary px-3 2xl:px-4 anim flex items-center justify-center space-x-2 ml-auto">
+                                <span class="icon-add font-bold"></span>
+                                <span class="inline-block font-bold">Add</span>
                             </button>
                         </div>
                         <div class="flex items-start flex-wrap -mx-2">
                             <div class="w-[calc(100%-64px)] p-2">
                                 <div class="flex flex-wrap items-start -mx-1.5 xl:-mx-2">
                                     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-1.5 xl:p-2">
-                                        <label class="label">Name</label>
+                                        <label class="label">Name <span class="text-red">*</span></label>
                                         <input type="text" class="input" placeholder="Enter your text here"/>
                                     </div>
                                     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-1.5 xl:p-2">
-                                        <label class="label">Relation</label>
+                                        <label class="label">Relation <span class="text-red">*</span></label>
                                         <input type="text" class="input" placeholder="Enter your text here"/>
                                     </div>
                                     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-1.5 xl:p-2">
-                                        <label class="label">Occupation</label>
+                                        <label class="label">Occupation <span class="text-red">*</span></label>
                                         <input type="text" class="input" placeholder="Enter your text here"/>
                                     </div>
                                     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-1.5 xl:p-2">
-                                        <label class="label">Contact</label>
+                                        <label class="label">Mobile Number <span class="text-red">*</span></label>
                                         <input type="text" class="input" placeholder="Enter your text here"/>
                                     </div>
                                 </div>
@@ -274,98 +361,29 @@
                     </div>
                     <div class="bg-white rounded-xl lg:rounded-2xl 2xl:rounded-[20px] p-3 lg:p-4 2xl:p-5 space-y-2.5 lg:space-y-3.5">
                         <div class="flex items-center">
-                            <h4>Address</h4>
-                            <button class="btn_secondary anim flex items-center justify-center space-x-2 ml-auto">
-                                <span class="icon-add font-bold text-primary"></span>
-                                <span class="inline-block font-bold text-primary">Add</span>
-                            </button>
-                        </div>
-                        <div class="space-y-4 lg:space-y-6 2xl:space-y-8">
-                            <div>
-                                <p class="text18 text-black font-bold">Home Address</p>
-                                <div class="flex flex-wrap items-start -mx-1.5 xl:-mx-2">
-                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                        <label class="label">Address Line 1</label>
-                                        <input type="text" class="input" placeholder="Enter your text here"/>
-                                    </div>
-                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                        <label class="label">Address Line 2</label>
-                                        <input type="text" class="input" placeholder="Enter your text here"/>
-                                    </div>
-                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                        <label class="label">City</label>
-                                        <input type="text" class="input" placeholder="Select"/>
-                                    </div>
-                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                        <label class="label">State</label>
-                                        <input type="text" class="input" placeholder="Enter your text here"/>
-                                    </div>
-                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                        <label class="label">Zip code</label>
-                                        <input type="text" class="input" placeholder="Enter your text here"/>
-                                    </div>
-                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                        <label class="label">Country</label>
-                                        <input type="text" class="input" placeholder="Select Country"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <p class="text18 text-black font-bold">Permanent Address</p>
-                                <div class="flex flex-wrap items-start -mx-1.5 xl:-mx-2">
-                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                        <label class="label">Address Line 1</label>
-                                        <input type="text" class="input" placeholder="Enter your text here"/>
-                                    </div>
-                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                        <label class="label">Address Line 2</label>
-                                        <input type="text" class="input" placeholder="Enter your text here"/>
-                                    </div>
-                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                        <label class="label">City</label>
-                                        <input type="text" class="input" placeholder="Select"/>
-                                    </div>
-                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                        <label class="label">State</label>
-                                        <input type="text" class="input" placeholder="Enter your text here"/>
-                                    </div>
-                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                        <label class="label">Zip code</label>
-                                        <input type="text" class="input" placeholder="Enter your text here"/>
-                                    </div>
-                                    <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                        <label class="label">Country</label>
-                                        <input type="text" class="input" placeholder="Select Country"/>
-                                    </div>
-                                </div>
-                            </div>  
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-xl lg:rounded-2xl 2xl:rounded-[20px] p-3 lg:p-4 2xl:p-5 space-y-2.5 lg:space-y-3.5">
-                        <div class="flex items-center">
                             <h4>Education</h4>
-                            <button class="btn_secondary anim flex items-center justify-center space-x-2 ml-auto">
-                                <span class="icon-add font-bold text-primary"></span>
-                                <span class="inline-block font-bold text-primary">Add</span>
+                            <button class="btn_primary px-3 2xl:px-4 anim flex items-center justify-center space-x-2 ml-auto">
+                                <span class="icon-add font-bold"></span>
+                                <span class="inline-block font-bold">Add</span>
                             </button>
                         </div>
                         <div class="flex items-start flex-wrap -mx-2">
                             <div class="w-[calc(100%-64px)] p-2">
                                 <div class="flex flex-wrap items-start -mx-1.5 xl:-mx-2">
                                     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-1.5 xl:p-2">
-                                        <label class="label">Qualification</label>
+                                        <label class="label">Qualification <span class="text-red">*</span></label>
                                         <input type="text" class="input" placeholder="Enter your text here"/>
                                     </div>
                                     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-1.5 xl:p-2">
-                                        <label class="label">University/Institute/School</label>
+                                        <label class="label">University/Institute/School <span class="text-red">*</span></label>
                                         <input type="text" class="input" placeholder="Enter your text here"/>
                                     </div>
                                     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-1.5 xl:p-2">
-                                        <label class="label">Year of Passing</label>
+                                        <label class="label">Year of Passing <span class="text-red">*</span></label>
                                         <input type="text" class="input" placeholder="Enter your text here"/>
                                     </div>
                                     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-1.5 xl:p-2">
-                                        <label class="label">Grade</label>
+                                        <label class="label">Grade <span class="text-red">*</span></label>
                                         <input type="text" class="input" placeholder="Enter your text here"/>
                                     </div>
                                 </div>
@@ -380,45 +398,48 @@
                     <div class="bg-white rounded-xl lg:rounded-2xl 2xl:rounded-[20px] p-3 lg:p-4 2xl:p-5 space-y-2.5 lg:space-y-3.5">
                         <div class="flex items-center">
                             <h4>Work History</h4>
-                            <button class="btn_secondary anim flex items-center justify-center space-x-2 ml-auto">
-                                <span class="icon-add font-bold text-primary"></span>
-                                <span class="inline-block font-bold text-primary">Add</span>
+                            <button class="btn_primary px-3 2xl:px-4 anim flex items-center justify-center space-x-2 ml-auto">
+                                <span class="icon-add font-bold"></span>
+                                <span class="inline-block font-bold">Add</span>
                             </button>
                         </div>
                         <div class="flex items-start flex-wrap -mx-2">
                             <div class="w-[calc(100%-64px)] p-2">
                                 <div class="flex flex-wrap items-start -mx-1.5 xl:-mx-2">
                                     <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                        <label class="label">Organization</label>
+                                        <label class="label">Organization <span class="text-red">*</span></label>
                                         <input type="text" class="input" placeholder="Enter your text here"/>
                                     </div>
                                     <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                        <label class="label">Designation</label>
+                                        <label class="label">Designation <span class="text-red">*</span></label>
                                         <input type="text" class="input" placeholder="Enter your text here"/>
                                     </div>
                                     <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                        <label class="label">Years of Service</label>
+                                        <label class="label">Years of Service <span class="text-red">*</span></label>
                                         <input type="text" class="input" placeholder="Enter your text here"/>
                                     </div>
                                     <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                        <label class="label">Reason for Leaving</label>
+                                        <label class="label">Reason for Leaving <span class="text-red">*</span></label>
                                         <input type="text" class="input" placeholder="Enter your text here"/>
                                     </div>
                                     <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                        <label class="label">Name of the contact person from last employment</label>
+                                        <label class="label">Name of the contact person from last employment <span class="text-red">*</span></label>
                                         <input type="text" class="input" placeholder="Enter your text here"/>
                                     </div>
                                     <div class="w-full sm:w-1/2 md:w-1/3 p-1.5 xl:p-2">
-                                        <label class="label">Contact Details of the contact person from last employment</label>
+                                        <label class="label">Mobile Number of the contact person from last employment <span class="text-red">*</span></label>
                                         <input type="text" class="input" placeholder="Enter your text here"/>
                                     </div>
-                                    <div class="w-full sm:w-1/2 md:w-1/3 p-2.5 xl:p-3.5">
-                                        <label class="label">Upload Documents</label>
-                                        <div class="w-full h-20 xl:h-[139px] bg-white relative border border-dashed border-primary rounded-lg lg:rounded-xl 2xl:rounded-2xl flex items-center justify-center">
-                                            <input type="file" class="absolute opacity-0 z-10 w-full h-full inset-0">
+                                    <div class="w-full sm:w-1/2 2xl:w-1/3 p-2.5 xl:p-3.5">
+                                        <label class="label">Upload Documents (Pan card, Aadhar card)</label>
+                                        <div class="w-full h-32 2xl:h-[139px] bg-white relative border border-dashed border-primary rounded-lg lg:rounded-xl 2xl:rounded-2xl flex items-center justify-center">
+                                            <input type="file" class="absolute opacity-0 z-10 w-full h-full inset-0 cursor-pointer">
                                             <div class="py-2 px-4 text-center">
-                                                <span class="text-22 2xl:text-28 font-medium text-gray_1 icon-upload"></span>
-                                                <span class="text-12 md:text-14 2xl:text-16 font-medium text-gray_1 block">Drag & Drop or <span class="text-primary">choose file</span> to upload</span>
+                                                <div class="w-8 h-8 xl:w-9 xl:h-9 2xl:w-10 2xl:h-10 mx-auto flex items-center justify-center rounded-[10px] bg-primary mb-1.5 2xl:mb-2.5">
+                                                    <span class="text-22 2xl:text-28 text-white font-medium text-gray_1 icon-upload"></span>
+                                                </div>
+                                                <span class="text-12 md:text-14 2xl:text-16 font-medium text-gray_1 block">Drag &amp; Drop or <span class="text-primary">choose file</span> to upload</span>
+                                                <span class="block text-center text-g1 font-normal mt-0.5 2xl:mt-1 text-12 xl:text-14">Supported formats : Jpeg, pdf</span>
                                             </div>
                                         </div>
                                     </div>
@@ -466,13 +487,6 @@
                                     <span class="icon-trash1 text-[18px] lg:text-[20px] 2xl:text-[24px] text-red"></span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-xl lg:rounded-2xl 2xl:rounded-[20px] p-3 lg:p-4 2xl:p-5 space-y-2.5 lg:space-y-3.5">
-                        <h4>Notes</h4>
-                        <div class="w-full p-1.5 xl:p-2">
-                            <label class="label">Description</label>
-                            <textarea type="text" rows="3" class="input" placeholder="Enter description here"></textarea>
                         </div>
                     </div>
                 </div>

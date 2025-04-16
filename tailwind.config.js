@@ -33,6 +33,7 @@ module.exports = {
         'red' : '#B01212',
         'yellow' : '#EFB008',
         's1' : '#474747',
+        'l2' : '#D6D6D6'
       },
       fontSize:{
         '12' : ['12px','22px'],

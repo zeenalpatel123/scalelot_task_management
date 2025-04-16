@@ -50,8 +50,12 @@ table tr td{@apply text-14 text-b1 bg-l1 font-semibold py-2 xl:py-3 px-4 xl:px-6
 .table_border_t tr td{@apply border-t;}
 .table_btn{@apply py-1.5 px-3 bg-primary border border-primary text-white text-14 xl:text-16 font-semibold rounded-md lg:rounded-lg xl:rounded-xl hover:bg-transparent hover:text-primary anim;}
 
-table.help_table tr th{background-color: #FCFCFD !important; color: #8F8F8F !important;}
-table.help_table tr td{@apply text-s1 font-normal text16;}
+table.help_table tr th{background-color: #FCFCFD !important; color: #8F8F8F !important; padding: 10px 12px;}
+table.help_table tr td{@apply text-s1 bg-white font-normal text16 px-3 py-2.5 border-b border-l2;}
+
+table.emp_table tr th{@apply text-black font-semibold text18 pl-0 p-2;}
+table.emp_table tr td{@apply text-[#525252] bg-transparent font-normal text16 p-2 px-3;}
+
 /* table css end  */
 
 /* Help popup show  */

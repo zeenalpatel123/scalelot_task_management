@@ -1116,9 +1116,19 @@ table tr td{
 table.help_table tr th{
   background-color: #FCFCFD !important;
   color: #8F8F8F !important;
+  padding: 10px 12px;
 }
 
 table.help_table tr td{
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(214 214 214 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
   font-weight: 400;
   --tw-text-opacity: 1;
   color: rgb(71 71 71 / var(--tw-text-opacity, 1));
@@ -1128,6 +1138,42 @@ table.help_table tr td{
 
 @media (min-width: 1280px){
   table.help_table tr td{
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+table.emp_table tr th{
+  padding: 0.5rem;
+  padding-left: 0px;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@media (min-width: 1536px){
+  table.emp_table tr th{
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+table.emp_table tr td{
+  background-color: transparent;
+  padding: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(82 82 82 / var(--tw-text-opacity, 1));
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media (min-width: 1280px){
+  table.emp_table tr td{
     font-size: 16px;
     line-height: 26px;
   }
@@ -1295,16 +1341,16 @@ input:checked + .emoji_select {
   order: 2;
 }
 
-.order-3{
-  order: 3;
-}
-
 .order-4{
   order: 4;
 }
 
 .order-5{
   order: 5;
+}
+
+.m-0{
+  margin: 0px;
 }
 
 .m-auto{
@@ -1356,6 +1402,10 @@ input:checked + .emoji_select {
   margin-bottom: auto;
 }
 
+.mb-0\.5{
+  margin-bottom: 0.125rem;
+}
+
 .mb-1{
   margin-bottom: 0.25rem;
 }
@@ -1390,6 +1440,10 @@ input:checked + .emoji_select {
 
 .mr-28{
   margin-right: 7rem;
+}
+
+.mt-0\.5{
+  margin-top: 0.125rem;
 }
 
 .mt-1\.5{
@@ -1500,8 +1554,16 @@ input:checked + .emoji_select {
   height: 6rem;
 }
 
+.h-28{
+  height: 7rem;
+}
+
 .h-3{
   height: 0.75rem;
+}
+
+.h-32{
+  height: 8rem;
 }
 
 .h-6{
@@ -1596,6 +1658,10 @@ input:checked + .emoji_select {
   width: 6rem;
 }
 
+.w-28{
+  width: 7rem;
+}
+
 .w-3{
   width: 0.75rem;
 }
@@ -1664,6 +1730,10 @@ input:checked + .emoji_select {
   width: 48%;
 }
 
+.w-\[70\%\]{
+  width: 70%;
+}
+
 .w-\[8\%\]{
   width: 8%;
 }
@@ -1699,6 +1769,10 @@ input:checked + .emoji_select {
 
 .max-w-10{
   max-width: 2.5rem;
+}
+
+.max-w-3\.5{
+  max-width: 0.875rem;
 }
 
 .max-w-32{
@@ -1739,6 +1813,10 @@ input:checked + .emoji_select {
 
 .max-w-\[434px\]{
   max-width: 434px;
+}
+
+.max-w-\[440px\]{
+  max-width: 440px;
 }
 
 .max-w-\[470px\]{
@@ -1844,10 +1922,6 @@ input:checked + .emoji_select {
   align-items: stretch;
 }
 
-.justify-start{
-  justify-content: flex-start;
-}
-
 .justify-end{
   justify-content: flex-end;
 }
@@ -1864,6 +1938,12 @@ input:checked + .emoji_select {
   --tw-space-x-reverse: 0;
   margin-right: calc(-0.75rem * var(--tw-space-x-reverse));
   margin-left: calc(-0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-0 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0px * var(--tw-space-x-reverse));
+  margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-x-1\.5 > :not([hidden]) ~ :not([hidden]){
@@ -1912,6 +1992,12 @@ input:checked + .emoji_select {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.25rem * var(--tw-space-x-reverse));
   margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-6 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-x-7 > :not([hidden]) ~ :not([hidden]){
@@ -2053,11 +2139,6 @@ input:checked + .emoji_select {
   border-color: rgb(210 210 210 / var(--tw-border-opacity, 1));
 }
 
-.border-\[\#D6D6D6\]{
-  --tw-border-opacity: 1;
-  border-color: rgb(214 214 214 / var(--tw-border-opacity, 1));
-}
-
 .border-\[\#E5E5EF\]{
   --tw-border-opacity: 1;
   border-color: rgb(229 229 239 / var(--tw-border-opacity, 1));
@@ -2086,6 +2167,11 @@ input:checked + .emoji_select {
 .border-l1{
   --tw-border-opacity: 1;
   border-color: rgb(239 242 247 / var(--tw-border-opacity, 1));
+}
+
+.border-l2{
+  --tw-border-opacity: 1;
+  border-color: rgb(214 214 214 / var(--tw-border-opacity, 1));
 }
 
 .border-primary{
@@ -2443,6 +2529,10 @@ input:checked + .emoji_select {
 
 .pb-3\.5{
   padding-bottom: 0.875rem;
+}
+
+.pb-4{
+  padding-bottom: 1rem;
 }
 
 .pl-2{
@@ -2847,10 +2937,6 @@ input:checked + .emoji_select {
     order: 3;
   }
 
-  .sm\:order-4{
-    order: 4;
-  }
-
   .sm\:order-5{
     order: 5;
   }
@@ -3024,6 +3110,11 @@ input:checked + .emoji_select {
   .lg\:-mx-2{
     margin-left: -0.5rem;
     margin-right: -0.5rem;
+  }
+
+  .lg\:mx-auto{
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .lg\:my-5{
@@ -3207,12 +3298,6 @@ input:checked + .emoji_select {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
-  }
-
-  .lg\:space-y-6 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
   }
 
   .lg\:rounded-2xl{
@@ -3441,6 +3526,10 @@ input:checked + .emoji_select {
     margin-top: 2.25rem;
   }
 
+  .xl\:block{
+    display: block;
+  }
+
   .xl\:hidden{
     display: none;
   }
@@ -3467,6 +3556,10 @@ input:checked + .emoji_select {
 
   .xl\:h-4{
     height: 1rem;
+  }
+
+  .xl\:h-9{
+    height: 2.25rem;
   }
 
   .xl\:h-\[102px\]{
@@ -3541,6 +3634,10 @@ input:checked + .emoji_select {
     width: 66.666667%;
   }
 
+  .xl\:w-9{
+    width: 2.25rem;
+  }
+
   .xl\:w-\[calc\(100\%-244px\)\]{
     width: calc(100% - 244px);
   }
@@ -3551,6 +3648,10 @@ input:checked + .emoji_select {
 
   .xl\:max-w-44{
     max-width: 11rem;
+  }
+
+  .xl\:max-w-5{
+    max-width: 1.25rem;
   }
 
   .xl\:max-w-\[659px\]{
@@ -3578,6 +3679,12 @@ input:checked + .emoji_select {
     --tw-space-x-reverse: 0;
     margin-right: calc(3rem * var(--tw-space-x-reverse));
     margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .xl\:space-x-20 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(5rem * var(--tw-space-x-reverse));
+    margin-left: calc(5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .xl\:space-x-3 > :not([hidden]) ~ :not([hidden]){
@@ -3608,6 +3715,12 @@ input:checked + .emoji_select {
     --tw-space-x-reverse: 0;
     margin-right: calc(1.75rem * var(--tw-space-x-reverse));
     margin-left: calc(1.75rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .xl\:space-x-8 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2rem * var(--tw-space-x-reverse));
+    margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .xl\:space-y-2 > :not([hidden]) ~ :not([hidden]){
@@ -3782,12 +3895,24 @@ input:checked + .emoji_select {
     padding-bottom: 1rem;
   }
 
+  .xl\:pb-5{
+    padding-bottom: 1.25rem;
+  }
+
   .xl\:pb-6{
     padding-bottom: 1.5rem;
   }
 
   .xl\:pl-0{
     padding-left: 0px;
+  }
+
+  .xl\:pt-3{
+    padding-top: 0.75rem;
+  }
+
+  .xl\:pt-5{
+    padding-top: 1.25rem;
   }
 
   .xl\:text-14{
@@ -3798,6 +3923,11 @@ input:checked + .emoji_select {
   .xl\:text-16{
     font-size: 16px;
     line-height: 26px;
+  }
+
+  .xl\:text-22{
+    font-size: 22px;
+    line-height: 30px;
   }
 
   .xl\:text-24{
@@ -3845,6 +3975,10 @@ input:checked + .emoji_select {
     margin-bottom: 1.75rem;
   }
 
+  .\32xl\:mb-2\.5{
+    margin-bottom: 0.625rem;
+  }
+
   .\32xl\:mb-3{
     margin-bottom: 0.75rem;
   }
@@ -3859,6 +3993,10 @@ input:checked + .emoji_select {
 
   .\32xl\:mb-7{
     margin-bottom: 1.75rem;
+  }
+
+  .\32xl\:mt-1{
+    margin-top: 0.25rem;
   }
 
   .\32xl\:mt-10{
@@ -3889,6 +4027,10 @@ input:checked + .emoji_select {
     margin-top: 1.75rem;
   }
 
+  .\32xl\:h-10{
+    height: 2.5rem;
+  }
+
   .\32xl\:h-11{
     height: 2.75rem;
   }
@@ -3909,6 +4051,10 @@ input:checked + .emoji_select {
     height: 5rem;
   }
 
+  .\32xl\:h-\[139px\]{
+    height: 139px;
+  }
+
   .\32xl\:h-\[calc\(100vh-68px\)\]{
     height: calc(100vh - 68px);
   }
@@ -3927,6 +4073,10 @@ input:checked + .emoji_select {
 
   .\32xl\:w-1\/6{
     width: 16.666667%;
+  }
+
+  .\32xl\:w-10{
+    width: 2.5rem;
   }
 
   .\32xl\:w-11{
@@ -3953,6 +4103,14 @@ input:checked + .emoji_select {
     width: 33.333333%;
   }
 
+  .\32xl\:w-48{
+    width: 12rem;
+  }
+
+  .\32xl\:w-\[140px\]{
+    width: 140px;
+  }
+
   .\32xl\:w-\[274px\]{
     width: 274px;
   }
@@ -3963,6 +4121,14 @@ input:checked + .emoji_select {
 
   .\32xl\:w-\[516px\]{
     width: 516px;
+  }
+
+  .\32xl\:w-\[calc\(100\%-140px\)\]{
+    width: calc(100% - 140px);
+  }
+
+  .\32xl\:w-\[calc\(100\%-192px\)\]{
+    width: calc(100% - 192px);
   }
 
   .\32xl\:w-\[calc\(100\%-278px\)\]{
@@ -4009,6 +4175,12 @@ input:checked + .emoji_select {
     justify-content: space-between;
   }
 
+  .\32xl\:space-x-10 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .\32xl\:space-x-14 > :not([hidden]) ~ :not([hidden]){
     --tw-space-x-reverse: 0;
     margin-right: calc(3.5rem * var(--tw-space-x-reverse));
@@ -4045,6 +4217,12 @@ input:checked + .emoji_select {
     margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
   }
 
+  .\32xl\:space-y-2\.5 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.625rem * var(--tw-space-y-reverse));
+  }
+
   .\32xl\:space-y-3 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
     margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
@@ -4073,12 +4251,6 @@ input:checked + .emoji_select {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
-  }
-
-  .\32xl\:space-y-8 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(2rem * var(--tw-space-y-reverse));
   }
 
   .\32xl\:rounded-2xl{
@@ -4229,8 +4401,16 @@ input:checked + .emoji_select {
     padding-right: 1rem;
   }
 
+  .\32xl\:pt-4{
+    padding-top: 1rem;
+  }
+
   .\32xl\:pt-5{
     padding-top: 1.25rem;
+  }
+
+  .\32xl\:pt-6{
+    padding-top: 1.5rem;
   }
 
   .\32xl\:text-14{
@@ -4276,25 +4456,71 @@ input:checked + .emoji_select {
 }
 
 @media (min-width: 1700px){
+  .\33xl\:-mx-2{
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+
   .\33xl\:-mx-3{
     margin-left: -0.75rem;
     margin-right: -0.75rem;
+  }
+
+  .\33xl\:-mx-3\.5{
+    margin-left: -0.875rem;
+    margin-right: -0.875rem;
+  }
+
+  .\33xl\:mt-2{
+    margin-top: 0.5rem;
   }
 
   .\33xl\:mt-8{
     margin-top: 2rem;
   }
 
+  .\33xl\:h-20{
+    height: 5rem;
+  }
+
+  .\33xl\:w-1\/2{
+    width: 50%;
+  }
+
   .\33xl\:w-1\/4{
     width: 25%;
+  }
+
+  .\33xl\:w-20{
+    width: 5rem;
+  }
+
+  .\33xl\:space-x-16 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(4rem * var(--tw-space-x-reverse));
+    margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .\33xl\:space-x-3 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .\33xl\:rounded-2xl{
     border-radius: 1rem;
   }
 
+  .\33xl\:p-2{
+    padding: 0.5rem;
+  }
+
   .\33xl\:p-3{
     padding: 0.75rem;
+  }
+
+  .\33xl\:p-3\.5{
+    padding: 0.875rem;
   }
 
   .\33xl\:text-16{
@@ -4302,8 +4528,22 @@ input:checked + .emoji_select {
     line-height: 26px;
   }
 
+  .\33xl\:text-20{
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .\33xl\:text-34{
+    font-size: 34px;
+    line-height: 44px;
+  }
+
   .\33xl\:text-44{
     font-size: 44px;
     line-height: 54px;
+  }
+
+  .\33xl\:text-\[24px\]{
+    font-size: 24px;
   }
 }

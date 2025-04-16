@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Detail Page</title>
+    <link rel="stylesheet" href="assets/css/icomoon.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+    <div class="flex justify-end">
+        <div id="open" class="w-72 2xl:w-[312px] fixed h-screen inset-y-0 left-0 bg-white overflow-x-hidden overflow-y-auto -translate-x-full lg:translate-x-0 anim z-50">
+            <div class="py-5 lg:py-6 2xl:py-8 px-4 2xl:px-6">
+                <a href="">
+                    <img src="assets/images/logo.png" class="mx-auto" alt="logo"/>
+                </a>
+            </div>
+           
+            <ul class="px-4 xl:px-5 2xl:px-7 py-2.5 lg:py-4 2xl:py-6 space-y-2.5 lg:space-y-4 2xl:space-y-6">
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-dashboard text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Dashboard</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-notebook text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Projects</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-task text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Tasks</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-user text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">HR Department</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-role text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Roles &amp; Permissions</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-setting text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Settings</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="cover" class="fixed w-full h-screen backdrop-blur-sm bg-black/30 xl:w-0 z-20 origin-left xl:hidden -translate-x-full"></div>
+        <div class="w-full lg:w-[calc(100%-292px)] 2xl:w-[calc(100%-316px)] ml-auto">
+            <header class="py-2 2xl:py-2.5 px-3.5 2xl:px-5 bg-white  z-50">
+                <div class="flex items-center">
+                    <span class="icon-menu text-[18px] md:text-[20px] lg:text-[24px] text-black xl:hidden pr-5 cursor-pointer" onclick="toggleActive('#open','-translate-x-full'); toggleActive('#cover','-translate-x-full');"></span>
+                    <div class="w-full max-w-80 2xl:max-w-[440px] hidden md:flex items-center bg-l1 rounded-lg px-2 md:px-3 xl:px-5 py-2 xl:py-3">
+                        <label for="search">
+                            <span class="icon-search text-g6 block text-[18px] xl:text-[20px] cursor-pointer"></span>
+                        </label>
+                        <input type="search" id="search" class="w-full outline-none text-g6 bg-transparent text-dark pl-2.5" placeholder="Search"/>
+                    </div>
+                    <div class="flex items-center space-x-3.5 md:space-x-5 xl:space-x-7 ml-auto">
+                        <button class="btn_primary anim flex items-center justify-center space-x-2 py-1.5 lg:py-2 xl:py-2.5">
+                            <span class="icon-time_clock font-bold text-[16px]"></span>
+                            <span class="inline-block text-14 font-bold">Time Tracker</span>
+                        </button>
+                        <div class="flex items-center space-x-3 xl:space-x-5">
+                            <span class="icon-noti text-[20px] 2xl:text-[24px] text-black cursor-pointer"></span>
+                            <div class="w-8 xl:w-10 h-8 xl:h-10 rounded-full cursor-pointer overflow-hidden">
+                                <img src="assets/images/profile.png" alt="profile"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="py-2 lg:py-3 2xl:py-4 px-4 2xl:px-6 h-[calc(100vh-68px)] overflow-y-auto">
+                <div class="flex flex-wrap items-stretch -mx-2 2xl:-mx-3">
+                    <div class="w-full 2xl:w-1/2 p-2 2xl:p-3 h-auto">
+                        <div class="bg-white h-full rounded-xl xl:rounded-2xl 2xl:rounded-[20px] py-4 xl:py-6 2xl:py-8 px-3 xl:px-4 2xl:px-5">
+                            <div class="flex items-center -mx-1.5 3xl:-mx-2">
+                                <div class="w-full 3xl:w-1/2 p-1.5 3xl:p-2">
+                                    <div class="flex items-start space-x-2 3xl:space-x-3">
+                                        <div class="flex items-center space-x-2.5 xl:space-x-3 2xl:space-x-4">
+                                            <div class="w-16 h-16 3xl:w-20 3xl:h-20 rounded-full">
+                                                <img src="assets/images/profile.png" class="w-full h-full object-cover" alt="profile"/>
+                                            </div>
+                                            <div class="space-y-1.5 2xl:space-y-2.5">
+                                                <h4 class="text-18 3xl:text-20">Krupa Amreliya</h4>
+                                                <span class="inline-block text-green bg-[#E8FDF9] rounded-full py-1 px-3">Active</span>
+                                            </div>
+                                        </div>
+                                        <span class="icon-edit2 text-[18px] 2xl:text-[20px] 3xl:text-[24px] text-primary mt-1.5 3xl:mt-2"></span>
+                                    </div>
+                                </div>
+                                <div class="w-full 3xl:w-1/2 p-1.5 3xl:p-2">
+                                    <div class="space-y-1.5 2xl:space-y-2.5">
+                                        <div class="flex items-center space-x-2.5">
+                                            <span class="icon-user_profile text-[18px] xl:text-[20px] 2xl:text-[24px] text-primary inline-block"></span>
+                                            <span class="text16 text-b1 font-semibold inline-block">ID : KA1001</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2.5">
+                                            <span class="icon-call text-[18px] xl:text-[20px] 2xl:text-[24px] text-primary inline-block"></span>
+                                            <span class="text16 text-b1 font-semibold inline-block">+91 56545 85465</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2.5">
+                                            <span class="icon-mail text-[18px] xl:text-[20px] 2xl:text-[24px] text-primary inline-block"></span>
+                                            <span class="text16 text-b1 font-semibold inline-block">amreliyakrupa225@gmail.com</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2.5">
+                                            <span class="icon-birthday font-medium text-[18px] xl:text-[20px] 2xl:text-[24px] text-primary inline-block"></span>
+                                            <span class="text16 text-b1 font-semibold inline-block">30-08-2002</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full xl:w-1/2 px-2 2xl:px-3 h-auto">
+                        <div class="flex flex-wrap -mx-1.5 2xl:-mx-2 3xl:-mx-3 h-auto">
+                            <div class="w-full xs:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/2 p-1.5 2xl:p-2 3xl:p-3 h-auto">
+                                <div class="bg-white h-full py-2.5 2xl:py-3 px-4 2xl:px-5 rounded-lg 2xl:rounded-xl">
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <span class="w-2.5 h-2.5 bg-primary rounded-full inline-block"></span>
+                                        <span class="text16 text-black/50 font-medium inline-block">Attendance  </span>
+                                    </div>
+                                    <h3 class="text-18 xl:text-22 2xl:text-28 3xl:text-34">240 days</h3>
+                                </div>
+                            </div>
+                            <div class="w-full xs:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/2 p-1.5 2xl:p-2 3xl:p-3 h-auto">
+                                <div class="bg-white h-full py-2.5 2xl:py-3 px-4 2xl:px-5 rounded-lg 2xl:rounded-xl">
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <span class="w-2.5 h-2.5 bg-yellow rounded-full inline-block"></span>
+                                        <span class="text16 text-black/50 font-medium inline-block">Late Coming</span>
+                                    </div>
+                                    <h3 class="text-18 xl:text-22 2xl:text-28 3xl:text-34">10 days</h3>
+                                </div>
+                            </div>
+                            <div class="w-full xs:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/2 p-1.5 2xl:p-2 3xl:p-3 h-auto">
+                                <div class="bg-white h-full py-2.5 2xl:py-3 px-4 2xl:px-5 rounded-lg 2xl:rounded-xl">
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <span class="w-2.5 h-2.5 bg-[#F24545] rounded-full inline-block"></span>
+                                        <span class="text16 text-black/50 font-medium inline-block">Absent</span>
+                                    </div>
+                                    <h3 class="text-18 xl:text-22 2xl:text-28 3xl:text-34">10 days</h3>
+                                </div>
+                            </div>
+                            <div class="w-full xs:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/2 p-1.5 2xl:p-2 3xl:p-3 h-auto">
+                                <div class="bg-white h-full py-2.5 2xl:py-3 px-4 2xl:px-5 rounded-lg 2xl:rounded-xl">
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <span class="w-2.5 h-2.5 bg-[#75C675] rounded-full inline-block"></span>
+                                        <span class="text16 text-black/50 font-medium inline-block">Leave Apply</span>
+                                    </div>
+                                    <h3 class="text-18 xl:text-22 2xl:text-28 3xl:text-34">240 days</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 p-2 2xl:p-3 h-auto">
+                        <div class="bg-white h-full rounded-xl xl:rounded-2xl 2xl:rounded-[20px] p-3.5 2xl:p-5 space-y-2.5">
+                            <h4>Job Information</h4>
+                            <div class="w-full overflow-x-auto">
+                                <table class="emp_table w-full">
+                                    <tr>
+                                        <th class="w-[30%]">Department</th>
+                                        <td class="w-[70%]">Product Design</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w-[30%]">Designation</th>
+                                        <td class="w-[70%]">UI/UX Designer</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w-[30%]">Employment Status</th>
+                                        <td class="w-[70%]">Full Time</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w-[30%]">Joining Date</th>
+                                        <td class="w-[70%]">08-01-2025</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w-[30%]">Manager/Supervisor</th>
+                                        <td class="w-[70%]">Nadeem Vora</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w-[30%]">Work Location</th>
+                                        <td class="w-[70%]">Work From Office</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w-[30%]">Work Email</th>
+                                        <td class="w-[70%]">krupascalelot123@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w-[30%]">Total Tenure</th>
+                                        <td class="w-[70%]">2 Years, 8 Months</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 p-2 2xl:p-3 h-auto">
+                        <div class="bg-white h-full rounded-xl xl:rounded-2xl 2xl:rounded-[20px] p-3.5 2xl:p-5 space-y-2.5">
+                            <h4>Salary and Compensation</h4>
+                            <div class="w-full overflow-x-auto">
+                                <table class="emp_table w-full">
+                                    <tr>
+                                        <th class="w-[30%]">Monthly Salary</th>
+                                        <td class="w-[70%]">₹ 100.00</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w-[30%]">Salary Payment Method</th>
+                                        <td class="w-[70%]">Bank Transfer</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w-[30%]">Employment Status</th>
+                                        <td class="w-[70%]">Full Time</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w-[30%]">Bank Account Number</th>
+                                        <td class="w-[70%]">1256 - 7890 - 1XXX</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w-[30%]">Aadhar Number</th>
+                                        <td class="w-[70%]">2653  8564  4663</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w-[30%]">PAN Number</th>
+                                        <td class="w-[70%]">AAAPA1234A</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 p-2 2xl:p-3 h-auto">
+                        <div class="bg-white h-full rounded-xl xl:rounded-2xl 2xl:rounded-[20px] p-3.5 2xl:p-5 space-y-2.5">
+                            <h4>Family Information</h4>
+                            <div class="flex items-center flex-wrap space-x-0 xl:space-x-20 -mx-2.5">
+                                <div class="w-auto p-2.5">
+                                    <h6 class="text18 font-semibold text-black mb-2 2xl:mb-3">Father</h6>
+                                    <span class="text16 text-[#525252] font-normal block">Anilbhai Amreliya</span>
+                                    <span class="text16 text-[#525252] font-normal block">Business Owner</span>
+                                    <span class="text16 text-[#525252] font-normal block">+91 56545 85465</span>
+                                </div>
+                                <div class="w-auto p-2.5">
+                                    <h6 class="text18 font-semibold text-black mb-2 2xl:mb-3">Mother</h6>
+                                    <span class="text16 text-[#525252] font-normal block">Manishaben Amreliya</span>
+                                    <span class="text16 text-[#525252] font-normal block">House wife</span>
+                                    <span class="text16 text-[#525252] font-normal block">+91 56545 85465</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="w-full md:w-1/2 p-2 2xl:p-3 h-auto">
+                        <div class="bg-white h-full rounded-xl xl:rounded-2xl 2xl:rounded-[20px] p-3.5 2xl:p-5 space-y-2.5">
+                            <h4>Educational Information & Qualifications</h4>
+                            <div class="flex items-center flex-wrap space-x-0 xl:space-x-20 -mx-2.5">
+                                <div class="w-auto p-2.5">
+                                    <h6 class="text18 font-semibold text-black mb-2 2xl:mb-3">Bachelor’s Degree</h6>
+                                    <span class="text16 text-[#525252] font-normal block">University of XYZ</span>
+                                    <span class="text16 text-[#525252] font-normal block">Year : 2019-20</span>
+                                    <span class="text16 text-[#525252] font-normal block">Grade : A</span>
+                                </div>
+                                <div class="w-auto p-2.5">
+                                    <h6 class="text18 font-semibold text-black mb-2 2xl:mb-3">Commerce</h6>
+                                    <span class="text16 text-[#525252] font-normal block">School of ABC</span>
+                                    <span class="text16 text-[#525252] font-normal block">Year : 2018-19</span>
+                                    <span class="text16 text-[#525252] font-normal block">Grade : B1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="w-full md:w-1/2 p-2 2xl:p-3 h-auto">
+                        <div class="bg-white h-full rounded-xl xl:rounded-2xl 2xl:rounded-[20px] p-3.5 2xl:p-5 space-y-2.5">
+                            <div class="space-y-1.5">
+                                <h4>Home Address</h4>
+                                <p class="text16 text-[#525252] font-normal w-full max-w-[440px]">17th Floor, Office no. 1710, The Junomoneta Tower,<br class="xl:block hidden">
+                                    nr. Rajhans Cinema, opp. Pal RTO BRTS Road, Adajan Gam,
+                                    Adajan, Surat, Gujarat 395009</p>
+                            </div>
+                            <div class="space-y-1.5">
+                                <h4>Permanent Address</h4>
+                                <p class="text16 text-[#525252] font-normal w-full max-w-[440px]">17th Floor, Office no. 1710, The Junomoneta Tower,<br class="xl:block hidden">
+                                    nr. Rajhans Cinema, opp. Pal RTO BRTS Road, Adajan Gam,
+                                    Adajan, Surat, Gujarat 395009</p>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="w-full md:w-1/2 p-2 2xl:p-3 h-auto">
+                        <div class="bg-white h-full rounded-xl xl:rounded-2xl 2xl:rounded-[20px] p-3.5 2xl:p-5 space-y-2.5">
+                            <h4>Previous Work History</h4>
+                            <div class="flex items-center flex-wrap space-x-0 3xl:space-x-16 -mx-2.5">
+                                <div class="w-auto p-2.5">
+                                    <h6 class="text18 font-semibold text-black mb-2 2xl:mb-3">UI UX Designer</h6>
+                                    <div>
+                                        <span class="text16 text-[#525252] font-normal block">ABC Tech Solutions</span>
+                                        <span class="text16 text-[#525252] font-normal block">Feb 2022 - Present</span>
+                                        <span class="text16 text-[#525252] font-normal block">Reason for leaving : XYZ Reason</span>
+                                    </div>
+                                    <div class="mt-1.5">
+                                        <span class="text16 text-[#525252] font-bold block">Contact person from last employment</span>
+                                        <span class="text16 text-[#525252] font-normal block">Elissa Mann</span>
+                                        <span class="text16 text-[#525252] font-normal block">+91 56545 85465</span>
+                                    </div>
+                                </div>
+                                <div class="w-auto p-2.5">
+                                    <h6 class="text18 font-semibold text-black mb-2 2xl:mb-3">UI UX Designer</h6>
+                                    <span class="text16 text-[#525252] font-normal block">XYZ Innovations</span>
+                                    <span class="text16 text-[#525252] font-normal block">Feb 2022 - Present</span>
+                                    <span class="text16 text-[#525252] font-normal block">Reason for leaving : XYZ Reason</span>
+                                    <div class="mt-1.5">
+                                        <span class="text16 text-[#525252] font-bold block">Contact person from last employment</span>
+                                        <span class="text16 text-[#525252] font-normal block">Elissa Mann</span>
+                                        <span class="text16 text-[#525252] font-normal block">+91 56545 85465</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="w-full md:w-1/2 p-2 2xl:p-3 h-auto">
+                        <div class="bg-white h-full rounded-xl xl:rounded-2xl 2xl:rounded-[20px] p-3.5 2xl:p-5 space-y-2.5">
+                            <h4>Performance Analytics</h4>
+                        </div>
+                    </div> 
+                    <div class="w-full md:w-1/2 p-2 2xl:p-3 h-auto">
+                        <div class="bg-white h-full rounded-xl xl:rounded-2xl 2xl:rounded-[20px] p-3.5 2xl:p-5 space-y-2.5">
+                            <h4>Leave Balance</h4>
+                            <div class="w-full overflow-x-auto">
+                                <table class="emp_table w-full">
+                                    <tr>
+                                        <th class="w-[30%]">Annual Leave</th>
+                                        <td class="w-[70%]">15 days</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w-[30%]">Sick Leave</th>
+                                        <td class="w-[70%]">10 days</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w-[30%]">Personal Leave</th>
+                                        <td class="w-[70%]">5 days</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="w-full md:w-1/2 p-2 2xl:p-3 h-auto">
+                        <div class="bg-white rounded-2xl overflow-hidden p-3 lg:p-4 xl:p-6 h-full">
+                            <h4>Files &amp; Attachments</h4>
+                            <div class="space-y-1.5 lg:space-y-2.5 mt-2 md:mt-4 lg:mt-6 xl:mt-8">
+                                <div class="bg-l1 rounded-lg lg:rounded-xl xl:rounded-2xl py-1.5 lg:py-2.5 px-2.5 lg:px-4 xl:px-6">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-8 xl:w-10 h-8 xl:h-10 flex items-center justify-center rounded-md bg-[#5380C0]/15">
+                                                <img src="assets/images/doc.png" class="w-full max-w-3.5 xl:max-w-5" alt="doc"/>
+                                            </div>
+                                            <span class="text16 font-medium text-[#0C0F35]">Daily Update 2024.doc</span>
+                                        </div>
+                                        <span class="icon-download1 text-[18px] lg:text-[20px] xl:text-[24px] text-g5"></span>
+                                    </div>
+                                </div>
+                                <div class="bg-l1 rounded-lg lg:rounded-xl xl:rounded-2xl py-1.5 lg:py-2.5 px-2.5 lg:px-4 xl:px-6">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-8 xl:w-10 h-8 xl:h-10 flex items-center justify-center rounded-md bg-[#FDF3D2]">
+                                                <img src="assets/images/zip.png" class="w-full max-w-3.5 xl:max-w-5" alt="doc"/>
+                                            </div>
+                                            <span class="text16 font-medium text-[#0C0F35]">Kratos-outdoor.zip</span>
+                                        </div>
+                                        <span class="icon-download1 text-[18px] lg:text-[20px] xl:text-[24px] text-g5"></span>
+                                    </div>
+                                </div>
+                                <div class="bg-l1 rounded-lg lg:rounded-xl xl:rounded-2xl py-1.5 lg:py-2.5 px-2.5 lg:px-4 xl:px-6">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-8 xl:w-10 h-8 xl:h-10 flex items-center justify-center rounded-md bg-[#E5F6E6]">
+                                                <img src="assets/images/xl.png" class="w-full max-w-3.5 xl:max-w-5" alt="doc"/>
+                                            </div>
+                                            <span class="text16 font-medium text-[#0C0F35]">Kratos-outdoor.xl</span>
+                                        </div>
+                                        <span class="icon-download1 text-[18px] lg:text-[20px] xl:text-[24px] text-g5"></span>
+                                    </div>
+                                </div>
+                                <div class="bg-l1 rounded-lg lg:rounded-xl xl:rounded-2xl py-1.5 lg:py-2.5 px-2.5 lg:px-4 xl:px-6">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-8 xl:w-10 h-8 xl:h-10 flex items-center justify-center rounded-md bg-[#F6E5E5]">
+                                                <img src="assets/images/pdf.png" class="w-full max-w-3.5 xl:max-w-5" alt="doc"/>
+                                            </div>
+                                            <span class="text16 font-medium text-[#0C0F35]">Kratos-outdoor.pdf</span>
+                                        </div>
+                                        <span class="icon-download1 text-[18px] lg:text-[20px] xl:text-[24px] text-g5"></span>
+                                    </div>
+                                </div>
+                                <div class="bg-l1 rounded-lg lg:rounded-xl xl:rounded-2xl py-1.5 lg:py-2.5 px-2.5 lg:px-4 xl:px-6">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-8 xl:w-10 h-8 xl:h-10 flex items-center justify-center rounded-md">
+                                                <img src="assets/images/jpg.png" class="max-w-full" alt="doc"/>
+                                            </div>
+                                            <span class="text16 font-medium text-[#0C0F35]">Kratos.jpg</span>
+                                        </div>
+                                        <span class="icon-download1 text-[18px] lg:text-[20px] xl:text-[24px] text-g5"></span>
+                                    </div>
+                                </div>
+                                <div class="bg-l1 rounded-lg lg:rounded-xl xl:rounded-2xl py-1.5 lg:py-2.5 px-2.5 lg:px-4 xl:px-6">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-8 xl:w-10 h-8 xl:h-10 flex items-center justify-center rounded-md bg-[#F6E5E5]">
+                                                <img src="assets/images/pdf.png" class="w-full max-w-3.5 xl:max-w-5" alt="doc"/>
+                                            </div>
+                                            <span class="text16 font-medium text-[#0C0F35]">Kratos-outdoor(2).pdf</span>
+                                        </div>
+                                        <span class="icon-download1 text-[18px] lg:text-[20px] xl:text-[24px] text-g5"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 p-2 2xl:p-3 h-auto">
+                        <div class="bg-white rounded-lg xl:rounded-xl 2xl:rounded-2xl p-3.5 2xl:p-5 h-full">
+                            <h4 class="mb-3 xl:mb-5 2xl:mb-7">Help</h4>
+                            <ul class="flex items-center space-x-10 xl:space-x-12 2xl:space-x-14 pb-1.5 xl:pb-2.5 2xl:pb-3 border-b border-l2">
+                                <li>
+                                    <a href="#" class="text-g6 font-semibold text16">Requests I Made</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-g6 font-semibold text16">Requests I Received</a>
+                                </li>
+                            </ul>
+                            <div class="w-full overflow-x-auto mt-2.5 2xl:mt-4">
+                                <table class="w-full help_table">
+                                    <thead>
+                                        <tr>
+                                            <th>Subject</th>
+                                            <th>Sent To</th>
+                                            <th>Feedback</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Help for home page create...</td>
+                                            <td>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-6 h-6 rounded-full">
+                                                        <img src="assets/images/profile.png" alt="profile">
+                                                    </div>
+                                                    <span class="inline-block ">Vijay Baldaniya</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="text-center block">😊</span>
+                                            </td>
+                                            <td>
+                                                <span class="text-center inline-block text-green font-normal py-1 px-4 rounded-full bg-[#E8FDF9]">Completed</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Help for home page create...</td>
+                                            <td>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-6 h-6 rounded-full">
+                                                        <img src="assets/images/profile.png" alt="profile">
+                                                    </div>
+                                                    <span class="inline-block ">Vijay Baldaniya</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="text-center block">😊</span>
+                                            </td>
+                                            <td>
+                                                <span class="text-center inline-block text-red font-normal py-1 px-4 rounded-full bg-[#FFF5F4]">Unable to Help</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
