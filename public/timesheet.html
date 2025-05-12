@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/icomoon.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+    <div class="flex justify-end">
+        <aside id="open" class="w-72 lg:w-[274px] fixed h-screen inset-y-0 left-0 bg-white overflow-x-hidden overflow-y-auto -translate-x-full lg:translate-x-0 anim z-50">
+            <div class="flex items-center justify-between py-5 lg:py-6 2xl:py-8 px-4 2xl:px-6">
+                <a href="">
+                    <img src="assets/images/logo.png" class="m-0 lg:mx-auto" alt="logo"/>
+                </a>
+                <div class="block lg:hidden" onclick="toggleActive('#open','-translate-x-full'); toggleActive('#cover','-translate-x-full');">
+                    <div class="w-8 h-8 z-[999] bg-primary rounded-full opacity-100 lg:opacity-0 flex items-center justify-center">
+                        <span class="icon-close text-[20px] text-white"></span>
+                    </div>
+                </div>
+            </div>
+            <ul class="px-3.5 xl:px-4 2xl:px-5 py-2.5 lg:py-4 2xl:py-6 space-y-2.5 2xl:space-y-4">
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-dashboard text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Dashboard</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-clinets text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Client</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-notebook text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Projects</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-task text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Tasks</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-timer text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Timesheet</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-user_profile text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Employees</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-attendance text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Attendance</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-leave text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim">Leaves</a>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center justify-between py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <div class="flex items-center space-x-3">
+                            <span class="icon-setting text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                            <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim whitespace-nowrap">Masters</a>
+                        </div>
+                        <span class="icon-down text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                    </div>
+                </li>
+                <li class="group">
+                    <div class="flex items-center space-x-3 py-2.5 px-3 2xl:px-5 cursor-pointer group-hover:bg-l1 rounded-[10px] anim">
+                        <span class="icon-role text-g1 group-hover:text-primary text-[20px] xl:text-[24px] anim"></span>
+                        <a href="#" class="inline-block text-16 font-semibold text-g1 group-hover:text-primary anim whitespace-nowrap">Roles & Permissions</a>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+        <div id="cover" class="fixed w-full h-screen backdrop-blur-sm bg-black/30 xl:w-0 z-20 origin-left xl:hidden -translate-x-full" onclick="toggleActive('#open','-translate-x-full'); toggleActive('#cover','-translate-x-full');"></div>
+        <div class="w-full lg:w-[calc(100%-278px)]">
+            <header class="py-2 2xl:py-2.5 px-3.5 2xl:px-5 bg-white z-50">
+                <div class="flex items-center">
+                    <span class="icon-menu text-[18px] md:text-[20px] lg:text-[24px] text-black xl:hidden pr-5 cursor-pointer" onclick="toggleActive('#open','-translate-x-full'); toggleActive('#cover','-translate-x-full');"></span>
+                    <div class="w-full max-w-80 2xl:max-w-[440px] hidden xl:flex items-center bg-l1 rounded-lg px-2 md:px-3 xl:px-5 py-2 xl:py-3">
+                        <label for="search">
+                            <span class="icon-search text-g6 block text-[18px] xl:text-[20px] cursor-pointer"></span>
+                        </label>
+                        <input type="search" id="search" class="w-full outline-none text-g6 bg-transparent text-dark pl-2.5" placeholder="Search">
+                    </div>
+                    <div class="flex items-center space-x-3 xl:space-x-5 2xl:space-x-7 ml-auto pl-2 xl:pl-0">
+                        <div class="flex items-center space-x-2.5 lg:space-x-3 2xl:space-x-5">
+                            <button class="btn_primary anim flex items-center justify-center space-x-2 py-1.5 lg:py-2 2xl:py-2.5 px-3 xl:px-4 2xl:px-5">
+                                <span class="icon-time_clock font-bold text-[16px]"></span>
+                                <span class="inline-block text-14 font-bold">Clock-In</span>
+                            </button>
+                            <button class="btn_primary anim flex items-center justify-center space-x-2 py-1.5 lg:py-2 2xl:py-2.5 px-3 xl:px-4 2xl:px-5">
+                                <span class="icon-time_clock font-bold text-[16px]"></span>
+                                <span class="inline-block text-14 font-bold">Time Tracker</span>
+                            </button>
+                        </div>
+                        <div class="flex items-center space-x-3 xl:space-x-5">
+                            <span class="icon-noti text-[20px] 2xl:text-[24px] text-black cursor-pointer"></span>
+                            <span class="icon-noti text-[20px] 2xl:text-[24px] text-black cursor-pointer"></span>
+                            <div class="w-8 xl:w-10 h-8 xl:h-10 rounded-full cursor-pointer overflow-hidden">
+                                <img src="assets/images/profile.png" alt="profile">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="p-4 2xl:p-6 space-y-2.5 xl:space-y-4 h-[calc(100vh-68px)] overflow-y-auto">
+                <div class="bg-white rounded-xl 2xl:rounded-2xl py-2 xl:py-3 2xl:py-4 px-5 lg:px-7 2xl:px-9 overflow-x-auto">
+                    <ul class="flex items-center space-x-2.5 xl:space-x-4 2xl:space-x-5">
+                        <li>
+                            <a href="" class="text16 text-g1 font-semibold hover:text-primary px-2.5 inline-block anim whitespace-nowrap">Clock In-out History</a>
+                        </li>
+                        <li>
+                            <a href="" class="text16 text-g1 font-semibold hover:text-primary px-2.5 inline-block anim whitespace-nowrap">Task Time History</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-wrap items-center -mx-1 md:-mx-2">
+                    <div class="p-1 md:p-2">
+                        <h4>Clock In-Out History</h4>
+                    </div>
+                    <div class="md:ml-auto flex flex-wrap items-center">
+                        <div class="w-full xs:w-1/2 sm:w-1/3 lg:w-[352px] p-1 md:p-2">
+                            <input type="text" class="input bg-white" placeholder="Select Member"/>
+                        </div>
+                        <div class="w-full xs:w-1/2 sm:w-1/3 lg:w-auto p-1 md:p-2">
+                            <input type="text" class="input bg-white" placeholder="March 2025"/>
+                        </div>
+                        <div class="w-full xs:w-1/2 sm:w-1/3 lg:w-auto p-1 md:p-2">
+                            <input type="text" class="input bg-white" placeholder="Monthly"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

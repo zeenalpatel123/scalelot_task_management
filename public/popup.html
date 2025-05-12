@@ -1,3 +1,13 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/icomoon.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+   </head>
+   <body>
     <div class="fixed inset-0 w-full backdrop-blur bg-[#656B74]/60 overflow-hidden overflow-y-auto py-8 2xl:py-12 px-6 z-50 flex hidden">
         <div class="w-full max-w-[470px] py-4 xl:py-5 2xl:py-6 px-3.5 xl:px-4 2xl:px-5 bg-white rounded-xl xl:rounded-2xl 2xl:rounded-[20px] m-auto">
             <div class="relative">
@@ -192,9 +202,21 @@
                 <span class="icon-close text-[#848A94] text-[24px] absolute right-0 top-0 cursor-pointer"></span>
             </div>
             <div class="flex flex-wrap items-center -mx-2.5 mt-4 xl:mt-5 2xl:mt-7">
-                <div class="w-full sm:w-1/2 p-2.5">
+                <div class="w-full p-2.5">
                     <label class="label">Milestone Name <span class="text-red">*</span></label>
                     <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+                <div class="w-full sm:w-1/2">
+                    <div class="flex items-center">
+                        <div class="w-full sm:w-1/2 p-2.5">
+                            <label class="label">Start Date  <span class="text-red">*</span></label>
+                            <input type="text" class="input" placeholder="Select">
+                        </div>
+                        <div class="w-full sm:w-1/2 p-2.5">
+                            <label class="label">Due Date <span class="text-red">*</span></label>
+                            <input type="text" class="input" placeholder="Select">
+                        </div>
+                    </div>
                 </div>
                 <div class="w-full sm:w-1/2 p-2.5">
                     <label class="label">Amount <span class="text-red">*</span></label>
@@ -238,6 +260,593 @@
         </div>
     </div>
     <!-- Task Timer popup  -->
+    <!-- New Entry  -->
+    <div class="fixed inset-0 w-full backdrop-blur bg-[#656B74]/60 overflow-hidden overflow-y-auto py-8 2xl:py-12 px-6 z-50 flex hidden">
+        <div class="w-full max-w-[1052px] py-4 xl:py-5 2xl:py-6 px-3.5 xl:px-4 2xl:px-5 bg-white rounded-xl xl:rounded-2xl 2xl:rounded-[20px] m-auto">
+            <div class="relative">
+                <h3 class="text24 text-b1 font-extrabold text-left">Add Attendance</h3>
+                <span class="icon-close text-[#848A94] text-[24px] absolute right-0 top-0 cursor-pointer"></span>
+            </div>
+            <div class="flex flex-wrap items-center -mx-2.5 mt-4 xl:mt-5 2xl:mt-7">
+                <div class="w-full sm:w-1/2 p-2.5">
+                    <label class="label">Employee Name <span class="text-red">*</span></label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+                <div class="w-full sm:w-1/2 p-2.5">
+                    <label class="label">Select Date <span class="text-red">*</span></label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+                <div class="w-full sm:w-1/2 p-2.5">
+                    <label class="label">Punch In <span class="text-red">*</span></label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+                <div class="w-full sm:w-1/2 p-2.5">
+                    <label class="label">Punch Out <span class="text-red">*</span></label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+                <div class="w-full sm:w-1/2 p-2.5">
+                    <label class="label">Status <span class="text-red">*</span></label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+                <div class="w-full sm:w-1/2 p-2.5">
+                    <label class="label">Shift <span class="text-red">*</span></label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+            </div>
+            <div class="text-center mt-4 xl:mt-5 2xl:mt-6 flex items-center justify-center space-x-3 lg:space-x-4 xl:space-x-5">
+                <button class="btn_secondary">Cancel</button>
+                <button class="btn_primary">Send</button>
+            </div>
+        </div>
+    </div>
+    <!-- New Entry  -->
+    <!-- Add Holiday -->
+    <div class="fixed inset-0 w-full backdrop-blur bg-[#656B74]/60 overflow-hidden overflow-y-auto py-8 2xl:py-12 px-6 z-50 flex hidden">
+        <div class="w-full max-w-[536px] py-4 xl:py-5 2xl:py-6 px-3.5 xl:px-4 2xl:px-5 bg-white rounded-xl xl:rounded-2xl 2xl:rounded-[20px] m-auto">
+            <div class="relative">
+                <h3 class="text24 text-b1 font-extrabold text-left">Add Holiday</h3>
+                <span class="icon-close text-[#848A94] text-[24px] absolute right-0 top-0 cursor-pointer"></span>
+            </div>
+            <div class="flex flex-wrap items-center -mx-2.5 mt-3 2xl:mt-4">
+                <div class="w-full p-2.5">
+                    <label class="label">Holiday Name</label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+                <div class="w-full p-2.5">
+                    <label class="label">Start Date <span class="text-red">*</span></label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+                <div class="w-full p-2.5">
+                    <label class="label">End Date <span class="text-red">*</span></label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+            </div>
+            <div class="text-center mt-4 xl:mt-5 2xl:mt-6 flex items-center justify-center space-x-3 lg:space-x-4 xl:space-x-5">
+                <button class="btn_secondary">Cancel</button>
+                <button class="btn_primary">Send</button>
+            </div>
+        </div>
+    </div>
+    <!-- Add Holiday -->
+    <!-- Add Leave  -->
+    <div class="fixed inset-0 w-full backdrop-blur bg-[#656B74]/60 overflow-hidden overflow-y-auto py-8 2xl:py-12 px-6 z-50 flex hidden">
+        <div class="w-full max-w-[1052px] py-4 xl:py-5 2xl:py-6 px-3.5 xl:px-4 2xl:px-5 bg-white rounded-xl xl:rounded-2xl 2xl:rounded-[20px] m-auto">
+            <div class="relative">
+                <h3 class="text24 text-b1 font-extrabold text-left">Add Leave</h3>
+                <span class="icon-close text-[#848A94] text-[24px] absolute right-0 top-0 cursor-pointer"></span>
+            </div>
+            <div class="flex flex-wrap items-start -mx-2.5 mt-4 xl:mt-5 2xl:mt-7">
+                <div class="w-full sm:w-1/2 p-2.5">
+                    <label class="label">Employee Name</label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+                <div class="w-full sm:w-1/2 p-2.5">
+                    <label class="label">Leave Type</label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+                <div class="w-full sm:w-1/2 p-2.5">
+                    <label class="label">From Date</label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+                <div class="w-full sm:w-1/2 p-2.5">
+                    <label class="label">To Date</label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+                <div class="w-full sm:w-1/2 p-2.5">
+                    <label class="label">Leave Duration</label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+                <div class="w-full sm:w-1/2 p-2.5">
+                    <label class="label">Leave Status</label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+                <div class="w-full sm:w-1/2 p-2.5">
+                    <label class="label">Upload Attachments</label>
+                    <div class="w-full h-32 2xl:h-[139px] bg-white relative border border-dashed border-primary rounded-lg lg:rounded-xl 2xl:rounded-2xl flex items-center justify-center">
+                        <input type="file" class="absolute opacity-0 z-10 w-full h-full inset-0 cursor-pointer">
+                        <div class="py-2 px-4 text-center">
+                            <div class="w-8 h-8 xl:w-9 xl:h-9 2xl:w-10 2xl:h-10 mx-auto flex items-center justify-center rounded-[10px] bg-primary mb-1.5 2xl:mb-2.5">
+                                <span class="text-22 2xl:text-28 text-white font-medium text-gray_1 icon-upload"></span>
+                            </div>
+                            <span class="text-12 md:text-14 2xl:text-16 font-medium text-gray_1 block">Drag &amp; Drop or <span class="text-primary">choose file</span> to upload</span>
+                            <span class="block text-center text-g1 font-normal mt-0.5 2xl:mt-1 text-12 xl:text-14">Supported formats : Jpeg, pdf</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-2">
+                        <div class="w-1/3 p-2">
+                            <div class="w-full h-20 xl:h-[139px] bg-white relative rounded-lg lg:rounded-xl 2xl:rounded-2xl flex items-center justify-center overflow-hidden">
+                                <img src="assets/images/pan_card.png" class="w-full h-full object-cover" alt="subtask_img">
+                                <div class="w-6 h-6 rounded-full bg-white absolute right-3 top-3 flex items-center justify-center cursor-pointer">
+                                    <span class="icon-trash1 text-[12px] text-black"></span>
+                                </div>
+                                <div class="absolute bottom-1 left-2.5">
+                                    <span class="text-12 font-medium text-white inline-block">pan_card.pdf</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full sm:w-1/2 p-2.5">
+                    <label class="label">Description</label>
+                    <textarea type="text" rows="5" class="input" placeholder="Enter your text here"></textarea>
+                </div>
+            </div>
+            <div class="text-center mt-4 xl:mt-5 2xl:mt-6 flex items-center justify-center space-x-3 lg:space-x-4 xl:space-x-5">
+                <button class="btn_secondary">Cancel</button>
+                <button class="btn_primary">Send</button>
+            </div>
+        </div>
+    </div>
+    <!-- Add Leave  -->
+    <!-- Leave Details / Approved  -->
+    <div class="fixed inset-0 w-full backdrop-blur bg-[#656B74]/60 overflow-hidden overflow-y-auto py-8 2xl:py-12 px-6 z-50 flex hidden">
+        <div class="w-full max-w-[1052px] py-4 xl:py-5 2xl:py-6 px-3.5 xl:px-4 2xl:px-5 bg-white rounded-xl xl:rounded-2xl 2xl:rounded-[20px] m-auto">
+            <div class="relative mb-2.5 xl:mb-4">
+                <h3 class="text24 text-b1 font-extrabold text-left">Leave Detail</h3>
+                <span class="icon-close text-[#848A94] text-[24px] absolute right-0 top-0 cursor-pointer"></span>
+            </div>
+            <table class="w-full leave_details">
+                <tr>
+                    <th class="w-[15%]">Employee Name</th>
+                    <td class="w-[4%]">:</td>
+                    <td>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-6 h-6 rounded-full">
+                                <img src="assets/images/profile2.png" alt="profile2"/>
+                            </div>
+                            <span class="text-b1 font-medium text16">Uday Kyada</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Start Date</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                        26-03-2025
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">End Date</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                        15-04-2025
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Leave Type</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                        Sick Leave
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Duration</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                        Full Day
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">No. of Days</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                        20
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Discription</th>
+                    <td class="w-[4%]">:</td>
+                    <td>
+                        I am writing to formally request sick leave for 20 days, from 26-03-2025 to 15-04-2025, due to medical condition. As per my doctor's advice, I need this time off for proper rest and recovery. I have attached my medical certificate for your reference. I will ensure a smooth handover of any urgent tasks before my leave begins, and if necessary, I can be available for minimal remote assistance.
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Leave Status</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                       <span class="approved">Approved</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">File Attached</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                        <div class="bg-[#E9EEEA] py-1.5 px-2.5 rounded-[10px] w-full max-w-[276px]">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-1">
+                                    <img src="assets/images/jpg.png" alt="jpg">
+                                    <span class="inline-block text16 font-medium text-b1">Medical_Report.jpg</span>
+                                </div>
+                                <span class="icon-download1 text-[20px] text-[#848A94]"></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Approved By</th>
+                    <td class="w-[4%]">:</td>
+                    <td>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-6 h-6 rounded-full">
+                                <img src="assets/images/profile2.png" alt="profile2"/>
+                            </div>
+                            <span class="text-b1 font-medium text16">Uday Kyada</span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    <!-- Leave Details / Approved  -->
+    <!-- Leave Details / Reject  -->
+    <div class="fixed inset-0 w-full backdrop-blur bg-[#656B74]/60 overflow-hidden overflow-y-auto py-8 2xl:py-12 px-6 z-50 flex hidden">
+        <div class="w-full max-w-[1052px] py-4 xl:py-5 2xl:py-6 px-3.5 xl:px-4 2xl:px-5 bg-white rounded-xl xl:rounded-2xl 2xl:rounded-[20px] m-auto">
+            <div class="relative mb-2.5 xl:mb-4">
+                <h3 class="text24 text-b1 font-extrabold text-left">Leave Detail</h3>
+                <span class="icon-close text-[#848A94] text-[24px] absolute right-0 top-0 cursor-pointer"></span>
+            </div>
+            <table class="w-full leave_details">
+                <tr>
+                    <th class="w-[15%]">Employee Name</th>
+                    <td class="w-[4%]">:</td>
+                    <td>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-6 h-6 rounded-full">
+                                <img src="assets/images/profile2.png" alt="profile2"/>
+                            </div>
+                            <span class="text-b1 font-medium text16">Uday Kyada</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Start Date</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                        26-03-2025
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">End Date</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                        15-04-2025
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Leave Type</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                        Sick Leave
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Duration</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                        Full Day
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">No. of Days</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                        20
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Discription</th>
+                    <td class="w-[4%]">:</td>
+                    <td>
+                        I am writing to formally request sick leave for 20 days, from 26-03-2025 to 15-04-2025, due to medical condition. As per my doctor's advice, I need this time off for proper rest and recovery. I have attached my medical certificate for your reference. I will ensure a smooth handover of any urgent tasks before my leave begins, and if necessary, I can be available for minimal remote assistance.
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Leave Status</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                       <span class="reject">Rejected</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">File Attached</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                        <div class="bg-[#E9EEEA] py-1.5 px-2.5 rounded-[10px] w-full max-w-[276px]">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-1">
+                                    <img src="assets/images/jpg.png" alt="jpg">
+                                    <span class="inline-block text16 font-medium text-b1">Medical_Report.jpg</span>
+                                </div>
+                                <span class="icon-download1 text-[20px] text-[#848A94]"></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Approved By</th>
+                    <td class="w-[4%]">:</td>
+                    <td>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-6 h-6 rounded-full">
+                                <img src="assets/images/profile2.png" alt="profile2"/>
+                            </div>
+                            <span class="text-b1 font-medium text16">Uday Kyada</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Rejection Reason</th>
+                    <td class="w-[4%]">:</td>
+                    <td>
+                        Critical tasks require your presence during the requested period.
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- Leave Details / Reject  -->
+    <!-- Leave Details / Pending  -->
+    <div class="fixed inset-0 w-full backdrop-blur bg-[#656B74]/60 overflow-hidden overflow-y-auto py-8 2xl:py-12 px-6 z-50 flex hidden">
+        <div class="w-full max-w-[1052px] py-4 xl:py-5 2xl:py-6 px-3.5 xl:px-4 2xl:px-5 bg-white rounded-xl xl:rounded-2xl 2xl:rounded-[20px] m-auto">
+            <div class="relative mb-2.5 xl:mb-4">
+                <h3 class="text24 text-b1 font-extrabold text-left">Leave Detail</h3>
+                <span class="icon-close text-[#848A94] text-[24px] absolute right-0 top-0 cursor-pointer"></span>
+            </div>
+            <table class="w-full leave_details">
+                <tr>
+                    <th class="w-[15%]">Employee Name</th>
+                    <td class="w-[4%]">:</td>
+                    <td>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-6 h-6 rounded-full">
+                                <img src="assets/images/profile2.png" alt="profile2"/>
+                            </div>
+                            <span class="text-b1 font-medium text16">Uday Kyada</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Start Date</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                        26-03-2025
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">End Date</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                        15-04-2025
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Leave Type</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                        Sick Leave
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Duration</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                        Full Day
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">No. of Days</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                        20
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Discription</th>
+                    <td class="w-[4%]">:</td>
+                    <td>
+                        I am writing to formally request sick leave for 20 days, from 26-03-2025 to 15-04-2025, due to medical condition. As per my doctor's advice, I need this time off for proper rest and recovery. I have attached my medical certificate for your reference. I will ensure a smooth handover of any urgent tasks before my leave begins, and if necessary, I can be available for minimal remote assistance.
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Leave Status</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                       <span class="pending">Pending</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">File Attached</th>
+                    <td class="w-[4%]">:</td>
+                    <td >
+                        <div class="bg-[#E9EEEA] py-1.5 px-2.5 rounded-[10px] w-full max-w-[276px]">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-1">
+                                    <img src="assets/images/xl.png" alt="jpg">
+                                    <span class="inline-block text16 font-medium text-b1">Medical_Report.jpg</span>
+                                </div>
+                                <span class="icon-download1 text-[20px] text-[#848A94]"></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="w-[15%]">Approved By</th>
+                    <td class="w-[4%]">:</td>
+                    <td>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-6 h-6 rounded-full">
+                                <img src="assets/images/profile2.png" alt="profile2"/>
+                            </div>
+                            <span class="text-b1 font-medium text16">Uday Kyada</span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="flex items-center space-x-2 mt-5">
+                <button class="py-1.5 px-4 bg-red text-white rounded-xl text-14 font-bold border border-red inline-block hover:bg-transparent hover:border-red hover:text-red">Reject</button>
+                <button class="py-1.5 px-4 bg-green text-white rounded-xl text-14 font-bold border border-green inline-block hover:bg-transparent hover:border-green hover:text-green">Approve</button>
+            </div>
+        </div>
+    </div>
+    <!-- Leave Details / Pending  -->
+    <!-- Add New User  -->
+    <div class="fixed inset-0 w-full backdrop-blur bg-[#656B74]/60 overflow-hidden overflow-y-auto py-8 2xl:py-12 px-6 z-50 flex hidden">
+        <div class="w-full max-w-[536px] py-4 xl:py-5 2xl:py-6 px-3.5 xl:px-4 2xl:px-5 bg-white rounded-xl xl:rounded-2xl 2xl:rounded-[20px] m-auto">
+            <div class="relative">
+                <h3 class="text24 text-b1 font-extrabold text-left">Add User</h3>
+                <span class="icon-close text-[#848A94] text-[24px] absolute right-0 top-0 cursor-pointer"></span>
+            </div>
+            <div class="mt-2">
+                <div class="w-full p-2.5">
+                    <label class="label">User Name</label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+                <div class="w-full p-2.5">
+                    <label class="label">Role <span class="text-red">*</span></label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+            </div>
+            <div class="text-center mt-4 xl:mt-5 2xl:mt-6 flex items-center justify-center space-x-3 lg:space-x-4 xl:space-x-5">
+                <button class="btn_secondary">Cancel</button>
+                <button class="btn_primary">Send</button>
+            </div>
+        </div>
+    </div>
+    <!-- Add New User  -->
+    <!-- Add Department  -->
+    <div class="fixed inset-0 w-full backdrop-blur bg-[#656B74]/60 overflow-hidden overflow-y-auto py-8 2xl:py-12 px-6 z-50 flex hidden">
+        <div class="w-full max-w-[536px] py-4 xl:py-5 2xl:py-6 px-3.5 xl:px-4 2xl:px-5 bg-white rounded-xl xl:rounded-2xl 2xl:rounded-[20px] m-auto">
+            <div class="relative">
+                <h3 class="text24 text-b1 font-extrabold text-left">Add Department</h3>
+                <span class="icon-close text-[#848A94] text-[24px] absolute right-0 top-0 cursor-pointer"></span>
+            </div>
+            <div class="mt-2">
+                <div class="w-full p-2.5">
+                    <label class="label">Department Name</label>
+                    <input type="text" class="input" placeholder="Enter your text here"/>
+                </div>
+            </div>
+            <div class="text-center mt-4 xl:mt-5 2xl:mt-6 flex items-center justify-center space-x-3 lg:space-x-4 xl:space-x-5">
+                <button class="btn_secondary">Cancel</button>
+                <button class="btn_primary">Send</button>
+            </div>
+        </div>
+    </div>
+    <!-- Add Department  -->
+    <!-- Add Designations  -->
+    <div class="fixed inset-0 w-full backdrop-blur bg-[#656B74]/60 overflow-hidden overflow-y-auto py-8 2xl:py-12 px-6 z-50 flex hidden">
+        <div class="w-full max-w-[536px] py-4 xl:py-5 2xl:py-6 px-3.5 xl:px-4 2xl:px-5 bg-white rounded-xl xl:rounded-2xl 2xl:rounded-[20px] m-auto">
+            <div class="relative">
+                <h3 class="text24 text-b1 font-extrabold text-left">Add Designation</h3>
+                <span class="icon-close text-[#848A94] text-[24px] absolute right-0 top-0 cursor-pointer"></span>
+            </div>
+            <div class="mt-2">
+                <div class="w-full p-2.5">
+                    <label class="label">Designation Name</label>
+                    <input type="text" class="input" placeholder="Enter Designations Name"/>
+                </div>
+            </div>
+            <div class="text-center mt-4 xl:mt-5 2xl:mt-6 flex items-center justify-center space-x-3 lg:space-x-4 xl:space-x-5">
+                <button class="btn_secondary">Cancel</button>
+                <button class="btn_primary">Send</button>
+            </div>
+        </div>
+    </div>
+    <!-- Add Designations  -->
+    <div class="fixed inset-0 w-full backdrop-blur bg-[#656B74]/60 overflow-hidden overflow-y-auto py-8 2xl:py-12 px-6 z-50 flex hidden">
+        <div class="w-full max-w-[536px] py-4 xl:py-5 2xl:py-6 px-3.5 xl:px-4 2xl:px-5 bg-white rounded-xl xl:rounded-2xl 2xl:rounded-[20px] m-auto">
+            <div class="relative mb-4 xl:mb-5 2xl:mb-7">
+                <h3 class="text24 text-b1 font-extrabold text-center">New Chat</h3>
+                <span class="icon-close text-[#848A94] text-[24px] absolute right-0 top-0 cursor-pointer"></span>
+            </div>
+            <div class="w-full hidden md:flex items-center bg-l1 rounded-lg px-2 md:px-3 xl:px-5 py-2 xl:py-3">
+                <label for="search">
+                    <span class="icon-search text-g6 block text-[18px] xl:text-[20px] cursor-pointer"></span>
+                </label>
+                <input type="search" id="search" class="w-full outline-none text-g6 bg-transparent text-dark pl-2.5" placeholder="Search">
+            </div>
+            <button class="btn_primary anim flex items-center justify-center space-x-2 py-1.5 lg:py-2 2xl:py-2.5 px-3 xl:px-4 2xl:px-5 mt-3 xl:mt-4 2xl:mt-5">
+                <span class="icon-add font-bold text-[16px]"></span>
+                <span class="inline-block text-14 font-bold">New Group Chat</span>
+            </button>
+            <div class="flex items-satrt -mx-1.5 2xl:-mx-2.5 3xl:-mx-3.5">
+                <div class="w-full 2xl:w-[140px] p-1.5 2xl:p-2.5 3xl:p-3.5">
+                    <label class="label">Profile Picture</label>
+                    <div class="w-28 h-28 rounded lg:rounded-md 2xl:rounded-[10px] relative bg-[#E9EEEA] flex overflow-hidden">
+                        <input type="file" class="absolute inset-0 w-full h-full opacity-0">
+                        <span class="icon-add text-[18px] lg:text-[20px] 2xl:text-[24px] text-g1 m-auto"></span>
+                        <div class="w-6 h-6 rounded-full bg-white absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 hidden flex items-center justify-center cursor-pointer">
+                            <span class="icon-trash1 text-[12px] text-black"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[calc(100%-140px)] p-1.5 2xl:p-2.5 3xl:p-3.5">
+                    <div>
+                        <label class="label">Group Chat Name</label>
+                        <input type="text" class="input" placeholder="Write your text here"/>
+                    </div>
+                    <div class="flex items-center space-x-1 mt-2.5 xl:mt-4">
+                        <div class="py-0.5 px-1 bg-[#E3E5F7] rounded">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-1">
+                                    <div class="w-4 h-4 rounded-full">
+                                        <img src="assets/images/profile2.png" alt="profile"/>
+                                    </div>
+                                    <span class="inline-block text-12 xl:text-14 font-normal text-[#525252]">Uday Kyada</span>
+                                </div>
+                                <span class="icon-close text-[16px] text-g6"></span>
+                            </div>
+                        </div>
+                        <div class="py-0.5 px-1 bg-[#E3E5F7] rounded">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-1">
+                                    <div class="w-4 h-4 rounded-full">
+                                        <img src="assets/images/profile2.png" alt="profile"/>
+                                    </div>
+                                    <span class="inline-block text-12 xl:text-14 font-normal text-[#525252]">Uday Kyada</span>
+                                </div>
+                                <span class="icon-close text-[16px] text-g6"></span>
+                            </div>
+                        </div>
+                        <span class="text-14 text-b1 font-normal inline-block">+2</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4 xl:mt-5 2xl:mt-6 flex items-center justify-center space-x-3 lg:space-x-4 xl:space-x-5">
+                <button class="btn_secondary">Cancel</button>
+                <button class="btn_primary">Send</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
 
 
     <!-- table  -->
@@ -375,3 +984,8 @@
             </table>
         </div>
     </div>
+    <!-- table  -->
+
+   </body>
+   </html>
+  

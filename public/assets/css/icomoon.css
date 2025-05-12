@@ -25,6 +25,30 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
+  .icon-add_details:before {
+    content: "\e93a";
+  }
+  .icon-job_details:before {
+    content: "\e93b";
+  }
+  .icon-per_info:before {
+    content: "\e93c";
+  }
+  .icon-user1:before {
+    content: "\e93d";
+  }
+  .icon-work_hist:before {
+    content: "\e93e";
+  }
+  .icon-edu_details:before {
+    content: "\e93f";
+  }
+  .icon-family_details:before {
+    content: "\e940";
+  }
+  .icon-salary_details:before {
+    content: "\e941";
+  }
   .icon-download1:before {
     content: "\e937";
   }
