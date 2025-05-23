@@ -1466,6 +1466,11 @@ input:checked + .emoji_select {
   margin-bottom: auto;
 }
 
+.-mx-4{
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
 .mb-0\.5{
   margin-bottom: 0.125rem;
 }
@@ -1642,6 +1647,10 @@ input:checked + .emoji_select {
   height: 1rem;
 }
 
+.h-5{
+  height: 1.25rem;
+}
+
 .h-6{
   height: 1.5rem;
 }
@@ -1718,6 +1727,10 @@ input:checked + .emoji_select {
   width: 3rem;
 }
 
+.w-14{
+  width: 3.5rem;
+}
+
 .w-16{
   width: 4rem;
 }
@@ -1750,6 +1763,14 @@ input:checked + .emoji_select {
   width: 33.333333%;
 }
 
+.w-5{
+  width: 1.25rem;
+}
+
+.w-5\/12{
+  width: 41.666667%;
+}
+
 .w-6{
   width: 1.5rem;
 }
@@ -1764,6 +1785,10 @@ input:checked + .emoji_select {
 
 .w-7{
   width: 1.75rem;
+}
+
+.w-7\/12{
+  width: 58.333333%;
 }
 
 .w-72{
@@ -1838,6 +1863,10 @@ input:checked + .emoji_select {
   width: calc(100% - 140px);
 }
 
+.w-\[calc\(100\%-56px\)\]{
+  width: calc(100% - 56px);
+}
+
 .w-\[calc\(100\%-64px\)\]{
   width: calc(100% - 64px);
 }
@@ -1853,6 +1882,34 @@ input:checked + .emoji_select {
 .w-max{
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-\[calc\(100\%-48px\)\]{
+  width: calc(100% - 48px);
+}
+
+.w-36{
+  width: 9rem;
+}
+
+.w-\[calc\(100\%-144px\)\]{
+  width: calc(100% - 144px);
+}
+
+.w-3\/12{
+  width: 25%;
+}
+
+.w-9\/12{
+  width: 75%;
+}
+
+.w-10\/12{
+  width: 83.333333%;
+}
+
+.w-2\/12{
+  width: 16.666667%;
 }
 
 .min-w-72{
@@ -2261,6 +2318,11 @@ input:checked + .emoji_select {
   border-color: rgb(210 210 210 / var(--tw-border-opacity, 1));
 }
 
+.border-\[\#D6D6D6\]{
+  --tw-border-opacity: 1;
+  border-color: rgb(214 214 214 / var(--tw-border-opacity, 1));
+}
+
 .border-\[\#E5E5EF\]{
   --tw-border-opacity: 1;
   border-color: rgb(229 229 239 / var(--tw-border-opacity, 1));
@@ -2468,6 +2530,10 @@ input:checked + .emoji_select {
 
 .bg-primary\/20{
   background-color: rgb(117 110 243 / 0.2);
+}
+
+.bg-primary\/30{
+  background-color: rgb(117 110 243 / 0.3);
 }
 
 .bg-red{
@@ -2767,6 +2833,10 @@ input:checked + .emoji_select {
   line-height: 40px;
 }
 
+.text-\[10px\]{
+  font-size: 10px;
+}
+
 .text-\[12px\]{
   font-size: 12px;
 }
@@ -2814,6 +2884,10 @@ input:checked + .emoji_select {
 
 .font-semibold{
   font-weight: 600;
+}
+
+.leading-\[20px\]{
+  line-height: 20px;
 }
 
 .text-\[\#002055\]{
@@ -3049,6 +3123,10 @@ input:checked + .emoji_select {
 .hover\:border-yellow:hover{
   --tw-border-opacity: 1;
   border-color: rgb(239 176 8 / var(--tw-border-opacity, 1));
+}
+
+.hover\:bg-primary\/30:hover{
+  background-color: rgb(117 110 243 / 0.3);
 }
 
 .hover\:bg-transparent:hover{
@@ -3465,6 +3543,10 @@ input:checked + .emoji_select {
     width: auto;
   }
 
+  .lg\:w-1\/2{
+    width: 50%;
+  }
+
   .lg\:max-w-60{
     max-width: 15rem;
   }
@@ -3475,6 +3557,10 @@ input:checked + .emoji_select {
 
   .lg\:max-w-sm{
     max-width: 24rem;
+  }
+
+  .lg\:max-w-72{
+    max-width: 18rem;
   }
 
   .lg\:border-spacing-y-3{
@@ -3900,6 +3986,18 @@ input:checked + .emoji_select {
 
   .xl\:w-auto{
     width: auto;
+  }
+
+  .xl\:w-\[calc\(100\%-56px\)\]{
+    width: calc(100% - 56px);
+  }
+
+  .xl\:w-10\/12{
+    width: 83.333333%;
+  }
+
+  .xl\:w-2\/12{
+    width: 16.666667%;
   }
 
   .xl\:max-w-44{
